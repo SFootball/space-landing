@@ -44,7 +44,7 @@ jobs:
           file: Dockerfile
           push: true
           tags: ${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_NAME}}:${{ steps.get_version.outputs.version }},${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_NAME}}:latest
-          cache-from: type=registry,ref=${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_NAME}}:latest
+          cache-from: type=registry,ref=${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_NAME }}:latest
           cache-to: type=inline
 
       - name: Cleanup
