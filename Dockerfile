@@ -5,6 +5,6 @@ RUN yarn install
 RUN yarn build
 
 FROM nginxinc/nginx-unprivileged
-EXPOSE 8080
+EXPOSE 8080 443
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /usr/app/dist /usr/share/nginx/html
