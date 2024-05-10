@@ -9,13 +9,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const bgImgURL = "/images/footballer.jpg";
+const bgImgURL = "/images/footballer_1.jpg";
 
 function App() {
   return (
     <Box
       bgImage={bgImgURL}
-      minHeight="100vh"
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPosition="center"
@@ -37,14 +36,19 @@ function App() {
             direction="column"
           >
             <Box
-              fontSize="72px"
+              fontSize={{ base: "72px", sm: "56px" }}
               marginBottom="54px"
               fontWeight="bold"
               color="white"
+              textAlign="center"
             >
               Professionals rely on numbers!
             </Box>
-            <Box color="white" fontSize="46px">
+            <Box
+              color="white"
+              fontSize={{ base: "46px", sm: "32px" }}
+              textAlign="center"
+            >
               All in one statistical solution
             </Box>
           </Flex>
