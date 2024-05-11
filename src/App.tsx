@@ -2,7 +2,6 @@ import {
   Flex,
   Box,
   Container,
-  Heading,
   Text,
   Input,
   Textarea,
@@ -20,13 +19,13 @@ function App() {
       bgPosition="center"
       bgAttachment="fixed"
     >
-      {/* <Box as="header" bgColor="white">
-        <Container maxW="1200px">
+      <Box as="header" bgColor="white">
+        {/* <Container maxW="1200px">
           <Flex h="110px" alignItems="center">
             <Heading size="lg">Space Football</Heading>
           </Flex>
-        </Container>
-      </Box> */}
+        </Container> */}
+      </Box>
       <Box as="main">
         <Container maxW="1200px">
           <Flex
@@ -59,7 +58,7 @@ function App() {
               <iframe
                 width="960"
                 height="540"
-                src="https://www.youtube.com/watch?v=5hPsXvKzZnU"
+                src="https://www.youtube.com/embed/5hPsXvKzZnU?si=Sr2UixtM5dGM6ekp"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

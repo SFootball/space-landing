@@ -43,7 +43,8 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: space-football.cr.cloud.ru/sfootball_landing:${{ steps.get_version.outputs.version }},space-football.cr.cloud.ru/sfootball_landing:latest
+          tags: space-football.cr.cloud.ru/sfootball_landing:${{ steps.get_version.outputs.version }}
+          # ,space-football.cr.cloud.ru/sfootball_landing:latest
           # cache-from: type=registry,ref=space-football.cr.cloud.ru/sfootball_landing:latest
           # cache-to: type=inline
 
