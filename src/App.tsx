@@ -20,13 +20,13 @@ function App() {
       bgPosition="center"
       bgAttachment="fixed"
     >
-      <Box as="header" bgColor="white">
+      {/* <Box as="header" bgColor="white">
         <Container maxW="1200px">
           <Flex h="110px" alignItems="center">
             <Heading size="lg">Space Football</Heading>
           </Flex>
         </Container>
-      </Box>
+      </Box> */}
       <Box as="main">
         <Container maxW="1200px">
           <Flex
@@ -59,7 +59,7 @@ function App() {
               <iframe
                 width="960"
                 height="540"
-                src="https://www.youtube.com/embed/g_ERlr_Y_H8?si=hKA0RF3XLSharIKX"
+                src="https://www.youtube.com/watch?v=5hPsXvKzZnU"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -77,9 +77,9 @@ function App() {
               Who we are?
             </Text>
             <Text fontSize="20px" mb="54px">
-              SportsBase is a new digital project dedicated to set up a football
-              analytics and video analysis system. The company provides a wide
-              range of services covering all possible customer requests,
+              SpaceFootball is a new digital project dedicated to set up a
+              football analytics and video analysis system. The project provides
+              a wide range of services covering all possible customer requests,
               including a video platform, statistical post-match reports, live
               breakdown with the minimal delay, raw data, player fitness
               tracking reports, and analytical player reports.
@@ -106,7 +106,7 @@ function App() {
               RELIABILITY
             </Text>
             <Text fontSize="20px" mb="54px">
-              SportsBase is a well-structured company with over 200 people in
+              SpaceFootball is a well-structured company with over 20 people in
               staff all around the world.
             </Text>
           </Container>
@@ -123,10 +123,10 @@ function App() {
                 <Box as="img" src="/images/1.png" maxW="48%"></Box>
                 <Box>
                   <Text fontSize="26px" as="b" mb="24px">
-                    SPORTSBASE SOLUTIONS
+                    SPACEFOOTBALL SOLUTIONS
                   </Text>
                   <Text mb="36px" fontSize="18px">
-                    <p>• SportsBase football video platform;</p>
+                    {/* <p>• SportsBase football video platform;</p> */}
                     <p>• Technical match filming;</p>
                     <p>• Video and advanced statistics;</p>
                     <p>• Detailed post-match reports;</p>
@@ -147,7 +147,7 @@ function App() {
               <Flex justify="space-between" align="center">
                 <Box>
                   <Text fontSize="26px" as="b" mb="24px">
-                    SPORTSBASE PLATFORM FOR COACHES
+                    SPACEFOOTBALL PLATFORM FOR COACHES
                   </Text>
                   <Text fontSize="18px">
                     <p>• Video breakdown of own and opponent’s matches;</p>
@@ -271,7 +271,7 @@ function App() {
                   Contact us
                 </Text>
                 <Text fontSize="18px" mb="30px">
-                  office@sportsbase.world
+                  spacefootball.web3@gmail.com
                 </Text>
                 <Text fontSize="16px" mb="5px">
                   Your email
