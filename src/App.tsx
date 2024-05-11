@@ -9,13 +9,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const bgImgURL = "/images/footballer.jpg";
+const bgImgURL = "/images/footballer_1.jpg";
 
 function App() {
   return (
     <Box
       bgImage={bgImgURL}
-      minHeight="100vh"
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPosition="center"
@@ -37,14 +36,19 @@ function App() {
             direction="column"
           >
             <Box
-              fontSize="72px"
+              fontSize={{ base: "72px", sm: "56px" }}
               marginBottom="54px"
               fontWeight="bold"
               color="white"
+              textAlign="center"
             >
               Professionals rely on numbers!
             </Box>
-            <Box color="white" fontSize="46px">
+            <Box
+              color="white"
+              fontSize={{ base: "46px", sm: "32px" }}
+              textAlign="center"
+            >
               All in one statistical solution
             </Box>
           </Flex>
@@ -64,7 +68,11 @@ function App() {
               ></iframe>
             </Flex>
           </Container>
-          <Container maxW="760px" h="1280px" py="150px">
+          <Container
+            maxW="760px"
+            h="1280px"
+            py={{ base: "150px", xl: "150px" }}
+          >
             <Text fontSize="72px" as="b" textAlign="center" mb="72px">
               Who we are?
             </Text>
@@ -103,8 +111,13 @@ function App() {
             </Text>
           </Container>
         </Box>
-        <Box bgColor="#f5f5f5">
-          <Container maxW="1200px" maxH="3300px" pt="135px" pb="165px">
+        <Box bgColor="gray.100">
+          <Container
+            maxW="1200px"
+            maxH="3300px"
+            pt={{ base: "135px", xl: "135px" }}
+            pb={{ base: "165px", xl: "165px" }}
+          >
             <Flex direction="column" gap="50px">
               <Flex justify="space-between" align="center">
                 <Box as="img" src="/images/1.png" maxW="48%"></Box>
@@ -238,7 +251,11 @@ function App() {
           </Container>
         </Box>
         <Box bgColor="white">
-          <Container maxW="1200px" maxH="650px" pt="150px">
+          <Container
+            maxW="1200px"
+            maxH="650px"
+            pt={{ base: "150px", xl: "150px" }}
+          >
             <Flex justify="start" pb="150px">
               <Box
                 objectFit="cover"
@@ -286,10 +303,11 @@ function App() {
                   width="160px"
                   height="50px"
                   background="linear-gradient(0.12031726607834739turn, rgba(0, 0, 0, 1) 1%, rgba(0, 95, 174, 1) 72%);"
+                  _hover={{ bgColor: "blue.500", backgroundImage: "none" }}
                   transition="0.3s ease all"
                   borderRadius="16px"
                 >
-                  Button
+                  Send
                 </Button>
               </Box>
             </Flex>
