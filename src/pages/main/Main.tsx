@@ -8,9 +8,11 @@ import {
   Button,
   Image,
   Heading,
+  HStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const bgImgURL = "/images/footballer.jpg";
+export const bgImgURL = "/images/footballer.jpg";
 
 function MainPage() {
   return (
@@ -23,8 +25,14 @@ function MainPage() {
     >
       <Box as="header" bgColor="white">
         <Container maxW="1200px">
-          <Flex h="110px" alignItems="center">
-            <Image src="/images/logo.png" maxW="20%"></Image>
+          <Flex h="110px" alignItems="center" justify="space-between">
+            <Link to="/">
+              <Image src="/images/logo.png" maxW="50%"></Image>
+            </Link>
+            <HStack spacing="16px">
+              <Link to="/about">About</Link>
+              <Link to="/roadmap">Roadmap</Link>
+            </HStack>
           </Flex>
         </Container>
       </Box>
@@ -147,7 +155,7 @@ function MainPage() {
                   >
                     SPACEFOOTBALL SOLUTIONS
                   </Text>
-                  <Text
+                  <Box
                     mb="36px"
                     fontSize={{ base: "13px", sm: "13px", xl: "18px" }}
                   >
@@ -157,15 +165,15 @@ function MainPage() {
                     <p>• Statistical live data collection;</p>
                     <p>• Player fitness tracking reports;</p>
                     <p>• Raw data delivered in live mode.</p>
-                  </Text>
-                  <Text fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
+                  </Box>
+                  <Box fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
                     Services to be launched in the short term:
                     <p>• 24/7 technical support;</p>
                     <p>• Live fitness tracking;</p>
                     <p>• Analytical opponent’s prescout reports;</p>
                     <p>• Post-match referee reports;</p>
                     <p>• Offline and online tagging software.</p>
-                  </Text>
+                  </Box>
                 </Box>
               </Flex>
               <Flex justify="space-between" align="center">
@@ -177,7 +185,7 @@ function MainPage() {
                   >
                     SPACEFOOTBALL PLATFORM FOR COACHES
                   </Text>
-                  <Text fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
+                  <Box fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
                     <p>• Video breakdown of own and opponent’s matches;</p>
                     <p>
                       • Various options to review a match: full match video,
@@ -195,7 +203,7 @@ function MainPage() {
                       • Quick video download with the 1080p or 720p resolution;
                     </p>
                     <p>• Customizable statistical spreadsheets.</p>
-                  </Text>
+                  </Box>
                 </Box>
                 <Image src="/images/2.png" maxW="48%"></Image>
               </Flex>
@@ -209,7 +217,7 @@ function MainPage() {
                   >
                     SPACEFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
                   </Text>
-                  <Text fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
+                  <Box fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
                     <p>
                       • Filter players by their statistics to find the best
                       candidates;
@@ -221,7 +229,7 @@ function MainPage() {
                     <p>
                       • Share any video in two clicks with your team via email.
                     </p>
-                  </Text>
+                  </Box>
                 </Box>
               </Flex>
               <Flex justify="space-between" align="center">
@@ -233,13 +241,13 @@ function MainPage() {
                   >
                     STATISTICAL REPORTS
                   </Text>
-                  <Text fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
+                  <Box fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
                     <p>• Real-time statistical match analysis;</p>
                     <p>• Statistical post-match team and player report;</p>
                     <p>• Team and tournament summary reports;</p>
                     <p>• New advanced metrics developed;</p>
                     <p>• Data quality control.</p>
-                  </Text>
+                  </Box>
                 </Box>
                 <Image src="/images/4.png" maxW="48%"></Image>
               </Flex>
@@ -253,7 +261,7 @@ function MainPage() {
                   >
                     PLAYER FITNESS TRACKING REPORTS
                   </Text>
-                  <Text fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
+                  <Box fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
                     <p>
                       • Fitness tracking data about your own team as well as the
                       opponents;
@@ -268,7 +276,7 @@ function MainPage() {
                     </p>
                     <p>• New metrics combining event and fitness data;</p>
                     <p>• Proven data collection methodology.</p>
-                  </Text>
+                  </Box>
                 </Box>
               </Flex>
               <Flex justify="space-between" align="center">
@@ -280,14 +288,14 @@ function MainPage() {
                   >
                     RAW DATA
                   </Text>
-                  <Text fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
+                  <Box fontSize={{ base: "13px", sm: "13px", xl: "18px" }}>
                     <p>• Over 2500 metrics;</p>
                     <p>• Data available in XML and JSON formats;</p>
                     <p>
                       • Tailor-made assistance and guidance on how to use the
                       data for a website or on social media.
                     </p>
-                  </Text>
+                  </Box>
                 </Box>
                 <Image src="/images/5-2.png" maxW="48%"></Image>
               </Flex>
