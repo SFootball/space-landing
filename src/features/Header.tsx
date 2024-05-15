@@ -11,8 +11,8 @@ const Header = () => {
               <Image src="/images/logo.png" maxW="50%"></Image>
             </Link>
             <HStack spacing="16px">
-              {/* <Link to="/about">About</Link> */}
-              {/* <Link to="/roadmap">Roadmap</Link> */}
+              {/* TODO need to create about page <Link to="/about">About</Link> */}
+              {/* TODO need to create roadmap page <Link to="/roadmap">Roadmap</Link> */}
             </HStack>
           </Flex>
         </Container>
