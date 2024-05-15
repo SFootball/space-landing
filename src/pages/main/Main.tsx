@@ -12,7 +12,7 @@ import {
 
 export const bgImgURL = "/images/footballer.jpg";
 
-function MainPage() {
+function Main() {
   return (
     <Box
       bgImage={bgImgURL}
@@ -293,16 +293,28 @@ function MainPage() {
             maxH="650px"
             pt={{ base: "150px", xl: "150px" }}
           >
-            <Flex justify="start" pb="150px">
+            <Flex
+              direction={{
+                base: "column",
+                sm: "column",
+                md: "row",
+                lg: "row",
+                xl: "row",
+                "2xl": "row",
+              }}
+              justify="start"
+              pb="150px"
+            >
               <Image
                 objectFit="cover"
                 transform="scale(1.25)"
                 alignSelf="center"
-                opacity="0.4"
+                opacity="0.6"
                 mr="8%"
-                src="/images/letter_s.png"
+                src="/images/letter_s_1.png"
                 maxW="30%"
                 pl="16px"
+                mb="40px"
               ></Image>
               <Box flexBasis="460px">
                 <Text
@@ -361,7 +373,7 @@ function MainPage() {
                   _hover={{ bgColor: "blue.500", backgroundImage: "none" }}
                   transition="0.3s ease all"
                   borderRadius="16px"
-                  fontSize={["sm", "md", "lg", "xl", "2xl"]}
+                  fontSize={["sm", "md", "lg", "xl", "xl"]}
                 >
                   Send
                 </Button>
@@ -374,4 +386,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default Main;
