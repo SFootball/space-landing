@@ -30,8 +30,8 @@ function MainPage() {
               <Image src="/images/logo.png" maxW="50%"></Image>
             </Link>
             <HStack spacing="16px">
-              <Link to="/about">About</Link>
-              <Link to="/roadmap">Roadmap</Link>
+              {/* <Link to="/about">About</Link> */}
+              {/* <Link to="/roadmap">Roadmap</Link> */}
             </HStack>
           </Flex>
         </Container>
