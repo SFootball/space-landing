@@ -8,10 +8,10 @@ import {
   Button,
   Image,
   Heading,
-  HStack,
+  // HStack,
 } from "@chakra-ui/react";
 import { bgImgURL } from "../main/Main";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -22,19 +22,6 @@ function About() {
       bgPosition="center"
       bgAttachment="fixed"
     >
-      <Box as="header" bgColor="white">
-        <Container maxW="1200px">
-          <Flex h="110px" alignItems="center" justify="space-between">
-            <Link to="/">
-              <Image src="/images/logo.png" maxW="50%"></Image>
-            </Link>
-            <HStack spacing="16px">
-              <Link to="/about">About</Link>
-              <Link to="/roadmap">Roadmap</Link>
-            </HStack>
-          </Flex>
-        </Container>
-      </Box>
       <Box as="main">
         <Container maxW="1200px">
           <Flex
