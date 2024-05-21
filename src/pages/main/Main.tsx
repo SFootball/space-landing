@@ -1,14 +1,4 @@
-import {
-  Flex,
-  Box,
-  Container,
-  Text,
-  Input,
-  Textarea,
-  Button,
-  Image,
-  Heading,
-} from "@chakra-ui/react";
+import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 
 export const bgImgURL = "/images/footballer.jpg";
 
@@ -268,85 +258,6 @@ function Main() {
                 </Box>
                 <Image src="/images/5-2.png" maxW="48%"></Image>
               </Flex>
-            </Flex>
-          </Container>
-        </Box>
-        <Box bgColor="white">
-          <Container
-            maxW="1200px"
-            maxH="650px"
-            pt={{ base: "150px", xl: "150px" }}
-          >
-            <Flex
-              direction={{
-                base: "column",
-                md: "row",
-              }}
-              justify="start"
-              pb="150px"
-            >
-              <Image
-                objectFit="cover"
-                transform="scale(1.25)"
-                alignSelf="center"
-                opacity="0.6"
-                mr="8%"
-                src="/images/letter_s.png"
-                maxW="30%"
-                pl="16px"
-                mb="40px"
-              ></Image>
-              <Box flexBasis="460px">
-                <Text fontSize={{ base: "21px", md: "30px" }} as="b">
-                  Contact us
-                </Text>
-                <Text fontSize={{ base: "13px", md: "18px" }} mb="30px">
-                  sfootball.web3@gmail.com
-                </Text>
-                <Text fontSize={{ base: "11px", md: "16px" }} mb="5px">
-                  Your email
-                </Text>
-                <Input
-                  maxW="460px"
-                  mb="20px"
-                  variant="filled"
-                  placeholder="mail@example.com"
-                  fontSize={{ base: "11px", md: "16px" }}
-                />
-                <Text fontSize={{ base: "11px", md: "16px" }} mb="5px">
-                  Your name
-                </Text>
-                <Input
-                  maxW="460px"
-                  mb="20px"
-                  variant="filled"
-                  placeholder="John Smith"
-                  fontSize={{ base: "11px", md: "16px" }}
-                />
-                <Text fontSize={{ base: "11px", md: "16px" }}>
-                  Your message
-                </Text>
-                <Textarea
-                  maxW="460px"
-                  variant="filled"
-                  placeholder="Write your appeal"
-                  fontSize={{ base: "11px", md: "16px" }}
-                  mb="20px"
-                />
-                <Button
-                  display="block"
-                  color="white"
-                  width="160px"
-                  height="50px"
-                  background="linear-gradient(0.12031726607834739turn, rgba(0, 0, 0, 1) 1%, rgba(0, 95, 174, 1) 72%);"
-                  _hover={{ bgColor: "blue.500", backgroundImage: "none" }}
-                  transition="0.3s ease all"
-                  borderRadius="16px"
-                  fontSize={["sm", "md", "lg", "xl", "xl"]}
-                >
-                  Send
-                </Button>
-              </Box>
             </Flex>
           </Container>
         </Box>
