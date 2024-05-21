@@ -20,7 +20,7 @@ function Main() {
             direction="column"
           >
             <Heading
-              fontSize={{ base: "56px", md: "72px" }}
+              fontSize={{ base: "56px", lg: "72px" }}
               marginBottom="54px"
               fontWeight="bold"
               color="white"
@@ -30,7 +30,7 @@ function Main() {
             </Heading>
             <Box
               color="white"
-              fontSize={{ base: "32px", md: "46px" }}
+              fontSize={{ base: "32px", lg: "46px" }}
               textAlign="center"
             >
               All in one statistical solution
@@ -55,27 +55,27 @@ function Main() {
           <Container
             maxW="760px"
             maxH="1280px"
-            py={{ base: "75px", md: "150px" }}
+            py={{ base: "75px", lg: "150px" }}
           >
             <Text
-              fontSize={{ base: "56px", md: "72px" }}
+              fontSize={{ base: "56px", lg: "72px" }}
               as="b"
               textAlign="center"
               mb="72px"
             >
               Who we are?
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
               SFootball is a new digital project dedicated to set up a football
               analytics. The project provides a wide range of services covering
               all possible customer requests, statistical post-match reports,
               raw data, player fitness tracking reports, and analytical player
               reports.
             </Text>
-            <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
+            <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
               OUR MISSION
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
               We aim at developing football with the contemporary IT solutions
               using machine learning, blockchain, neural networks, customized
               and user-friendly software which will facilitate the work for
@@ -83,17 +83,17 @@ function Main() {
               The SFootball services are fully customizable, so all the users
               will manage to find what they need.
             </Text>
-            <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
+            <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
               OUR ENERGY
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
               A young team of motivated and charged specialists united by one
               goal.
             </Text>
-            <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
+            <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
               RELIABILITY
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
               SFootball is a well-structured company with over 20 people in
               staff all around the world.
             </Text>
@@ -111,13 +111,13 @@ function Main() {
                 <Image src="/images/1.png" maxW="48%"></Image>
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     SFOOTBALL SOLUTIONS
                   </Text>
-                  <Box mb="36px" fontSize={{ base: "13px", md: "18px" }}>
+                  <Box mb="36px" fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Technical match filming;</p>
                     <p>• Video and advanced statistics;</p>
                     <p>• Detailed post-match reports;</p>
@@ -125,7 +125,7 @@ function Main() {
                     <p>• Player fitness tracking reports;</p>
                     <p>• Raw data delivered in live mode.</p>
                   </Box>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     Services to be launched in the short term:
                     <p>• 24/7 technical support;</p>
                     <p>• Live fitness tracking;</p>
@@ -138,13 +138,13 @@ function Main() {
               <Flex justify="space-between" align="center">
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     SFOOTBALL PLATFORM FOR COACHES
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Video breakdown of own and opponent’s matches;</p>
                     <p>
                       • Various options to review a match: full match video,
@@ -168,15 +168,15 @@ function Main() {
               </Flex>
               <Flex justify="space-between" align="center">
                 <Image src="/images/3.png" maxW="48%"></Image>
-                <Box pl={{ base: "30px", md: "100px" }}>
+                <Box pl={{ base: "30px", lg: "100px" }}>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     SFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>
                       • Filter players by their statistics to find the best
                       candidates;
@@ -194,13 +194,13 @@ function Main() {
               <Flex justify="space-between" align="center">
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     STATISTICAL REPORTS
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Real-time statistical match analysis;</p>
                     <p>• Statistical post-match team and player report;</p>
                     <p>• Team and tournament summary reports;</p>
@@ -214,13 +214,13 @@ function Main() {
                 <Image src="/images/5-1.png" maxW="48%"></Image>
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     PLAYER FITNESS TRACKING REPORTS
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>
                       • Fitness tracking data about your own team as well as the
                       opponents;
@@ -241,13 +241,13 @@ function Main() {
               <Flex justify="space-between" align="center">
                 <Box pr="50px">
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     RAW DATA
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Over 2500 metrics;</p>
                     <p>• Data available in XML and JSON formats;</p>
                     <p>
