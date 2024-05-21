@@ -76,36 +76,35 @@ function Main() {
               Who we are?
             </Text>
             <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
-              SpaceFootball is a new digital project dedicated to set up a
-              football analytics and video analysis system. The project provides
-              a wide range of services covering all possible customer requests,
-              including a video platform, statistical post-match reports, live
-              breakdown with the minimal delay, raw data, player fitness
-              tracking reports, and analytical player reports.
+              SFootball is a new digital project dedicated to set up a football
+              analytics. The project provides a wide range of services covering
+              all possible customer requests, statistical post-match reports,
+              raw data, player fitness tracking reports, and analytical player
+              reports.
             </Text>
             <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
               OUR MISSION
             </Text>
             <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
               We aim at developing football with the contemporary IT solutions
-              using machine learning, neural networks, customized and
-              user-friendly software which will facilitate the work for coaches,
-              analysts as well as journalists and commentators. The
-              SpaceFootball services are fully customizable, so all the users
+              using machine learning, blockchain, neural networks, customized
+              and user-friendly software which will facilitate the work for
+              coaches, analysts, scouts as well as journalists and commentators.
+              The SFootball services are fully customizable, so all the users
               will manage to find what they need.
             </Text>
             <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
-              OUR QUALITY
+              OUR ENERGY
             </Text>
             <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
-              More than 200 experienced ex-InStat employess, own independent
-              production department, own methodology of full Live analysis.
+              A young team of motivated and charged specialists united by one
+              goal.
             </Text>
             <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
               RELIABILITY
             </Text>
             <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
-              SpaceFootball is a well-structured company with over 20 people in
+              SFootball is a well-structured company with over 20 people in
               staff all around the world.
             </Text>
           </Container>
@@ -126,7 +125,7 @@ function Main() {
                     as="b"
                     mb="24px"
                   >
-                    SPACEFOOTBALL SOLUTIONS
+                    SFOOTBALL SOLUTIONS
                   </Text>
                   <Box mb="36px" fontSize={{ base: "13px", md: "18px" }}>
                     <p>• Technical match filming;</p>
@@ -153,7 +152,7 @@ function Main() {
                     as="b"
                     mb="24px"
                   >
-                    SPACEFOOTBALL PLATFORM FOR COACHES
+                    SFOOTBALL PLATFORM FOR COACHES
                   </Text>
                   <Box fontSize={{ base: "13px", md: "18px" }}>
                     <p>• Video breakdown of own and opponent’s matches;</p>
@@ -185,7 +184,7 @@ function Main() {
                     as="b"
                     mb="24px"
                   >
-                    SPACEFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
+                    SFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
                   </Text>
                   <Box fontSize={{ base: "13px", md: "18px" }}>
                     <p>
@@ -302,7 +301,7 @@ function Main() {
                   Contact us
                 </Text>
                 <Text fontSize={{ base: "13px", md: "18px" }} mb="30px">
-                  spacefootball.web3@gmail.com
+                  sfootball.web3@gmail.com
                 </Text>
                 <Text fontSize={{ base: "11px", md: "16px" }} mb="5px">
                   Your email
