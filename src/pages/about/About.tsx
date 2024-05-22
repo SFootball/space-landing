@@ -1,4 +1,4 @@
-import { Flex, Box, Container, Text, Divider } from "@chakra-ui/react";
+import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 
 function About() {
   return (
@@ -192,6 +192,44 @@ function About() {
               Our Investors
             </Text>
             <Divider borderColor="black" mb="90px" />
+            <Flex justify="center" align="start" gap="60px">
+              <Flex
+                align="center"
+                justify="center"
+                w="25%"
+                minH="80px"
+                borderBottom="1px solid black"
+              >
+                <Image src="/logos/DCVC.webp" maxH="60px" />
+              </Flex>
+              <Flex
+                align="center"
+                justify="center"
+                w="25%"
+                minH="80px"
+                borderBottom="1px solid black"
+              >
+                <Image src="/logos/pantera.webp" maxH="60px" />
+              </Flex>
+              <Flex
+                align="center"
+                justify="center"
+                w="25%"
+                minH="80px"
+                borderBottom="1px solid black"
+              >
+                <Image src="/logos/paradigm.webp" maxH="60px" />
+              </Flex>
+              <Flex
+                align="center"
+                justify="center"
+                w="25%"
+                minH="80px"
+                borderBottom="1px solid black"
+              >
+                <Image src="/logos/sequoia.webp" maxH="60px" />
+              </Flex>
+            </Flex>
           </Box>
         </Container>
       </Box>
