@@ -1,14 +1,4 @@
-import {
-  Flex,
-  Box,
-  Container,
-  Text,
-  Input,
-  Textarea,
-  Button,
-  Image,
-  Heading,
-} from "@chakra-ui/react";
+import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 
 export const bgImgURL = "/images/footballer.jpg";
 
@@ -30,7 +20,7 @@ function Main() {
             direction="column"
           >
             <Heading
-              fontSize={{ base: "56px", md: "72px" }}
+              fontSize={{ base: "56px", lg: "72px" }}
               marginBottom="54px"
               fontWeight="bold"
               color="white"
@@ -40,7 +30,7 @@ function Main() {
             </Heading>
             <Box
               color="white"
-              fontSize={{ base: "32px", md: "46px" }}
+              fontSize={{ base: "32px", lg: "46px" }}
               textAlign="center"
             >
               All in one statistical solution
@@ -65,47 +55,46 @@ function Main() {
           <Container
             maxW="760px"
             maxH="1280px"
-            py={{ base: "75px", md: "150px" }}
+            py={{ base: "75px", lg: "150px" }}
           >
             <Text
-              fontSize={{ base: "56px", md: "72px" }}
+              fontSize={{ base: "56px", lg: "72px" }}
               as="b"
               textAlign="center"
               mb="72px"
             >
               Who we are?
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
-              SpaceFootball is a new digital project dedicated to set up a
-              football analytics and video analysis system. The project provides
-              a wide range of services covering all possible customer requests,
-              including a video platform, statistical post-match reports, live
-              breakdown with the minimal delay, raw data, player fitness
-              tracking reports, and analytical player reports.
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
+              SFootball is a new digital project dedicated to set up a football
+              analytics. The project provides a wide range of services covering
+              all possible customer requests, statistical post-match reports,
+              raw data, player fitness tracking reports, and analytical player
+              reports.
             </Text>
-            <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
+            <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
               OUR MISSION
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
               We aim at developing football with the contemporary IT solutions
-              using machine learning, neural networks, customized and
-              user-friendly software which will facilitate the work for coaches,
-              analysts as well as journalists and commentators. The
-              SpaceFootball services are fully customizable, so all the users
+              using machine learning, blockchain, neural networks, customized
+              and user-friendly software which will facilitate the work for
+              coaches, analysts, scouts as well as journalists and commentators.
+              The SFootball services are fully customizable, so all the users
               will manage to find what they need.
             </Text>
-            <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
-              OUR QUALITY
+            <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
+              OUR ENERGY
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
-              More than 200 experienced ex-InStat employess, own independent
-              production department, own methodology of full Live analysis.
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
+              A young team of motivated and charged specialists united by one
+              goal.
             </Text>
-            <Text fontSize={{ base: "18px", md: "26px" }} as="b" mb="36px">
+            <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
               RELIABILITY
             </Text>
-            <Text fontSize={{ base: "14px", md: "20px" }} mb="54px">
-              SpaceFootball is a well-structured company with over 20 people in
+            <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
+              SFootball is a well-structured company with over 20 people in
               staff all around the world.
             </Text>
           </Container>
@@ -122,13 +111,13 @@ function Main() {
                 <Image src="/images/1.png" maxW="48%"></Image>
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
-                    SPACEFOOTBALL SOLUTIONS
+                    SFOOTBALL SOLUTIONS
                   </Text>
-                  <Box mb="36px" fontSize={{ base: "13px", md: "18px" }}>
+                  <Box mb="36px" fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Technical match filming;</p>
                     <p>• Video and advanced statistics;</p>
                     <p>• Detailed post-match reports;</p>
@@ -136,7 +125,7 @@ function Main() {
                     <p>• Player fitness tracking reports;</p>
                     <p>• Raw data delivered in live mode.</p>
                   </Box>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     Services to be launched in the short term:
                     <p>• 24/7 technical support;</p>
                     <p>• Live fitness tracking;</p>
@@ -149,13 +138,13 @@ function Main() {
               <Flex justify="space-between" align="center">
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
-                    SPACEFOOTBALL PLATFORM FOR COACHES
+                    SFOOTBALL PLATFORM FOR COACHES
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Video breakdown of own and opponent’s matches;</p>
                     <p>
                       • Various options to review a match: full match video,
@@ -179,15 +168,15 @@ function Main() {
               </Flex>
               <Flex justify="space-between" align="center">
                 <Image src="/images/3.png" maxW="48%"></Image>
-                <Box pl={{ base: "30px", md: "100px" }}>
+                <Box pl={{ base: "30px", lg: "100px" }}>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
-                    SPACEFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
+                    SFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>
                       • Filter players by their statistics to find the best
                       candidates;
@@ -205,13 +194,13 @@ function Main() {
               <Flex justify="space-between" align="center">
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     STATISTICAL REPORTS
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Real-time statistical match analysis;</p>
                     <p>• Statistical post-match team and player report;</p>
                     <p>• Team and tournament summary reports;</p>
@@ -225,13 +214,13 @@ function Main() {
                 <Image src="/images/5-1.png" maxW="48%"></Image>
                 <Box>
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     PLAYER FITNESS TRACKING REPORTS
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>
                       • Fitness tracking data about your own team as well as the
                       opponents;
@@ -252,13 +241,13 @@ function Main() {
               <Flex justify="space-between" align="center">
                 <Box pr="50px">
                   <Text
-                    fontSize={{ base: "18px", md: "26px" }}
+                    fontSize={{ base: "18px", lg: "26px" }}
                     as="b"
                     mb="24px"
                   >
                     RAW DATA
                   </Text>
-                  <Box fontSize={{ base: "13px", md: "18px" }}>
+                  <Box fontSize={{ base: "13px", lg: "18px" }}>
                     <p>• Over 2500 metrics;</p>
                     <p>• Data available in XML and JSON formats;</p>
                     <p>
@@ -269,85 +258,6 @@ function Main() {
                 </Box>
                 <Image src="/images/5-2.png" maxW="48%"></Image>
               </Flex>
-            </Flex>
-          </Container>
-        </Box>
-        <Box bgColor="white">
-          <Container
-            maxW="1200px"
-            maxH="650px"
-            pt={{ base: "150px", xl: "150px" }}
-          >
-            <Flex
-              direction={{
-                base: "column",
-                md: "row",
-              }}
-              justify="start"
-              pb="150px"
-            >
-              <Image
-                objectFit="cover"
-                transform="scale(1.25)"
-                alignSelf="center"
-                opacity="0.6"
-                mr="8%"
-                src="/images/letter_s.png"
-                maxW="30%"
-                pl="16px"
-                mb="40px"
-              ></Image>
-              <Box flexBasis="460px">
-                <Text fontSize={{ base: "21px", md: "30px" }} as="b">
-                  Contact us
-                </Text>
-                <Text fontSize={{ base: "13px", md: "18px" }} mb="30px">
-                  spacefootball.web3@gmail.com
-                </Text>
-                <Text fontSize={{ base: "11px", md: "16px" }} mb="5px">
-                  Your email
-                </Text>
-                <Input
-                  maxW="460px"
-                  mb="20px"
-                  variant="filled"
-                  placeholder="mail@example.com"
-                  fontSize={{ base: "11px", md: "16px" }}
-                />
-                <Text fontSize={{ base: "11px", md: "16px" }} mb="5px">
-                  Your name
-                </Text>
-                <Input
-                  maxW="460px"
-                  mb="20px"
-                  variant="filled"
-                  placeholder="John Smith"
-                  fontSize={{ base: "11px", md: "16px" }}
-                />
-                <Text fontSize={{ base: "11px", md: "16px" }}>
-                  Your message
-                </Text>
-                <Textarea
-                  maxW="460px"
-                  variant="filled"
-                  placeholder="Write your appeal"
-                  fontSize={{ base: "11px", md: "16px" }}
-                  mb="20px"
-                />
-                <Button
-                  display="block"
-                  color="white"
-                  width="160px"
-                  height="50px"
-                  background="linear-gradient(0.12031726607834739turn, rgba(0, 0, 0, 1) 1%, rgba(0, 95, 174, 1) 72%);"
-                  _hover={{ bgColor: "blue.500", backgroundImage: "none" }}
-                  transition="0.3s ease all"
-                  borderRadius="16px"
-                  fontSize={["sm", "md", "lg", "xl", "xl"]}
-                >
-                  Send
-                </Button>
-              </Box>
             </Flex>
           </Container>
         </Box>
