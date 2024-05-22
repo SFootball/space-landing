@@ -28,7 +28,7 @@ const Footer = () => {
               src="/images/letter_s.png"
               maxW="30%"
               pl="16px"
-            ></Image>
+            />
             <Box flexBasis="460px">
               <Text fontSize={{ base: "21px", sm: "21px", xl: "30px" }} as="b">
                 Contact us
