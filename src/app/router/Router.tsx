@@ -3,10 +3,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import MainPage from "../pages/main/Main";
-import About from "../pages/about/About";
-import Roadmap from "../pages/roadmap/Roadmap";
-import Layout from "../features/Layout";
+import MainPage from "../../pages/main/Main";
+import About from "../../pages/about/About";
+import Roadmap from "../../pages/roadmap/Roadmap";
+import Layout from "../Layout";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
