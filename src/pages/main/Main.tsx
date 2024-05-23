@@ -1,6 +1,6 @@
 import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 
-export const bgImgURL = "/images/footballer.jpg";
+export const bgImgURL = "/images/common/footballer.jpg";
 
 function Main() {
   return (
@@ -108,7 +108,7 @@ function Main() {
           >
             <Flex direction="column" gap="50px">
               <Flex justify="space-between" align="center">
-                <Image src="/images/1.png" maxW="48%"></Image>
+                <Image src="/images/common/1.png" maxW="48%"></Image>
                 <Box>
                   <Text
                     fontSize={{ base: "18px", lg: "26px" }}
@@ -164,10 +164,10 @@ function Main() {
                     <p>• Customizable statistical spreadsheets.</p>
                   </Box>
                 </Box>
-                <Image src="/images/2.png" maxW="48%"></Image>
+                <Image src="/images/common/2.png" maxW="48%"></Image>
               </Flex>
               <Flex justify="space-between" align="center">
-                <Image src="/images/3.png" maxW="48%"></Image>
+                <Image src="/images/common/3.png" maxW="48%"></Image>
                 <Box pl={{ base: "30px", lg: "100px" }}>
                   <Text
                     fontSize={{ base: "18px", lg: "26px" }}
@@ -208,10 +208,10 @@ function Main() {
                     <p>• Data quality control.</p>
                   </Box>
                 </Box>
-                <Image src="/images/4.png" maxW="48%"></Image>
+                <Image src="/images/common/4.png" maxW="48%"></Image>
               </Flex>
               <Flex justify="space-between" align="center">
-                <Image src="/images/5-1.png" maxW="48%"></Image>
+                <Image src="/images/common/5-1.png" maxW="48%"></Image>
                 <Box>
                   <Text
                     fontSize={{ base: "18px", lg: "26px" }}
@@ -256,7 +256,7 @@ function Main() {
                     </p>
                   </Box>
                 </Box>
-                <Image src="/images/5-2.png" maxW="48%"></Image>
+                <Image src="/images/common/5-2.png" maxW="48%"></Image>
               </Flex>
             </Flex>
           </Container>

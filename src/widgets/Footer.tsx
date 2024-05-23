@@ -25,7 +25,7 @@ const Footer = () => {
               alignSelf="center"
               opacity="0.4"
               mr="8%"
-              src="/images/letter_s.png"
+              src="/images/common/letter_s.png"
               maxW="30%"
               pl="16px"
             />
