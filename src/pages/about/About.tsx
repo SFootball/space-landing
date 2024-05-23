@@ -5,14 +5,24 @@ function About() {
     <Box as="main">
       <Box bgColor="gray.100">
         <Container maxW="1200px">
-          <Flex maxH="1200px" py="140px" direction="column" gap="50px">
-            <Flex justifyContent="center" alignItems="center" gap="50px">
+          <Flex
+            maxH="1500px"
+            py={{ base: "90px", lg: "140px" }}
+            direction="column"
+            gap="50px"
+          >
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              justifyContent="center"
+              alignItems="center"
+              gap="50px"
+            >
               <Box
                 h="300px"
                 w="300px"
                 borderRadius="50%"
-                bg={"url('/images/stadium.jpg') no-repeat 0 -70px"}
-                bgSize="cover"
+                bg="url('/images/stadium.jpg') no-repeat 0 -36px"
+                bgSize="300px auto"
                 boxShadow="dark-lg"
                 p="6"
               ></Box>
@@ -27,7 +37,12 @@ function About() {
                 </Text>
               </Box>
             </Flex>
-            <Flex justifyContent="center" alignItems="center" gap="50px">
+            <Flex
+              direction={{ base: "column-reverse", lg: "row" }}
+              justifyContent="center"
+              alignItems="center"
+              gap="50px"
+            >
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
                   Our Products
@@ -42,7 +57,7 @@ function About() {
                 h="300px"
                 w="300px"
                 borderRadius="50%"
-                bg={"url('/images/ball.jpg') no-repeat -190px 0"}
+                bg="url('/images/ball.jpg') no-repeat -190px 0"
                 bgSize="auto 300px"
                 boxShadow="dark-lg"
                 p="6"
@@ -53,14 +68,18 @@ function About() {
       </Box>
       <Box bgColor="white">
         <Container maxW="1000px">
-          <Box maxH="1600px" pt="140px">
-            <Box mb="140px">
+          <Box maxH="1600px" pt={{ base: "90px", lg: "140px" }}>
+            <Box mb={{ base: "90px", lg: "140px" }}>
               <Text fontSize={{ base: "21px", lg: "30px" }} as="b">
                 Management
               </Text>
-              <Divider borderColor="black" mb="90px" />
-              <Flex justify="center" align="start" gap="60px">
-                <Flex direction="column" align="center">
+              <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
+              <Flex justify="center" align="start">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -71,10 +90,18 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Denis</Text>
-                  <Text>Co-Founder, CEO</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Denis
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>
+                    Co-Founder, CEO
+                  </Text>
                 </Flex>
-                <Flex direction="column" align="center">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -85,18 +112,26 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Ildar Nasyrov</Text>
-                  <Text>Co-Founder, CTO</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Ildar Nasyrov
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>
+                    Co-Founder, CTO
+                  </Text>
                 </Flex>
               </Flex>
             </Box>
-            <Box mb="140px">
+            <Box mb={{ base: "90px", lg: "140px" }}>
               <Text fontSize={{ base: "21px", lg: "30px" }} as="b">
                 Core team
               </Text>
-              <Divider borderColor="black" mb="80px" />
+              <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="start" align="start" wrap="wrap" rowGap="60px">
-                <Flex direction="column" align="center" width="25%">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -107,10 +142,16 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Anton Tuktarev</Text>
-                  <Text>Role</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Anton Tuktarev
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
-                <Flex direction="column" align="center" width="25%">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -121,10 +162,16 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Leisan</Text>
-                  <Text>Role</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Leisan
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
-                <Flex direction="column" align="center" width="25%">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -135,10 +182,16 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Zykov Dmitry</Text>
-                  <Text>Role</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Zykov Dmitry
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
-                <Flex direction="column" align="center" width="25%">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -149,10 +202,16 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Alexey Senchenko</Text>
-                  <Text>Role</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Alexey Senchenko
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
-                <Flex direction="column" align="center" width="25%">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -163,10 +222,16 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Danil</Text>
-                  <Text>Role</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Danil
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
-                <Flex direction="column" align="center" width="25%">
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
                   <Box
                     h="120px"
                     w="120px"
@@ -177,8 +242,32 @@ function About() {
                     p="6"
                     mb="16px"
                   ></Box>
-                  <Text as="b">Ali Baybutov</Text>
-                  <Text>Frontend Developer</Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Ali Baybutov
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>
+                    Frontend Developer
+                  </Text>
+                </Flex>
+                <Flex
+                  direction="column"
+                  align="center"
+                  width={{ base: "50%", lg: "25%" }}
+                >
+                  <Box
+                    h="120px"
+                    w="120px"
+                    borderRadius="50%"
+                    bg={"url('/avatars/karina_kanchurina.jpg') no-repeat 0 0"}
+                    bgSize="auto 120px"
+                    boxShadow="dark-lg"
+                    p="6"
+                    mb="16px"
+                  ></Box>
+                  <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
+                    Karina Kanchurina
+                  </Text>
+                  <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
               </Flex>
             </Box>
@@ -187,11 +276,11 @@ function About() {
       </Box>
       <Box bgColor="gray.100">
         <Container maxW="1000px">
-          <Box maxH="1200px" py="140px">
+          <Box maxH="1200px" py={{ base: "90px", lg: "140px" }}>
             <Text fontSize={{ base: "21px", lg: "30px" }} as="b">
               Our Investors
             </Text>
-            <Divider borderColor="black" mb="90px" />
+            <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
             <Flex justify="center" align="start" gap="60px">
               <Flex
                 align="center"
