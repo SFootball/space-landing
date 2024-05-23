@@ -21,7 +21,7 @@ function About() {
                 h="300px"
                 w="300px"
                 borderRadius="50%"
-                bg="url('/images/stadium.jpg') no-repeat 0 -36px"
+                bg="url('/images/common/stadium.jpg') no-repeat 0 -36px"
                 bgSize="300px auto"
                 boxShadow="dark-lg"
                 p="6"
@@ -57,7 +57,7 @@ function About() {
                 h="300px"
                 w="300px"
                 borderRadius="50%"
-                bg="url('/images/ball.jpg') no-repeat -190px 0"
+                bg="url('/images/common/ball.jpg') no-repeat -190px 0"
                 bgSize="auto 300px"
                 boxShadow="dark-lg"
                 p="6"
@@ -84,7 +84,9 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/denis_yunusov.jpg') no-repeat -26px 0"}
+                    bg={
+                      "url('/images/avatars/denis_yunusov.jpg') no-repeat -44px 0"
+                    }
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -106,7 +108,7 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/ildar_nasyrov.jpeg') no-repeat"}
+                    bg={"url('/images/avatars/ildar_nasyrov.jpeg') no-repeat"}
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -136,7 +138,9 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/tuktarev_anton.jpg') no-repeat"}
+                    bg={
+                      "url('/images/avatars/tuktarev_anton.jpg') no-repeat -42px 0"
+                    }
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -176,7 +180,7 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/zykov_dmitry.jpg') no-repeat"}
+                    bg={"url('/images/avatars/zykov_dmitry.jpg') no-repeat"}
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -196,7 +200,7 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/alexey_senchenko.jpg') no-repeat"}
+                    bg={"url('/images/avatars/alexey_senchenko.jpg') no-repeat"}
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -216,7 +220,7 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/danil.jpg') no-repeat"}
+                    bg={"url('/images/avatars/danil.jpg') no-repeat"}
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -236,7 +240,9 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/ali_baybutov.jpg') no-repeat -40px 0"}
+                    bg={
+                      "url('/images/avatars/ali_baybutov.jpg') no-repeat -40px 0"
+                    }
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -258,7 +264,9 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg={"url('/avatars/karina_kanchurina.jpg') no-repeat 0 0"}
+                    bg={
+                      "url('/images/avatars/karina_kanchurina.jpg') no-repeat -46px 0"
+                    }
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
@@ -289,7 +297,7 @@ function About() {
                 minH="80px"
                 borderBottom="1px solid black"
               >
-                <Image src="/logos/DCVC.webp" maxH="60px" />
+                <Image src="/images/logos/DCVC.webp" maxH="60px" />
               </Flex>
               <Flex
                 align="center"
@@ -298,7 +306,7 @@ function About() {
                 minH="80px"
                 borderBottom="1px solid black"
               >
-                <Image src="/logos/pantera.webp" maxH="60px" />
+                <Image src="/images/logos/pantera.webp" maxH="60px" />
               </Flex>
               <Flex
                 align="center"
@@ -307,7 +315,7 @@ function About() {
                 minH="80px"
                 borderBottom="1px solid black"
               >
-                <Image src="/logos/paradigm.webp" maxH="60px" />
+                <Image src="/images/logos/paradigm.webp" maxH="60px" />
               </Flex>
               <Flex
                 align="center"
@@ -316,7 +324,7 @@ function About() {
                 minH="80px"
                 borderBottom="1px solid black"
               >
-                <Image src="/logos/sequoia.webp" maxH="60px" />
+                <Image src="/images/logos/sequoia.webp" maxH="60px" />
               </Flex>
             </Flex>
           </Box>

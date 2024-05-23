@@ -7,7 +7,7 @@ const Header = () => {
       <Container maxW="1200px">
         <Flex h="110px" alignItems="center" justify="space-between">
           <Link to="/">
-            <Image src="/images/logo.png" maxW="50%" />
+            <Image src="/images/logos/logo.png" maxW="50%" />
           </Link>
           <HStack spacing="16px">
             {/* TODO need to create about page <Link to="/about">About</Link> */}
