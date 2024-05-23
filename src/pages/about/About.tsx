@@ -84,14 +84,14 @@ function About() {
                     h="120px"
                     w="120px"
                     borderRadius="50%"
-                    bg="gray.100"
+                    bg={"url('/avatars/denis_yunusov.jpg') no-repeat -26px 0"}
                     bgSize="auto 120px"
                     boxShadow="dark-lg"
                     p="6"
                     mb="16px"
                   ></Box>
                   <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
-                    Denis
+                    Denis Yunusov
                   </Text>
                   <Text fontSize={{ base: "13px", lg: "18px" }}>
                     Co-Founder, CEO
