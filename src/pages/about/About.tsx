@@ -187,7 +187,7 @@ function About() {
                     mb="16px"
                   ></Box>
                   <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
-                    Zykov Dmitry
+                    Dmitry Zykov
                   </Text>
                   <Text fontSize={{ base: "13px", lg: "18px" }}>Role</Text>
                 </Flex>
