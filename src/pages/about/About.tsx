@@ -1,5 +1,8 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 
+const stadiumImgURL = "/images/common/stadium.jpg";
+const ballImgURL = "/images/common/ball.jpg";
+
 function About() {
   const management = [
     {
@@ -72,7 +75,7 @@ function About() {
                 h="300px"
                 w="300px"
                 borderRadius="50%"
-                bg="url('/images/common/stadium.jpg') no-repeat 0 -36px"
+                bg={`url('${stadiumImgURL}') no-repeat 0 -36px`}
                 bgSize="300px auto"
                 boxShadow="dark-lg"
                 p="6"
@@ -108,7 +111,7 @@ function About() {
                 h="300px"
                 w="300px"
                 borderRadius="50%"
-                bg="url('/images/common/ball.jpg') no-repeat -190px 0"
+                bg={`url('${ballImgURL}') no-repeat -190px 0`}
                 bgSize="auto 300px"
                 boxShadow="dark-lg"
                 p="6"
