@@ -1,6 +1,12 @@
 import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 
 export const bgImgURL = "/images/common/footballer.jpg";
+const laptopImgURL_1 = "/images/common/1.png";
+const laptopImgURL_2 = "/images/common/2.png";
+const laptopImgURL_3 = "/images/common/3.png";
+const laptopImgURL_4 = "/images/common/4.png";
+const dataImgURL_1 = "/images/common/5-1.png";
+const dataImgURL_2 = "/images/common/5-2.png";
 
 function Main() {
   return (
@@ -108,7 +114,7 @@ function Main() {
           >
             <Flex direction="column" gap="50px">
               <Flex justify="space-between" align="center">
-                <Image src="/images/common/1.png" maxW="48%"></Image>
+                <Image src={laptopImgURL_1} maxW="48%"></Image>
                 <Box>
                   <Text
                     fontSize={{ base: "18px", lg: "26px" }}
@@ -164,10 +170,10 @@ function Main() {
                     <p>• Customizable statistical spreadsheets.</p>
                   </Box>
                 </Box>
-                <Image src="/images/common/2.png" maxW="48%"></Image>
+                <Image src={laptopImgURL_2} maxW="48%"></Image>
               </Flex>
               <Flex justify="space-between" align="center">
-                <Image src="/images/common/3.png" maxW="48%"></Image>
+                <Image src={laptopImgURL_3} maxW="48%"></Image>
                 <Box pl={{ base: "30px", lg: "100px" }}>
                   <Text
                     fontSize={{ base: "18px", lg: "26px" }}
@@ -208,10 +214,10 @@ function Main() {
                     <p>• Data quality control.</p>
                   </Box>
                 </Box>
-                <Image src="/images/common/4.png" maxW="48%"></Image>
+                <Image src={laptopImgURL_4} maxW="48%"></Image>
               </Flex>
               <Flex justify="space-between" align="center">
-                <Image src="/images/common/5-1.png" maxW="48%"></Image>
+                <Image src={dataImgURL_1} maxW="48%"></Image>
                 <Box>
                   <Text
                     fontSize={{ base: "18px", lg: "26px" }}
@@ -256,7 +262,7 @@ function Main() {
                     </p>
                   </Box>
                 </Box>
-                <Image src="/images/common/5-2.png" maxW="48%"></Image>
+                <Image src={dataImgURL_2} maxW="48%"></Image>
               </Flex>
             </Flex>
           </Container>

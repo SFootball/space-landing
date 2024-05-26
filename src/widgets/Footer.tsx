@@ -1,12 +1,12 @@
 import {
-  Flex,
+  // Flex,
   Box,
   Container,
-  Text,
-  Input,
-  Textarea,
-  Button,
-  Image,
+  // Text,
+  // Input,
+  // Textarea,
+  // Button,
+  // Image,
 } from "@chakra-ui/react";
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
           maxH="650px"
           pt={{ base: "150px", xl: "150px" }}
         >
-          <Flex justify="start" pb="150px">
+          {/* TODO need to change footer layout <Flex justify="start" pb="150px">
             <Image
               objectFit="cover"
               transform="scale(1.25)"
@@ -88,7 +88,7 @@ const Footer = () => {
                 Send
               </Button>
             </Box>
-          </Flex>
+          </Flex> */}
         </Container>
       </Box>
     </>
