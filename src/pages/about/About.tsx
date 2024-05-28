@@ -65,7 +65,7 @@ function About() {
       <Box bgColor="gray.100">
         <Container maxW="1200px">
           <Flex
-            maxH="2000px"
+            maxH="2500px"
             py={{ base: "90px", lg: "140px" }}
             direction="column"
             gap="50px"
