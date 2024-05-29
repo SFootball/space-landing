@@ -1,9 +1,14 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 const stadiumImgURL = "/images/common/stadium.jpg";
 const ballImgURL = "/images/common/ball.jpg";
+const matchImgURL = "/images/common/match.jpg";
+const scautImgURL = "/images/common/scaut.svg";
 
 function About() {
+  const { t } = useTranslation();
+
   const management = [
     {
       name: "Denis Yunusov",
@@ -45,7 +50,7 @@ function About() {
     },
     {
       name: "Ali Baybutov",
-      position: "Position",
+      position: "Frontend Developer",
       bg: "url('/images/avatars/ali_baybutov.jpg') no-repeat -40px 0",
     },
     {
@@ -60,7 +65,7 @@ function About() {
       <Box bgColor="gray.100">
         <Container maxW="1200px">
           <Flex
-            maxH="1500px"
+            maxH="2500px"
             py={{ base: "90px", lg: "140px" }}
             direction="column"
             gap="50px"
@@ -82,12 +87,10 @@ function About() {
               />
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
-                  Who are we?
+                  {t("about.aboutHeading")}
                 </Text>
                 <Text fontSize={{ base: "14px", lg: "20px" }}>
-                  SFootball develops STARK-based solutions for the blockchain
-                  industry. Our products facilitate secure, trustless, and
-                  scalable blockchain applications.
+                  {t("about.aboutInfo")}
                 </Text>
               </Box>
             </Flex>
@@ -99,12 +102,10 @@ function About() {
             >
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
-                  Our Products
+                  {t("about.mission")}
                 </Text>
                 <Text fontSize={{ base: "14px", lg: "20px" }}>
-                  SFootball develops StarkEx, a standalone permissioned
-                  Validity-Rollup, and Starknet, a permissionless decentralized
-                  ZK-Rollup.
+                  {t("about.missionDesk")}
                 </Text>
               </Box>
               <Box
@@ -112,6 +113,55 @@ function About() {
                 w="300px"
                 borderRadius="50%"
                 bg={`url('${ballImgURL}') no-repeat -190px 0`}
+                bgSize="auto 300px"
+                boxShadow="dark-lg"
+                p="6"
+              />
+            </Flex>
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              justifyContent="center"
+              alignItems="center"
+              gap="50px"
+            >
+              <Box
+                h="300px"
+                w="300px"
+                borderRadius="50%"
+                bg={`url('${matchImgURL}') no-repeat -60px 0`}
+                bgSize="auto 300px"
+                boxShadow="dark-lg"
+                p="6"
+              />
+              <Box maxW="600px">
+                <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
+                  {t("about.howItWork")}
+                </Text>
+                <Text fontSize={{ base: "14px", lg: "20px" }}>
+                  {t("about.howItWorkInfo")}
+                  <Text as="b">{t("about.nftInfo")}</Text>
+                </Text>
+              </Box>
+            </Flex>
+            <Flex
+              direction={{ base: "column-reverse", lg: "row" }}
+              justifyContent="center"
+              alignItems="center"
+              gap="50px"
+            >
+              <Box maxW="600px">
+                <Text fontSize={{ base: "14px", lg: "20px" }}>
+                  <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
+                    {t("about.notPlayer")}
+                  </Text>
+                  {t("about.notPlayerInfo")}
+                </Text>
+              </Box>
+              <Box
+                h="300px"
+                w="300px"
+                borderRadius="50%"
+                bg={`url('${scautImgURL}') no-repeat -18px 0`}
                 bgSize="auto 300px"
                 boxShadow="dark-lg"
                 p="6"
@@ -125,7 +175,7 @@ function About() {
           <Box maxH="1600px" pt={{ base: "90px", lg: "140px" }}>
             <Box mb={{ base: "90px", lg: "140px" }}>
               <Text fontSize={{ base: "21px", lg: "30px" }} as="b">
-                Management
+                {t("about.Management")}
               </Text>
               <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="center" align="start">
@@ -146,10 +196,14 @@ function About() {
                       mb="16px"
                     />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
-                      {person.name}
+                      {t(`about.${person.name}`)}
                     </Text>
-                    <Text fontSize={{ base: "13px", lg: "18px" }}>
-                      {person.position}
+                    <Text
+                      textAlign="center"
+                      fontSize={{ base: "13px", lg: "18px" }}
+                      px="10px"
+                    >
+                      {t(`about.${person.position}`)}
                     </Text>
                   </Flex>
                 ))}
@@ -157,7 +211,7 @@ function About() {
             </Box>
             <Box mb={{ base: "90px", lg: "140px" }}>
               <Text fontSize={{ base: "21px", lg: "30px" }} as="b">
-                Core team
+                {t("about.Core team")}
               </Text>
               <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="start" align="start" wrap="wrap" rowGap="60px">
@@ -178,10 +232,10 @@ function About() {
                       mb="16px"
                     />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
-                      {person.name}
+                      {t(`about.${person.name}`)}
                     </Text>
                     <Text fontSize={{ base: "13px", lg: "18px" }}>
-                      {person.position}
+                      {t(`about.${person.position}`)}
                     </Text>
                   </Flex>
                 ))}
@@ -194,7 +248,7 @@ function About() {
         <Container maxW="1000px">
           <Box maxH="1200px" py={{ base: "90px", lg: "140px" }}>
             <Text fontSize={{ base: "21px", lg: "30px" }} as="b">
-              Our Investors
+              {t("about.Our Investors")}
             </Text>
             <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
             <Flex justify="center" align="start" gap="60px">
