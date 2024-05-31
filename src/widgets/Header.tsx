@@ -1,5 +1,6 @@
 import { Flex, Box, Container, Image, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import Menu from "../app/Menu";
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
             {/* TODO need to create about page <Link to="/about">About</Link> */}
             {/* TODO need to create roadmap page <Link to="/roadmap">Roadmap</Link> */}
           </HStack>
+          <Menu />
         </Flex>
       </Container>
     </Box>
