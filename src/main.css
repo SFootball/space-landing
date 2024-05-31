@@ -1,26 +1,74 @@
-nav {
-  height: 110px;
-  /* position: absolute;
-  top: 0;
-  left: 1394px;
-  bottom: 0; */
-  position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  width: 300px;
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
-button {
-  background-color: #325aba !important;
-  outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+@media (max-width: 767px) {
+  button {
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: calc(100vw - 65px);
+    top: 30px;
+  }
+
+  ul {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  button {
+    background-color: #325aba !important;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  ul {
+    position: absolute;
+    top: 0px;
+    right: 30%;
+    width: 230px;
+    height: 110px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #325aba;
 }
 
 svg {
@@ -31,42 +79,6 @@ svg {
   height: 23px;
 }
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  padding: 25px;
-  position: absolute;
-  top: 0px;
-  right: 500px;
-  width: 230px;
-  height: 110px;
-  display: flex;
-  align-items: center;
-}
-
-li {
-  list-style: none;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-/* .icon-placeholder {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  flex: 40px 0;
-  margin-right: 20px;
-} */
-
-.text-placeholder {
-  border-radius: 5px;
-  width: 100px;
-  height: 20px;
-  flex: 1;
+.link {
+  max-width: 150px;
 }

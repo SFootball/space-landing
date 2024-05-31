@@ -10,14 +10,24 @@ const variants = {
   },
 };
 
-const Navigation = () => (
+const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => (
   <motion.ul variants={variants}>
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+    {links.map(({ path, name }, i) => (
+      <MenuItem path={path} name={name} key={i} toggle={toggle} />
     ))}
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
+const links = [
+  {
+    path: "/about",
+    name: "About",
+  },
+  // TODO roadmap page
+  // {
+  //   path: "/roadmap",
+  //   name: "Roadmap",
+  // },
+];
 
 export default Navigation;

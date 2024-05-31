@@ -1,6 +1,5 @@
 import * as React from "react";
 import { SVGMotionProps, motion } from "framer-motion";
-import { JSX } from "react/jsx-runtime";
 
 const Path = (
   props: JSX.IntrinsicAttributes &
