@@ -11,7 +11,7 @@ const variants = {
 };
 
 const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => (
-  <motion.ul variants={variants}>
+  <motion.ul className="nav-list" variants={variants}>
     {links.map(({ path, name }, i) => (
       <MenuItem path={path} name={name} key={i} toggle={toggle} />
     ))}
