@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./app/router/Router";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
+import "./main.css";
 
 function App() {
   return (
