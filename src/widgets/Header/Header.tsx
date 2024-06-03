@@ -1,7 +1,7 @@
 import { Flex, Box, Container, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import MenuForMdScreen from "../app/MenuForMdScreen";
-import MenuForMobScreen from "../app/MenuForMobScreen";
+import MenuForMdScreen from "./MenuForMdScreen";
+import MenuForMobScreen from "./MenuForMobScreen";
 
 const Header = () => {
   return (
