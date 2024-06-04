@@ -2,12 +2,17 @@ import {
   // Flex,
   Box,
   Container,
-  // Text,
+  Flex,
+  Text,
   // Input,
   // Textarea,
   // Button,
-  // Image,
+  Image,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { FaTelegram, FaDiscord } from "react-icons/fa";
+
+const logoSrc = "/images/logos/logo.png";
 
 const Footer = () => {
   return (
@@ -15,81 +20,58 @@ const Footer = () => {
       <Box bgColor="white">
         <Container
           maxW="1200px"
-          maxH="650px"
-          pt={{ base: "150px", xl: "150px" }}
+          minH="440px"
+          py={{ base: "100px", xl: "100px" }}
+          px={{ base: "60px", xl: "60px" }}
         >
-          {/* TODO need to change footer layout <Flex justify="start" pb="150px">
-            <Image
-              objectFit="cover"
-              transform="scale(1.25)"
-              alignSelf="center"
-              opacity="0.4"
-              mr="8%"
-              src="/images/common/letter_s.png"
-              maxW="30%"
-              pl="16px"
-            />
-            <Box flexBasis="460px">
-              <Text fontSize={{ base: "21px", sm: "21px", xl: "30px" }} as="b">
-                Contact us
+          <Flex
+            direction={{ base: "column", xl: "row" }}
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Link className="logo-footer" to="/">
+              <Image src={logoSrc} />
+            </Link>
+            <Flex
+              direction="column"
+              alignItems={{ base: "center", lg: "end" }}
+              gap="20px"
+            >
+              <Text as="b" fontSize={{ base: "24px" }} alignSelf="center">
+                Follow us
               </Text>
-              <Text
-                fontSize={{ base: "13px", sm: "13px", xl: "18px" }}
-                mb="30px"
+              <Flex
+                align="center"
+                justify="space-between"
+                gap="14px"
+                maxWidth="260px"
+                wrap="wrap"
               >
-                spacefootball.web3@gmail.com
-              </Text>
-              <Text
-                fontSize={{ base: "11px", sm: "11px", xl: "16px" }}
-                mb="5px"
-              >
-                Your email
-              </Text>
-              <Input
-                maxW="460px"
-                mb="20px"
-                variant="filled"
-                placeholder="mail@example.com"
-                fontSize={{ base: "11px", sm: "11px", xl: "16px" }}
-              />
-              <Text
-                fontSize={{ base: "11px", sm: "11px", xl: "16px" }}
-                mb="5px"
-              >
-                Your name
-              </Text>
-              <Input
-                maxW="460px"
-                mb="20px"
-                variant="filled"
-                placeholder="John Smith"
-                fontSize={{ base: "11px", sm: "11px", xl: "16px" }}
-              />
-              <Text fontSize={{ base: "11px", sm: "11px", xl: "16px" }}>
-                Your message
-              </Text>
-              <Textarea
-                maxW="460px"
-                variant="filled"
-                placeholder="Write your appeal"
-                fontSize={{ base: "11px", sm: "11px", xl: "16px" }}
-                mb="20px"
-              />
-              <Button
-                color="white"
-                width="160px"
-                height="50px"
-                background="linear-gradient(0.12031726607834739turn, rgba(0, 0, 0, 1) 1%, rgba(0, 95, 174, 1) 72%);"
-                _hover={{ bgColor: "blue.500", backgroundImage: "none" }}
-                transition="0.3s ease all"
-                borderRadius="16px"
-                fontSize={["sm", "md", "lg", "xl", "2xl"]}
-              >
-                Send
-              </Button>
-            </Box>
-          </Flex> */}
+                <Text fontSize={{ base: "18px" }}>{"Telegram bot: "}</Text>
+                <Link to="https://t.me/space_football_bot">
+                  <FaTelegram className="social-icon tg-bot-icon" />
+                </Link>
+                <Text fontSize={{ base: "18px" }}>{"Telegram channel: "}</Text>
+                <Link to="https://t.me/SFootballEN">
+                  <FaTelegram className="social-icon tg-en-icon" />
+                </Link>
+                <Text fontSize={{ base: "18px" }}>
+                  {"Telegram ru channel: "}
+                </Text>
+                <Link to="https://t.me/SFootballSpace">
+                  <FaTelegram className="social-icon tg-ru-icon" />
+                </Link>
+                <Text fontSize={{ base: "18px" }}>{"Discord: "}</Text>
+                <Link to="https://discord.com/invite/MNf6j9Hq">
+                  <FaDiscord className="social-icon discord-icon" />
+                </Link>
+              </Flex>
+            </Flex>
+          </Flex>
         </Container>
+        <Text margin="0 auto" textAlign="center" pb="30px">
+          &#169; 2024 All Rights Reserved
+        </Text>
       </Box>
     </>
   );
