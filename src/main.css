@@ -116,3 +116,12 @@ li {
 .tg-ru-icon:hover {
   fill: red;
 }
+
+/* Styles to fix background problem on ios */
+
+.main-bg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+}
