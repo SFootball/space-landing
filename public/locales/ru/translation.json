@@ -92,5 +92,13 @@
     "John Smith": "Иван Иванов",
     "Write your appeal": "Напишите Ваше обращение",
     "Send": "Отправить"
+  },
+  "footer": {
+    "Follow us": "Подписывайтесь на нас",
+    "Telegram bot": "Телеграм бот",
+    "Telegram channel": "Телеграм канал",
+    "Telegram ru channel": "Телеграм канал ру",
+    "Discord": "Дискорд",
+    "2024 All Rights Reserved": "2024 все права защищены"
   }
 }
