@@ -5,7 +5,7 @@ li {
 }
 
 @media (max-width: 767px) {
-  button {
+  .nav_menu_button {
     position: absolute;
     outline: none;
     cursor: pointer;
@@ -16,7 +16,7 @@ li {
     top: 30px;
   }
 
-  ul {
+  .nav-list {
     position: absolute;
     top: 110px;
     right: 0;
@@ -27,7 +27,7 @@ li {
     color: white;
   }
 
-  li {
+  .nav-item {
     list-style: none;
     margin-bottom: 20px;
     cursor: pointer;
@@ -35,7 +35,7 @@ li {
 }
 
 @media (min-width: 768px) {
-  button {
+  .nav_menu_button {
     background-color: #325aba !important;
     outline: none;
     cursor: pointer;
@@ -44,7 +44,7 @@ li {
     border-radius: 50%;
   }
 
-  ul {
+  .nav-list {
     position: absolute;
     top: 0px;
     right: 30%;
@@ -55,7 +55,7 @@ li {
     align-items: center;
   }
 
-  li {
+  .nav-item {
     list-style: none;
     margin-right: 20px;
     cursor: pointer;
@@ -71,7 +71,7 @@ li {
   background: #325aba;
 }
 
-svg {
+.menu-icon {
   position: relative;
   top: 2px;
   left: 14px;
@@ -81,4 +81,38 @@ svg {
 
 .link {
   max-width: 150px;
+}
+
+.logo-footer {
+  max-width: 240px;
+  margin-bottom: 40px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.discord-icon:hover {
+  fill: red;
+}
+
+.tg-bot-icon:hover {
+  fill: red;
+}
+
+.tg-bot-icon {
+  fill: #c944fd;
+}
+
+.tg-en-icon:hover {
+  fill: red;
+}
+
+.tg-ru-icon {
+  fill: blue;
+}
+
+.tg-ru-icon:hover {
+  fill: red;
 }

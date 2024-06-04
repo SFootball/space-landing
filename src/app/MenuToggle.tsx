@@ -16,8 +16,8 @@ const Path = (
 );
 
 const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
-  <button onClick={toggle}>
-    <svg height="23px" width="23px" viewBox="0 0 23 23">
+  <button className="nav_menu_button" onClick={toggle}>
+    <svg className="menu-icon" height="23px" width="23px" viewBox="0 0 23 23">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
