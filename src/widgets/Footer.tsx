@@ -1,20 +1,13 @@
-import {
-  // Flex,
-  Box,
-  Container,
-  Flex,
-  Text,
-  // Input,
-  // Textarea,
-  // Button,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Text, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FaTelegram, FaDiscord } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const logoSrc = "/images/logos/logo.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Box bgColor="white">
@@ -38,7 +31,7 @@ const Footer = () => {
               gap="20px"
             >
               <Text as="b" fontSize={{ base: "24px" }} alignSelf="center">
-                Follow us
+                {t("footer.Follow us")}
               </Text>
               <Flex
                 align="center"
@@ -47,21 +40,25 @@ const Footer = () => {
                 maxWidth="260px"
                 wrap="wrap"
               >
-                <Text fontSize={{ base: "18px" }}>{"Telegram bot: "}</Text>
+                <Text fontSize={{ base: "18px" }}>
+                  {t("footer.Telegram bot")}:
+                </Text>
                 <Link to="https://t.me/space_football_bot">
                   <FaTelegram className="social-icon tg-bot-icon" />
                 </Link>
-                <Text fontSize={{ base: "18px" }}>{"Telegram channel: "}</Text>
+                <Text fontSize={{ base: "18px" }}>
+                  {t("footer.Telegram channel")}:
+                </Text>
                 <Link to="https://t.me/SFootballEN">
                   <FaTelegram className="social-icon tg-en-icon" />
                 </Link>
                 <Text fontSize={{ base: "18px" }}>
-                  {"Telegram ru channel: "}
+                  {t("footer.Telegram ru channel")}:
                 </Text>
                 <Link to="https://t.me/SFootballSpace">
                   <FaTelegram className="social-icon tg-ru-icon" />
                 </Link>
-                <Text fontSize={{ base: "18px" }}>{"Discord: "}</Text>
+                <Text fontSize={{ base: "18px" }}>{t("footer.Discord")}:</Text>
                 <Link to="https://discord.com/invite/MNf6j9Hq">
                   <FaDiscord className="social-icon discord-icon" />
                 </Link>
@@ -70,7 +67,7 @@ const Footer = () => {
           </Flex>
         </Container>
         <Text margin="0 auto" textAlign="center" pb="30px">
-          &#169; 2024 All Rights Reserved
+          &#169; {t("footer.2024 All Rights Reserved")}
         </Text>
       </Box>
     </>
