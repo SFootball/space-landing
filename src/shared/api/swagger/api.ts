@@ -114,87 +114,6 @@ export interface DeleteTaskParamsSchema {
 /**
  * 
  * @export
- * @interface GenerateTonproofPayloadSchema
- */
-export interface GenerateTonproofPayloadSchema {
-    /**
-     * 
-     * @type {string}
-     * @memberof GenerateTonproofPayloadSchema
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GenerateTonproofPayloadSchema
-     */
-    'network'?: string;
-    /**
-     * 
-     * @type {GenerateTonproofPayloadSchemaProof}
-     * @memberof GenerateTonproofPayloadSchema
-     */
-    'proof'?: GenerateTonproofPayloadSchemaProof;
-}
-/**
- * 
- * @export
- * @interface GenerateTonproofPayloadSchemaProof
- */
-export interface GenerateTonproofPayloadSchemaProof {
-    /**
-     * 
-     * @type {GenerateTonproofPayloadSchemaProofDomain}
-     * @memberof GenerateTonproofPayloadSchemaProof
-     */
-    'domain'?: GenerateTonproofPayloadSchemaProofDomain;
-    /**
-     * 
-     * @type {string}
-     * @memberof GenerateTonproofPayloadSchemaProof
-     */
-    'payload'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GenerateTonproofPayloadSchemaProof
-     */
-    'signature'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GenerateTonproofPayloadSchemaProof
-     */
-    'state_init'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GenerateTonproofPayloadSchemaProof
-     */
-    'timestamp'?: number;
-}
-/**
- * 
- * @export
- * @interface GenerateTonproofPayloadSchemaProofDomain
- */
-export interface GenerateTonproofPayloadSchemaProofDomain {
-    /**
-     * 
-     * @type {number}
-     * @memberof GenerateTonproofPayloadSchemaProofDomain
-     */
-    'lengthBytes'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof GenerateTonproofPayloadSchemaProofDomain
-     */
-    'value'?: string;
-}
-/**
- * 
- * @export
  * @interface PlayerSchema
  */
 export interface PlayerSchema {
@@ -347,6 +266,100 @@ export interface TaskSchema {
      * @memberof TaskSchema
      */
     'updated_at'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TonproofCheckPayloadBodySchema
+ */
+export interface TonproofCheckPayloadBodySchema {
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadBodySchema
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadBodySchema
+     */
+    'network'?: string;
+    /**
+     * 
+     * @type {TonproofCheckPayloadBodySchemaProof}
+     * @memberof TonproofCheckPayloadBodySchema
+     */
+    'proof'?: TonproofCheckPayloadBodySchemaProof;
+}
+/**
+ * 
+ * @export
+ * @interface TonproofCheckPayloadBodySchemaProof
+ */
+export interface TonproofCheckPayloadBodySchemaProof {
+    /**
+     * 
+     * @type {TonproofCheckPayloadBodySchemaProofDomain}
+     * @memberof TonproofCheckPayloadBodySchemaProof
+     */
+    'domain'?: TonproofCheckPayloadBodySchemaProofDomain;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadBodySchemaProof
+     */
+    'payload'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadBodySchemaProof
+     */
+    'signature'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadBodySchemaProof
+     */
+    'state_init'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof TonproofCheckPayloadBodySchemaProof
+     */
+    'timestamp'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface TonproofCheckPayloadBodySchemaProofDomain
+ */
+export interface TonproofCheckPayloadBodySchemaProofDomain {
+    /**
+     * 
+     * @type {number}
+     * @memberof TonproofCheckPayloadBodySchemaProofDomain
+     */
+    'lengthBytes'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadBodySchemaProofDomain
+     */
+    'value'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TonproofGeneratePayloadResponseSchema
+ */
+export interface TonproofGeneratePayloadResponseSchema {
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGeneratePayloadResponseSchema
+     */
+    'payload'?: string;
 }
 /**
  * 
@@ -541,12 +554,12 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
     return {
         /**
          * 
-         * @param {GenerateTonproofPayloadSchema} [generateTonproofPayloadSchema]  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
+         * @param {TonproofCheckPayloadBodySchema} [tonproofCheckPayloadBodySchema]  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthTonproofGeneratePayloadPost: async (generateTonproofPayloadSchema?: GenerateTonproofPayloadSchema, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/auth/tonproof/generate-payload`;
+        apiAuthTonproofCheckPayloadPost: async (tonproofCheckPayloadBodySchema?: TonproofCheckPayloadBodySchema, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/tonproof/check-payload`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -565,7 +578,36 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(generateTonproofPayloadSchema, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(tonproofCheckPayloadBodySchema, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthTonproofGeneratePayloadPost: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/tonproof/generate-payload`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -584,12 +626,23 @@ export const AuthApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {GenerateTonproofPayloadSchema} [generateTonproofPayloadSchema]  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
+         * @param {TonproofCheckPayloadBodySchema} [tonproofCheckPayloadBodySchema]  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthTonproofGeneratePayloadPost(generateTonproofPayloadSchema?: GenerateTonproofPayloadSchema, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TonproofPayloadResponseSchema>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthTonproofGeneratePayloadPost(generateTonproofPayloadSchema, options);
+        async apiAuthTonproofCheckPayloadPost(tonproofCheckPayloadBodySchema?: TonproofCheckPayloadBodySchema, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GenerateTonproofCheckPayloadSchema>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthTonproofCheckPayloadPost(tonproofCheckPayloadBodySchema, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.apiAuthTonproofCheckPayloadPost']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthTonproofGeneratePayloadPost(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TonproofGeneratePayloadResponseSchema>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthTonproofGeneratePayloadPost(options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['AuthApi.apiAuthTonproofGeneratePayloadPost']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -606,28 +659,36 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
     return {
         /**
          * 
-         * @param {AuthApiApiAuthTonproofGeneratePayloadPostRequest} requestParameters Request parameters.
+         * @param {AuthApiApiAuthTonproofCheckPayloadPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthTonproofGeneratePayloadPost(requestParameters: AuthApiApiAuthTonproofGeneratePayloadPostRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<TonproofPayloadResponseSchema> {
-            return localVarFp.apiAuthTonproofGeneratePayloadPost(requestParameters.generateTonproofPayloadSchema, options).then((request) => request(axios, basePath));
+        apiAuthTonproofCheckPayloadPost(requestParameters: AuthApiApiAuthTonproofCheckPayloadPostRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<GenerateTonproofCheckPayloadSchema> {
+            return localVarFp.apiAuthTonproofCheckPayloadPost(requestParameters.tonproofCheckPayloadBodySchema, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthTonproofGeneratePayloadPost(options?: RawAxiosRequestConfig): AxiosPromise<TonproofGeneratePayloadResponseSchema> {
+            return localVarFp.apiAuthTonproofGeneratePayloadPost(options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * Request parameters for apiAuthTonproofGeneratePayloadPost operation in AuthApi.
+ * Request parameters for apiAuthTonproofCheckPayloadPost operation in AuthApi.
  * @export
- * @interface AuthApiApiAuthTonproofGeneratePayloadPostRequest
+ * @interface AuthApiApiAuthTonproofCheckPayloadPostRequest
  */
-export interface AuthApiApiAuthTonproofGeneratePayloadPostRequest {
+export interface AuthApiApiAuthTonproofCheckPayloadPostRequest {
     /**
      *  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
-     * @type {GenerateTonproofPayloadSchema}
-     * @memberof AuthApiApiAuthTonproofGeneratePayloadPost
+     * @type {TonproofCheckPayloadBodySchema}
+     * @memberof AuthApiApiAuthTonproofCheckPayloadPost
      */
-    readonly generateTonproofPayloadSchema?: GenerateTonproofPayloadSchema
+    readonly tonproofCheckPayloadBodySchema?: TonproofCheckPayloadBodySchema
 }
 
 /**
@@ -639,13 +700,23 @@ export interface AuthApiApiAuthTonproofGeneratePayloadPostRequest {
 export class AuthApi extends BaseAPI {
     /**
      * 
-     * @param {AuthApiApiAuthTonproofGeneratePayloadPostRequest} requestParameters Request parameters.
+     * @param {AuthApiApiAuthTonproofCheckPayloadPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public apiAuthTonproofGeneratePayloadPost(requestParameters: AuthApiApiAuthTonproofGeneratePayloadPostRequest = {}, options?: RawAxiosRequestConfig) {
-        return AuthApiFp(this.configuration).apiAuthTonproofGeneratePayloadPost(requestParameters.generateTonproofPayloadSchema, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthTonproofCheckPayloadPost(requestParameters: AuthApiApiAuthTonproofCheckPayloadPostRequest = {}, options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).apiAuthTonproofCheckPayloadPost(requestParameters.tonproofCheckPayloadBodySchema, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public apiAuthTonproofGeneratePayloadPost(options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).apiAuthTonproofGeneratePayloadPost(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
