@@ -92,5 +92,13 @@
     "John Smith": "John Smith",
     "Write your appeal": "Write your appeal",
     "Send": "Send"
+  },
+  "footer": {
+    "Follow us": "Follow us",
+    "Telegram": "Telegram bot",
+    "Telegram channel": "Telegram channel",
+    "Telegram ru channel": "Telegram ru channel",
+    "Discord": "Discord",
+    "2024 All Rights Reserved": "2024 All Rights Reserved"
   }
 }

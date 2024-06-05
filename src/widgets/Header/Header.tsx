@@ -5,6 +5,8 @@ import MenuForMobScreen from "./MenuForMobScreen";
 // import { useBackendAuth } from "src/entities/tonAuth/useTonAuth";
 import { TonButton } from "../../entities/tonAuth/TonButton";
 
+const logoSrc = "/images/logos/logo.png";
+
 const Header = () => {
   // useBackendAuth();
   return (
@@ -12,7 +14,7 @@ const Header = () => {
       <Container maxW="1200px">
         <Flex h="110px" alignItems="center" justify="space-between">
           <Link className="link" to="/">
-            <Image src="/images/logos/logo.png" />
+            <Image src={logoSrc} />
           </Link>
           <Flex w="160px" zIndex={2}>
             <TonButton />

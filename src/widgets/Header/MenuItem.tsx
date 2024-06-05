@@ -32,6 +32,7 @@ const MenuItem: React.FC<Props> = ({ path, name, toggle }) => {
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      className="nav-item"
     >
       <Link to={path} onClick={toggle}>
         {name}
