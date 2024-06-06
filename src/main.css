@@ -47,11 +47,12 @@ li {
   .nav-list {
     position: absolute;
     top: 0px;
-    right: 30%;
+    right: calc(50% - 115px);
     width: 230px;
     height: 110px;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
     align-items: center;
   }
 

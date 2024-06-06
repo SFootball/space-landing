@@ -6,10 +6,12 @@ const MenuForMdScreen = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
-      <MenuToggle toggle={() => toggleOpen()} />
-      <Navigation toggle={() => toggleOpen()} />
-    </motion.nav>
+    <>
+      <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
+        <MenuToggle toggle={() => toggleOpen()} />
+        <Navigation toggle={() => toggleOpen()} />
+      </motion.nav>
+    </>
   );
 };
 

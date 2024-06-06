@@ -4,6 +4,7 @@ import MenuToggle from "./MenuToggle";
 
 const sidebar = {
   open: (height = 1000) => ({
+    height: "100vh",
     clipPath: `circle(${height * 2 + 200}px at calc(100vw - 40px) 55px)`,
     transition: {
       type: "spring",

@@ -144,7 +144,7 @@ function About() {
                 <Text fontSize={{ base: "14px", lg: "20px" }}>
                   {t(
                     "If you are a football player, you just have to sign up on this application and enter your data, such as your date of birth, gender, skills, video of your matches  and so on. After signing up your visibility will be increasing within the football community."
-                  )}
+                  )}{" "}
                   <Text as="b">
                     {t("And by the way you will get your own NFT.")}
                   </Text>
