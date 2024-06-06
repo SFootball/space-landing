@@ -22,7 +22,7 @@ li {
     right: 0;
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     color: white;
   }

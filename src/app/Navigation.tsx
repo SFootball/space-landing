@@ -20,14 +20,17 @@ const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => (
 
 const links = [
   {
+    path: "/roadmap",
+    name: "Roadmap",
+  },
+  {
     path: "/about",
     name: "About",
   },
-  // TODO roadmap page
-  // {
-  //   path: "/roadmap",
-  //   name: "Roadmap",
-  // },
+  {
+    path: "/",
+    name: "Main",
+  },
 ];
 
 export default Navigation;
