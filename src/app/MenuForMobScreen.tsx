@@ -13,6 +13,7 @@ const sidebar = {
     },
   }),
   closed: {
+    height: "100vh",
     clipPath: "circle(25px at calc(100vw - 40px) 55px)",
     transition: {
       delay: 0.5,
