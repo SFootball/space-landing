@@ -6,11 +6,11 @@ function Roadmap() {
     <>
       <Box as="main">
         <Box bgColor="gray.100">
-          <Container maxW="1200px">
-            <Flex minH="500px" justify="center" align="center">
+          <Container maxW="1200px" py="40px">
+            <Flex justify="center" align="center">
               <Flex
                 direction={{ base: "column", lg: "row" }}
-                gap={{ base: "40px", lg: "0" }}
+                gap={{ base: "40px" }}
                 w="100%"
                 bgColor="white"
                 justify="space-between"
@@ -22,9 +22,18 @@ function Roadmap() {
                 <Text
                   fontSize={{ base: "32px", lg: "46px" }}
                   as="b"
-                  textAlign="center"
+                  textAlign={{ base: "center", lg: "left" }}
                 >
                   SFootball Roadmap
+                  <Text
+                    textAlign="left"
+                    fontSize={{ base: "18px", lg: "26px" }}
+                    fontWeight="normal"
+                    maxW="600px"
+                  >
+                    We invite you to familiarize yourself with the tasks that we
+                    have completed, are developing and plan to implement
+                  </Text>
                 </Text>
                 <Image
                   borderRadius="25px"
