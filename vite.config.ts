@@ -3,9 +3,16 @@ import react from "@vitejs/plugin-react";
 // import basicSsl from "@vitejs/plugin-basic-ssl";
 // import fs from "node:fs";
 
+const CDN_PATH = "https://sfootball.b-cdn.net";
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const VITE_API_URL = loadEnv(mode, process.cwd());
+  const { VITE_API_URL, VITE_NODE_ENV } = loadEnv(mode, process.cwd());
+  // check dev
+  // eslint-disable-next-line
+  // @ts-ignore
+  const basePath = VITE_NODE_ENV === "dev" ? "/" : CDN_PATH;
+  console.log("basePath: ", basePath);
   return {
     plugins: [react()],
     resolve: {
@@ -20,5 +27,6 @@ export default defineConfig(({ mode }) => {
         "/api": VITE_API_URL,
       },
     },
+    base: basePath,
   };
 });

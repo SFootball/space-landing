@@ -6,7 +6,7 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import { FC, useState } from "react";
+import { FC } from "react";
 import { useEffect, useRef } from "react";
 import {
   ConnectedWallet,
@@ -14,9 +14,6 @@ import {
   useTonConnectUI,
   useTonWallet,
 } from "@tonconnect/ui-react";
-import { useBackendToken } from "./BackendTokenContext";
-import { authApi } from "src/shared/api/api";
-import { errorAlert } from "src/shared/components/Alerts/ErrorAlert";
 import { useTonproofGenPayload } from "src/shared/hooks/useTonproofGenPayload";
 import { useTonproofCheckPayload } from "./useTonproofCheckPayload";
 import { tonproofPayloadTTLMS } from "src/shared/constants/intervals";
@@ -33,11 +30,11 @@ export const TonButton: FC = () => {
   const [tonConnectUI] = useTonConnectUI();
   const firstProofLoading = useRef<boolean>(true);
   // const interval = useRef<ReturnType<typeof setInterval> | undefined>();
-  const { queryPayload, payload } = useTonproofGenPayload();
+  const { queryPayload } = useTonproofGenPayload();
 
-  const { state, open, close } = useTonConnectModal();
+  const { open } = useTonConnectModal();
 
-  const { checkTonproof, isLoadingTonproof } = useTonproofCheckPayload();
+  const { checkTonproof } = useTonproofCheckPayload();
 
   const recreateProofPayload = async () => {
     if (firstProofLoading.current) {

@@ -9,7 +9,7 @@ import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const tonConnectManifest = "tonconnect-manifest.json";
-const tonConnectDevManifest = "tonconnect-manifest-dev.json";
+// const tonConnectDevManifest = "tonconnect-manifest-dev.json";
 // const manifestUrl = () => {
 //   if (import.meta.env.DEV) {
 //     return `${import.meta.env.VITE_APP_URL}/${tonConnectDevManifest}`;

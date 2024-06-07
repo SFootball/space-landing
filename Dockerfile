@@ -5,6 +5,7 @@ RUN yarn install
 
 ARG VITE_API_URL=https://apiservice.containers.cloud.ru
 ENV NODE_ENV=production
+ENV VITE_NODE_ENV=prod
 ENV VITE_API_URL=${VITE_API_URL}
 
 RUN yarn build

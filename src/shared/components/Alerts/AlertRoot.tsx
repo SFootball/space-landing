@@ -5,7 +5,7 @@ import {
   AlertDialogContent,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogOverlay,
+  // AlertDialogOverlay,
   Button,
   theme,
   ThemeProvider,
@@ -14,6 +14,8 @@ import {
 import { FC, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
 
+// eslint-disable-next-line
+// @ts-ignore
 let returnResponse: unknown | null = null;
 
 export type RootAlertProps = {
