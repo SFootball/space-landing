@@ -31,7 +31,7 @@ const Footer = () => {
               gap="20px"
             >
               <Text as="b" fontSize={{ base: "24px" }} alignSelf="center">
-                {t("footer.Follow us")}
+                {t("Follow us")}
               </Text>
               <Flex
                 align="center"
@@ -40,25 +40,23 @@ const Footer = () => {
                 maxWidth="260px"
                 wrap="wrap"
               >
-                <Text fontSize={{ base: "18px" }}>
-                  {t("footer.Telegram bot")}:
-                </Text>
+                <Text fontSize={{ base: "18px" }}>{t("Telegram bot")}:</Text>
                 <Link to="https://t.me/space_football_bot">
                   <FaTelegram className="social-icon tg-bot-icon" />
                 </Link>
                 <Text fontSize={{ base: "18px" }}>
-                  {t("footer.Telegram channel")}:
+                  {t("Telegram channel")}:
                 </Text>
                 <Link to="https://t.me/SFootballEN">
                   <FaTelegram className="social-icon tg-en-icon" />
                 </Link>
                 <Text fontSize={{ base: "18px" }}>
-                  {t("footer.Telegram ru channel")}:
+                  {t("Telegram ru channel")}:
                 </Text>
                 <Link to="https://t.me/SFootballSpace">
                   <FaTelegram className="social-icon tg-ru-icon" />
                 </Link>
-                <Text fontSize={{ base: "18px" }}>{t("footer.Discord")}:</Text>
+                <Text fontSize={{ base: "18px" }}>{t("Discord")}:</Text>
                 <Link to="https://discord.com/invite/MNf6j9Hq">
                   <FaDiscord className="social-icon discord-icon" />
                 </Link>
@@ -67,7 +65,7 @@ const Footer = () => {
           </Flex>
         </Container>
         <Text margin="0 auto" textAlign="center" pb="30px">
-          &#169; {t("footer.2024 All Rights Reserved")}
+          &#169; {t("2024 All Rights Reserved")}
         </Text>
       </Box>
     </>

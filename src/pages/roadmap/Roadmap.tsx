@@ -1,54 +1,93 @@
-import { Flex, Box, Container, Heading } from "@chakra-ui/react";
-import { bgImgURL } from "../main/Main";
+import { Flex, Box, Container, Text, Image, Divider } from "@chakra-ui/react";
+import Card from "./Card";
 
 function Roadmap() {
   return (
-    <Box
-      bgImage={bgImgURL}
-      bgRepeat="no-repeat"
-      bgSize="cover"
-      bgPosition="center"
-      bgAttachment="fixed"
-    >
+    <>
       <Box as="main">
-        <Container maxW="1200px">
-          <Flex
-            h="calc(100vh - 110px)"
-            justifyContent="center"
-            alignItems="center"
-            direction="column"
-          >
-            <Heading
-              fontSize={{ base: "56px", sm: "56px", xl: "72px" }}
-              marginBottom="54px"
-              fontWeight="bold"
-              color="white"
-              textAlign="center"
-            >
-              Roadmap
-            </Heading>
-          </Flex>
-        </Container>
-        <Box bgColor="white">
-          <Container maxW="1200px">
-            <Flex maxH="720px" py="90px" justify="center" align="center"></Flex>
-          </Container>
-          <Container
-            maxW="760px"
-            maxH="1280px"
-            py={{ base: "75px", sm: "75px", xl: "150px" }}
-          ></Container>
-        </Box>
         <Box bgColor="gray.100">
-          <Container
-            maxW="1200px"
-            maxH="3300px"
-            pt={{ base: "135px", xl: "135px" }}
-            pb={{ base: "165px", xl: "165px" }}
-          ></Container>
+          <Container maxW="1200px" py="40px">
+            <Flex justify="center" align="center">
+              <Flex
+                direction={{ base: "column", lg: "row" }}
+                gap={{ base: "40px" }}
+                w="100%"
+                bgColor="white"
+                justify="space-between"
+                align="center"
+                p="40px 40px"
+                borderRadius="50px"
+                shadow="2xl"
+              >
+                <Text
+                  fontSize={{ base: "32px", lg: "46px" }}
+                  as="b"
+                  textAlign={{ base: "center", lg: "left" }}
+                >
+                  SFootball Roadmap
+                  <Text
+                    textAlign="left"
+                    fontSize={{ base: "18px", lg: "26px" }}
+                    fontWeight="normal"
+                    maxW="600px"
+                  >
+                    We invite you to familiarize yourself with the tasks that we
+                    have completed, are developing and plan to implement
+                  </Text>
+                </Text>
+                <Image
+                  borderRadius="25px"
+                  maxH={{ base: "300px" }}
+                  src="/images/common/roadmap.jpg"
+                  shadow="2xl"
+                />
+              </Flex>
+            </Flex>
+          </Container>
+        </Box>
+        <Box bgColor="white" py={{ base: "75px", sm: "75px", xl: "150px" }}>
+          <Container maxW="1200px">
+            <Flex
+              direction="column"
+              justify="start"
+              position="relative"
+              gap={{ base: "80px", lg: "0" }}
+              py={{ base: "80px", lg: "0" }}
+            >
+              <Box
+                position="absolute"
+                top="0"
+                left="50%"
+                width="2px"
+                bgColor="red"
+                h="100%"
+              ></Box>
+              <Card
+                justify={{ base: "center", lg: "start" }}
+                Q="Q1/2024"
+                badgeColor="green"
+              />
+              <Card
+                justify={{ base: "center", lg: "end" }}
+                Q="Q2/2024"
+                badgeColor="yellow"
+              />
+              <Card
+                justify={{ base: "center", lg: "start" }}
+                Q="Q3/2024"
+                badgeColor="red"
+              />
+              <Card
+                justify={{ base: "center", lg: "end" }}
+                Q="Q4/2025"
+                badgeColor="red"
+              />
+            </Flex>
+          </Container>
         </Box>
       </Box>
-    </Box>
+      <Divider />
+    </>
   );
 }
 

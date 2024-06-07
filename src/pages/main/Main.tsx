@@ -122,7 +122,7 @@ function Main() {
         >
           <Flex direction="column" gap="50px">
             <Flex justify="space-between" align="center">
-              <Image src={laptopImgSRC_1} maxW="48%"></Image>
+              <Image src={laptopImgSRC_1} maxW="48%" />
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
                   SFOOTBALL SOLUTIONS
@@ -170,10 +170,10 @@ function Main() {
                   <p>• Customizable statistical spreadsheets.</p>
                 </Box>
               </Box>
-              <Image src={laptopImgSRC_2} maxW="48%"></Image>
+              <Image src={laptopImgSRC_2} maxW="48%" />
             </Flex>
             <Flex justify="space-between" align="center">
-              <Image src={laptopImgSRC_3} maxW="48%"></Image>
+              <Image src={laptopImgSRC_3} maxW="48%" />
               <Box pl={{ base: "30px", lg: "100px" }}>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
                   SFOOTBALL PLATFORM FOR PLAYER RECRUITMENT
@@ -206,10 +206,10 @@ function Main() {
                   <p>• Data quality control.</p>
                 </Box>
               </Box>
-              <Image src={laptopImgSRC_4} maxW="48%"></Image>
+              <Image src={laptopImgSRC_4} maxW="48%" />
             </Flex>
             <Flex justify="space-between" align="center">
-              <Image src={dataImgSRC_1} maxW="48%"></Image>
+              <Image src={dataImgSRC_1} maxW="48%" />
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
                   PLAYER FITNESS TRACKING REPORTS
@@ -246,7 +246,7 @@ function Main() {
                   </p>
                 </Box>
               </Box>
-              <Image src={dataImgSRC_2} maxW="48%"></Image>
+              <Image src={dataImgSRC_2} maxW="48%" />
             </Flex>
           </Flex>
         </Container>
