@@ -64,22 +64,22 @@ function Roadmap() {
               ></Box>
               <Card
                 justify={{ base: "center", lg: "start" }}
-                Q="Q1/2024"
+                quarter="Q1/2024"
                 badgeColor="green"
               />
               <Card
                 justify={{ base: "center", lg: "end" }}
-                Q="Q2/2024"
+                quarter="Q2/2024"
                 badgeColor="yellow"
               />
               <Card
                 justify={{ base: "center", lg: "start" }}
-                Q="Q3/2024"
+                quarter="Q3/2024"
                 badgeColor="red"
               />
               <Card
                 justify={{ base: "center", lg: "end" }}
-                Q="Q4/2025"
+                quarter="Q4/2025"
                 badgeColor="red"
               />
             </Flex>

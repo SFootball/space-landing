@@ -1,15 +1,11 @@
-import { Badge, Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Badge, Box, Flex, FlexProps, Image, Text } from "@chakra-ui/react";
 
-type Props = {
-  justify: {
-    base: string;
-    lg: string;
-  };
-  Q: string;
+interface Props extends FlexProps {
+  quarter: string;
   badgeColor: string;
-};
+}
 
-const Card: React.FC<Props> = ({ justify, Q, badgeColor }) => {
+const Card = ({ quarter, justify, badgeColor }: Props) => {
   return (
     <Flex justify={justify} position="relative">
       <Image
@@ -22,7 +18,7 @@ const Card: React.FC<Props> = ({ justify, Q, badgeColor }) => {
       <Flex
         w={{ base: "294px", lg: "420px" }}
         h={{ base: "217px", lg: "310" }}
-        bgColor="brand.blue"
+        bgColor="blue.500"
         borderRadius="25px"
         shadow="2xl"
         justify="center"
@@ -47,7 +43,7 @@ const Card: React.FC<Props> = ({ justify, Q, badgeColor }) => {
           top="20px"
           borderRadius="22px"
         >
-          {Q}
+          {quarter}
         </Badge>
         <Box
           w={{ base: "266px", lg: "380px" }}
