@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MenuForMdScreen from "./MenuForMdScreen";
 import MenuForMobScreen from "./MenuForMobScreen";
 // import { useBackendAuth } from "src/entities/tonAuth/useTonAuth";
-import { TonButton } from "../../entities/tonAuth/TonButton";
+// import { TonButton } from "../../entities/tonAuth/TonButton";
 
 const logoSrc = "/images/logos/logo.png";
 
@@ -17,7 +17,7 @@ const Header = () => {
             <Image src={logoSrc} />
           </Link>
           <Flex w="160px" zIndex={2}>
-            <TonButton />
+            {/* <TonButton /> */}
           </Flex>
           <Box display={{ base: "none", md: "block" }}>
             <MenuForMdScreen />

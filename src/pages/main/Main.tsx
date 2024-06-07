@@ -51,7 +51,7 @@ function Main() {
       </Container>
       <Box bgColor="white">
         <Container maxW="1200px">
-          <Flex maxH="720px" py="90px" justify="center" align="center">
+          {/* <Flex maxH="720px" py="90px" justify="center" align="center">
             <iframe
               width="960"
               height="540"
@@ -62,7 +62,7 @@ function Main() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
-          </Flex>
+          </Flex> */}
         </Container>
         <Container
           maxW="760px"

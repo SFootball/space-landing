@@ -19,6 +19,7 @@ let returnResponse: unknown | null = null;
 export type RootAlertProps = {
   title: string;
   message: string;
+  footerButtons?: boolean;
   cancelText?: string;
   okText?: string;
   onOk: () => void;
@@ -28,6 +29,7 @@ export type RootAlertProps = {
 const AlertRoot: FC<RootAlertProps> = ({
   title,
   message,
+  footerButtons = false,
   cancelText,
   okText,
   onOk,
@@ -35,10 +37,14 @@ const AlertRoot: FC<RootAlertProps> = ({
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef(null);
-  console.log("returnResponse", returnResponse);
+
   useEffect(() => {
     onOpen();
-  }, [onOpen]);
+    const tId = setTimeout(() => {
+      onClose();
+    }, 3000);
+    return () => clearTimeout(tId);
+  }, [onOpen, onClose]);
 
   const confirm = () => {
     onOk();
@@ -58,9 +64,9 @@ const AlertRoot: FC<RootAlertProps> = ({
           leastDestructiveRef={cancelRef}
           onClose={onClose}
           isOpen={isOpen}
-          isCentered
+          // isCentered
         >
-          <AlertDialogOverlay />
+          {/* <AlertDialogOverlay /> */}
 
           <AlertDialogContent>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
@@ -68,14 +74,16 @@ const AlertRoot: FC<RootAlertProps> = ({
             </AlertDialogHeader>
             <AlertDialogCloseButton />
             <AlertDialogBody>{message}</AlertDialogBody>
-            <AlertDialogFooter>
-              <Button variant="ghost" ref={cancelRef} onClick={cancel}>
-                {cancelText ?? "Close"}
-              </Button>
-              <Button ml={3} onClick={confirm} colorScheme="red">
-                {okText ?? "Continue"}
-              </Button>
-            </AlertDialogFooter>
+            {footerButtons && (
+              <AlertDialogFooter>
+                <Button variant="ghost" ref={cancelRef} onClick={cancel}>
+                  {cancelText ?? "Close"}
+                </Button>
+                <Button ml={3} onClick={confirm} colorScheme="red">
+                  {okText ?? "Continue"}
+                </Button>
+              </AlertDialogFooter>
+            )}
           </AlertDialogContent>
         </AlertDialog>
       </ThemeProvider>

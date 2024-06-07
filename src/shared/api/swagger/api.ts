@@ -351,6 +351,19 @@ export interface TonproofCheckPayloadBodySchemaProofDomain {
 /**
  * 
  * @export
+ * @interface TonproofCheckPayloadResponseSchema
+ */
+export interface TonproofCheckPayloadResponseSchema {
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofCheckPayloadResponseSchema
+     */
+    'token'?: string;
+}
+/**
+ * 
+ * @export
  * @interface TonproofGeneratePayloadResponseSchema
  */
 export interface TonproofGeneratePayloadResponseSchema {
@@ -630,7 +643,7 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthTonproofCheckPayloadPost(tonproofCheckPayloadBodySchema?: TonproofCheckPayloadBodySchema, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GenerateTonproofCheckPayloadSchema>> {
+        async apiAuthTonproofCheckPayloadPost(tonproofCheckPayloadBodySchema?: TonproofCheckPayloadBodySchema, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TonproofCheckPayloadResponseSchema>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthTonproofCheckPayloadPost(tonproofCheckPayloadBodySchema, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['AuthApi.apiAuthTonproofCheckPayloadPost']?.[localVarOperationServerIndex]?.url;
@@ -663,7 +676,7 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthTonproofCheckPayloadPost(requestParameters: AuthApiApiAuthTonproofCheckPayloadPostRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<GenerateTonproofCheckPayloadSchema> {
+        apiAuthTonproofCheckPayloadPost(requestParameters: AuthApiApiAuthTonproofCheckPayloadPostRequest = {}, options?: RawAxiosRequestConfig): AxiosPromise<TonproofCheckPayloadResponseSchema> {
             return localVarFp.apiAuthTonproofCheckPayloadPost(requestParameters.tonproofCheckPayloadBodySchema, options).then((request) => request(axios, basePath));
         },
         /**
