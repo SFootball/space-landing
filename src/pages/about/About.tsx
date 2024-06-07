@@ -12,12 +12,12 @@ function About() {
   const management = [
     {
       name: "Denis Yunusov",
-      position: "Co-Founder, CEO",
+      position: "CEO",
       bg: "url('/images/avatars/denis_yunusov.jpg') no-repeat -44px 0",
     },
     {
       name: "Ildar Nasyrov",
-      position: "Co-Founder, CTO",
+      position: "CTO",
       bg: "url('/images/avatars/ildar_nasyrov.jpeg') no-repeat",
     },
   ];
@@ -25,27 +25,27 @@ function About() {
   const coreTeam = [
     {
       name: "Anton Tuktarev",
-      position: "Position",
+      position: "Content Manager",
       bg: "url('/images/avatars/tuktarev_anton.jpg') no-repeat -42px 0",
     },
     {
       name: "Leisan",
-      position: "Position",
+      position: "PR Manager",
       bg: "gray.100",
     },
     {
       name: "Dmitry Zykov",
-      position: "Position",
+      position: "ML Engineer",
       bg: "url('/images/avatars/zykov_dmitry.jpg') no-repeat",
     },
     {
       name: "Alexey Senchenko",
-      position: "Position",
+      position: "Art Manager",
       bg: "url('/images/avatars/alexey_senchenko.jpg') no-repeat",
     },
     {
       name: "Danil",
-      position: "Position",
+      position: "Smart Contract Developer",
       bg: "url('/images/avatars/danil.jpg') no-repeat",
     },
     {
@@ -55,7 +55,7 @@ function About() {
     },
     {
       name: "Karina Kanchurina",
-      position: "Position",
+      position: "Test Engineer",
       bg: "url('/images/avatars/karina_kanchurina.jpg') no-repeat -46px 0",
     },
   ];
