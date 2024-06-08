@@ -11,6 +11,7 @@ export const useTonproofGenPayload = () => {
       return resp?.data;
     },
     enabled: false,
+    retry: 1,
   });
   return {
     payload: data?.payload,
