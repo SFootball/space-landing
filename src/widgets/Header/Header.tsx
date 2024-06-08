@@ -1,15 +1,15 @@
 import { Flex, Box, Container, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import MenuForMdScreen from "./MenuForMdScreen";
-// import { useBackendAuth } from "src/entities/tonAuth/useTonAuth";
-// import { TonButton } from "../../entities/tonAuth/TonButton";
+
 import MenuForMobScreen from "./MenuForMobScreen";
 import i18n from "../../i18n";
+import { useTonBackendAuth } from "src/entities/tonAuth/useTonBackendAuth";
 
 const logoSrc = "/images/logos/logo.png";
 
 const Header = () => {
-  // useBackendAuth();
+  useTonBackendAuth();
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };

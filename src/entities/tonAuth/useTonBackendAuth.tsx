@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { ConnectedWallet, useTonConnectUI } from "@tonconnect/ui-react";
 
 import { errorAlert } from "src/shared/components/Alerts/ErrorAlert";
@@ -8,6 +8,7 @@ import { useTonproofCheckPayload } from "./useTonproofCheckPayload";
 import useInterval from "src/shared/hooks/useInterval";
 import { tonproofPayloadTTLMS } from "src/shared/constants/intervals";
 import { getAuthTokenFromLS } from "src/shared/utils/localStorage";
+import { resetAuthJwtTocken } from "src/shared/api/api";
 
 let isCheckingProof = false;
 
@@ -21,7 +22,7 @@ export function useTonBackendAuth() {
 
   const { checkTonproof } = useTonproofCheckPayload();
 
-  const recreateProofPayload = async () => {
+  const recreateProofPayload = useCallback(async () => {
     if (firstProofLoading.current) {
       tonConnectUI.setConnectRequestParameters({ state: "loading" });
       firstProofLoading.current = false;
@@ -38,9 +39,13 @@ export function useTonBackendAuth() {
     } else {
       tonConnectUI.setConnectRequestParameters(null);
     }
-  };
+  }, [tonConnectUI, queryPayload]);
 
-  useInterval(recreateProofPayload, tonproofPayloadTTLMS, true);
+  if (firstProofLoading.current) {
+    recreateProofPayload();
+  }
+
+  useInterval(recreateProofPayload, tonproofPayloadTTLMS);
 
   // check proof in your backend
   useEffect(() => {
@@ -51,7 +56,7 @@ export function useTonBackendAuth() {
           if (!connectedWallet || isCheckingProof) {
             // TODO make back reset tonproof api
             // setAuthorized(false);
-
+            resetAuthJwtTocken();
             return;
           }
 
@@ -75,7 +80,8 @@ export function useTonBackendAuth() {
             return;
           }
         } catch (error) {
-          tonConnectUI.disconnect();
+          // tonConnectUI.disconnect();
+          console.error(error);
           errorAlert({
             message:
               (error as Error)?.message ||

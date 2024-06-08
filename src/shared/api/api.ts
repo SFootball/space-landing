@@ -27,3 +27,8 @@ export const playersApi = new PlayersApi();
 export const tasksApi = new TasksApi(configuration, basePath);
 
 export const authApi = new AuthApi(configuration, basePath);
+
+export const resetAuthJwtTocken = () => {
+  localStorage.removeItem(localStorageAuthTokenKey);
+  authApi.apiAuthTonproofGeneratePayloadPost();
+};

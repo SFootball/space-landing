@@ -1,6 +1,5 @@
 {
   "url": "https://sfootball.space",
   "name": "SFootball",
-  "iconUrl": "https://sfootball.space/icon.svg",
-  "host_permissions": ["https://apiservice.containers.cloud.ru/*", "http://locahlost:3000/*"]
+  "iconUrl": "https://sfootball.space/images/logos/logo.png"
 }
