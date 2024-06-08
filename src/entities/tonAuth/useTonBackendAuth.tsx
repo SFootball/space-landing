@@ -11,7 +11,7 @@ import { getAuthTokenFromLS } from "src/shared/utils/localStorage";
 
 let isCheckingProof = false;
 
-export function useBackendAuth() {
+export function useTonBackendAuth() {
   const { t } = useTranslation();
 
   const [tonConnectUI] = useTonConnectUI();
@@ -75,6 +75,7 @@ export function useBackendAuth() {
             return;
           }
         } catch (error) {
+          tonConnectUI.disconnect();
           errorAlert({
             message:
               (error as Error)?.message ||

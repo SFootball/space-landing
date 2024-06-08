@@ -2,7 +2,7 @@ import { Flex, Box, Container, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import MenuForMdScreen from "./MenuForMdScreen";
 // import { useBackendAuth } from "src/entities/tonAuth/useTonAuth";
-import { TonButton } from "../../entities/tonAuth/TonButton";
+// import { TonButton } from "../../entities/tonAuth/TonButton";
 import MenuForMobScreen from "./MenuForMobScreen";
 import i18n from "../../i18n";
 

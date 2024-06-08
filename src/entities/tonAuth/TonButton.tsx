@@ -6,9 +6,11 @@ import {
   useTonWallet,
 } from "@tonconnect/ui-react";
 import { useTranslation } from "react-i18next";
+import { useTonBackendAuth } from "./useTonBackendAuth";
 
 export const TonButton: FC = () => {
   const { t } = useTranslation();
+  useTonBackendAuth();
 
   const [tonConnectUI] = useTonConnectUI();
   const { open } = useTonConnectModal();
@@ -24,6 +26,7 @@ export const TonButton: FC = () => {
 
   const isWalletExist = wallet && "name" in wallet;
 
+  // return <TonConnectButton />;
   return (
     <Menu closeOnSelect={false}>
       <MenuButton as={Button} colorScheme="blue">
