@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import MenuItem from "./MenuItem";
+import { Flex } from "@chakra-ui/react";
+import { TonButton } from "src/entities/tonAuth/TonButton";
 
 const variants = {
   open: {
@@ -9,14 +11,6 @@ const variants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
 };
-
-const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => (
-  <motion.ul className="nav-list" variants={variants}>
-    {links.map(({ path, name }, i) => (
-      <MenuItem path={path} name={name} key={i} toggle={toggle} />
-    ))}
-  </motion.ul>
-);
 
 const links = [
   {
@@ -32,5 +26,16 @@ const links = [
     name: "Main",
   },
 ];
+
+const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => (
+  <motion.ul className="nav-list" variants={variants}>
+    <Flex w="160px" zIndex={2} justifyContent="center">
+      <TonButton />
+    </Flex>
+    {links.map(({ path, name }, i) => (
+      <MenuItem path={path} name={name} key={i} toggle={toggle} />
+    ))}
+  </motion.ul>
+);
 
 export default Navigation;

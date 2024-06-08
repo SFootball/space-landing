@@ -192,6 +192,7 @@ function About() {
               <Flex justify="center" align="start">
                 {management.map((person) => (
                   <Flex
+                    key={person.name}
                     direction="column"
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
@@ -228,6 +229,7 @@ function About() {
               <Flex justify="start" align="start" wrap="wrap" rowGap="60px">
                 {coreTeam.map((person) => (
                   <Flex
+                    key={person.name}
                     direction="column"
                     align="center"
                     width={{ base: "50%", lg: "25%" }}

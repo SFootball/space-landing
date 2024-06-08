@@ -1,5 +1,5 @@
 {
   "url": "http://localhost:3000",
-  "name": "SFootbal",
-  "iconUrl": "https://sfootball.space/icon.svg"
+  "name": "SFootball",
+  "iconUrl": "http://localhost:3000/icon.svg"
 }

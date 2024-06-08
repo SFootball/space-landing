@@ -1,81 +1,87 @@
 import { useEffect, useRef } from "react";
+import { ConnectedWallet, useTonConnectUI } from "@tonconnect/ui-react";
 
-import {
-  useIsConnectionRestored,
-  useTonConnectUI,
-  useTonWallet,
-} from "@tonconnect/ui-react";
-import { useBackendToken } from "./BackendTokenContext";
-import { authApi } from "src/shared/api/api";
 import { errorAlert } from "src/shared/components/Alerts/ErrorAlert";
+import { useTranslation } from "react-i18next";
+import { useTonproofGenPayload } from "src/shared/hooks/useTonproofGenPayload";
+import { useTonproofCheckPayload } from "./useTonproofCheckPayload";
+import useInterval from "src/shared/hooks/useInterval";
+import { tonproofPayloadTTLMS } from "src/shared/constants/intervals";
+import { getAuthTokenFromLS } from "src/shared/utils/localStorage";
 
-const localStorageKey = "my-dapp-auth-token";
-const payloadTTLMS = 1000 * 60 * 20;
+let isCheckingProof = false;
 
 export function useBackendAuth() {
-  const { setToken } = useBackendToken();
-  const isConnectionRestored = useIsConnectionRestored();
-  const wallet = useTonWallet();
+  const { t } = useTranslation();
+
   const [tonConnectUI] = useTonConnectUI();
-  const interval = useRef<ReturnType<typeof setInterval> | undefined>();
+  const firstProofLoading = useRef<boolean>(true);
 
-  useEffect(() => {
-    if (!isConnectionRestored || !setToken) {
-      console.log("Connection not restored");
-      return;
+  const { queryPayload } = useTonproofGenPayload();
+
+  const { checkTonproof } = useTonproofCheckPayload();
+
+  const recreateProofPayload = async () => {
+    if (firstProofLoading.current) {
+      tonConnectUI.setConnectRequestParameters({ state: "loading" });
+      firstProofLoading.current = false;
     }
+    const backPayloadData = await queryPayload();
+    const payload = backPayloadData?.data?.payload;
+    if (payload) {
+      tonConnectUI.setConnectRequestParameters({
+        state: "ready",
+        value: {
+          tonProof: payload,
+        },
+      });
+    } else {
+      tonConnectUI.setConnectRequestParameters(null);
+    }
+  };
 
-    clearInterval(interval.current);
-    if (!wallet) {
-      localStorage.removeItem(localStorageKey);
-      setToken(null);
+  useInterval(recreateProofPayload, tonproofPayloadTTLMS, true);
 
-      const refreshPayload = async () => {
-        tonConnectUI.setConnectRequestParameters({ state: "loading" });
+  // check proof in your backend
+  useEffect(() => {
+    tonConnectUI.onStatusChange(
+      async (connectedWallet: ConnectedWallet | null) => {
+        try {
+          console.log("tonConnectUI.onStatusChange ", connectedWallet);
+          if (!connectedWallet || isCheckingProof) {
+            // TODO make back reset tonproof api
+            // setAuthorized(false);
 
-        const value = await authApi.apiAuthTonproofGeneratePayloadPost();
-        if (!value) {
-          tonConnectUI.setConnectRequestParameters(null);
-        } else {
-          tonConnectUI.setConnectRequestParameters({
-            state: "ready",
-            value: {
-              tonProof: value.data.payload,
-            },
+            return;
+          }
+
+          let token = getAuthTokenFromLS();
+          if (
+            connectedWallet?.connectItems?.tonProof &&
+            "proof" in connectedWallet.connectItems.tonProof
+          ) {
+            console.log("onStatusChange", connectedWallet);
+            isCheckingProof = true;
+            token = await checkTonproof({
+              proof: connectedWallet.connectItems.tonProof.proof,
+              address: connectedWallet.account.address,
+              network: connectedWallet.account.chain,
+            });
+            isCheckingProof = false;
+          }
+
+          if (!token) {
+            tonConnectUI.disconnect();
+            return;
+          }
+        } catch (error) {
+          errorAlert({
+            message:
+              (error as Error)?.message ||
+              t("Something went wrong by checking proof"),
           });
         }
-      };
-
-      refreshPayload();
-      setInterval(refreshPayload, payloadTTLMS);
-      return;
-    }
-
-    const token = localStorage.getItem(localStorageKey);
-    if (token) {
-      setToken(token);
-      return;
-    }
-
-    if (
-      wallet.connectItems?.tonProof &&
-      !("error" in wallet.connectItems.tonProof)
-    ) {
-      console.log("check proof");
-      // backendAuth
-      //   .checkProof(wallet.connectItems.tonProof.proof, wallet.account)
-      //   .then((result) => {
-      //     if (result) {
-      //       setToken(result);
-      //       localStorage.setItem(localStorageKey, result);
-      //     } else {
-      //       alert("Please try another wallet");
-      //       tonConnectUI.disconnect();
-      //     }
-      //   });
-    } else {
-      errorAlert({ message: "Please try another wallet" });
-      tonConnectUI.disconnect();
-    }
-  }, [wallet, isConnectionRestored, setToken]);
+      }
+    );
+  }, [tonConnectUI]);
 }
