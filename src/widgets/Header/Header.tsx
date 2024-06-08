@@ -5,6 +5,7 @@ import MenuForMdScreen from "./MenuForMdScreen";
 import MenuForMobScreen from "./MenuForMobScreen";
 import i18n from "../../i18n";
 import { useTonBackendAuth } from "src/entities/tonAuth/useTonBackendAuth";
+import { TonButton } from "src/entities/tonAuth/TonButton";
 
 const logoSrc = "/images/logos/logo.png";
 
@@ -18,6 +19,8 @@ const Header = () => {
     <Box as="header" bgColor="white">
       <Container maxW="1200px" position="relative">
         <Flex position="absolute" right="100px" top="40px" gap="8px">
+          <TonButton />
+
           <Image
             onClick={() => {
               changeLanguage("ru");
@@ -26,6 +29,7 @@ const Header = () => {
             h="30px"
             w="30px"
             cursor="pointer"
+            ml={4}
           />
           <Image
             onClick={() => {

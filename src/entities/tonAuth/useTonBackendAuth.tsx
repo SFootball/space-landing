@@ -7,7 +7,10 @@ import { useTonproofGenPayload } from "src/shared/hooks/useTonproofGenPayload";
 import { useTonproofCheckPayload } from "./useTonproofCheckPayload";
 import useInterval from "src/shared/hooks/useInterval";
 import { tonproofPayloadTTLMS } from "src/shared/constants/intervals";
-import { getAuthTokenFromLS } from "src/shared/utils/localStorage";
+import {
+  getAuthTokenFromLS,
+  setAuthTokenToLS,
+} from "src/shared/utils/localStorage";
 import { resetAuthJwtTocken } from "src/shared/api/api";
 
 let isCheckingProof = false;
@@ -79,6 +82,7 @@ export function useTonBackendAuth() {
             tonConnectUI.disconnect();
             return;
           }
+          setAuthTokenToLS(token);
         } catch (error) {
           // tonConnectUI.disconnect();
           console.error(error);

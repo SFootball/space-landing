@@ -26,20 +26,24 @@ type Props = {
   toggle: () => void;
 };
 
-const MenuItem: React.FC<Props> = ({ path, name, toggle }) => {
+export const MotionMenuItem = ({ children }: React.PropsWithChildren) => (
+  <motion.li
+    variants={variants}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    className="nav-item"
+  >
+    {children}
+  </motion.li>
+);
+
+export const LinkMenuItem: React.FC<Props> = ({ path, name, toggle }) => {
   return (
-    <motion.li
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className="nav-item"
-    >
+    <MotionMenuItem>
       <Link to={path} onClick={toggle}>
         {name}
       </Link>
       <Divider borderColor={{ base: "white", md: "black" }} />
-    </motion.li>
+    </MotionMenuItem>
   );
 };
-
-export default MenuItem;
