@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { LinkMenuItem, MotionMenuItem } from "./MenuItem";
-import { TonButton } from "src/entities/tonAuth/TonButton";
-import { Box, Flex } from "@chakra-ui/react";
+import { LinkMenuItem } from "./MenuItem";
 
 const variants = {
   open: {
