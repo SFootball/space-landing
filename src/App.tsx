@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const tonConnectManifest = "tonconnect-manifest.json";
 
 const manifestUrl = `${import.meta.env.VITE_APP_URL}/${tonConnectManifest}`;
+// const manifestUrl = `/${tonConnectManifest}`;
 
 export const queryClient = new QueryClient();
 
