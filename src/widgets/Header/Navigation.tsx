@@ -1,14 +1,8 @@
-import { motion } from "framer-motion";
-import { LinkMenuItem } from "./MenuItem";
-
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
+import { Divider, Image } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { MotionList } from "src/shared/components/MotionList/MotionList";
+import { MotionMenuItem } from "src/shared/components/MotionList/MotionMenuItem";
 
 const links = [
   {
@@ -25,12 +19,47 @@ const links = [
   },
 ];
 
-const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => (
-  <motion.ul className="nav-list" variants={variants}>
-    {links.map(({ path, name }, i) => (
-      <LinkMenuItem path={path} name={name} key={i} toggle={toggle} />
-    ))}
-  </motion.ul>
-);
+export const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => {
+  const { t, i18n } = useTranslation();
 
-export default Navigation;
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
+  return (
+    <MotionList>
+      <MotionMenuItem>
+        <Image
+          onClick={() => {
+            changeLanguage("ru");
+          }}
+          src="/images/common/ru.png"
+          h="30px"
+          w="30px"
+          cursor="pointer"
+          zIndex={999}
+        />
+      </MotionMenuItem>
+      <MotionMenuItem>
+        <Image
+          onClick={() => {
+            changeLanguage("en");
+          }}
+          src="/images/common/en.png"
+          h="30px"
+          w="30px"
+          cursor="pointer"
+          zIndex={999}
+        />
+      </MotionMenuItem>
+      {links.map(({ path, name }) => (
+        <MotionMenuItem key={path}>
+          <Link to={path} onClick={toggle}>
+            {t(name)}
+          </Link>
+          <Divider borderColor={{ base: "white", md: "black" }} />
+        </MotionMenuItem>
+      ))}
+    </MotionList>
+  );
+};

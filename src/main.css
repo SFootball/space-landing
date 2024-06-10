@@ -4,86 +4,6 @@ li {
   padding: 0;
 }
 
-@media (max-width: 767px) {
-  .nav_menu_button {
-    position: absolute;
-    outline: none;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    left: calc(100vw - 65px);
-    top: 30px;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 110px;
-    right: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    color: white;
-  }
-
-  .nav-item {
-    list-style: none;
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-}
-
-@media (min-width: 768px) {
-  .nav_menu_button {
-    background-color: #325aba !important;
-    outline: none;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 0px;
-    right: calc(50% - 115px);
-    width: 230px;
-    height: 110px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-item {
-    list-style: none;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-}
-
-.sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  background: #325aba;
-}
-
-.menu-icon {
-  position: relative;
-  top: 2px;
-  left: 14px;
-  width: 23px;
-  height: 23px;
-}
-
-.link {
-  max-width: 150px;
-}
-
 .logo-footer {
   max-width: 240px;
   margin-bottom: 40px;
@@ -116,13 +36,4 @@ li {
 
 .tg-ru-icon:hover {
   fill: red;
-}
-
-/* Styles to fix background problem on ios */
-
-.main-bg {
-  background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
 }

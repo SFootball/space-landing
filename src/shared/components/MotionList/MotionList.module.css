@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+  .navMenuButton {
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: calc(100vw - 65px);
+    top: 30px;
+  }
+
+  .navList {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: white;
+  }
+
+  .navItem {
+    list-style: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .navList {
+    position: absolute;
+    top: 0px;
+    right: calc(50% - 115px);
+    width: 230px;
+    height: 110px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navItem {
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}

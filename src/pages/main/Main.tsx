@@ -1,4 +1,5 @@
 import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
+import style from "./Main.module.css";
 
 export const bgImgURL = "url('/images/common/footballer.jpg')";
 const laptopImgSRC_1 = "/images/common/1.png";
@@ -22,7 +23,7 @@ function Main() {
         bgRepeat="no-repeat"
         bgPosition="center"
         zIndex="-1"
-        className="main-bg"
+        className={style.mainBg}
       />
       <Container maxW="1200px">
         <Flex

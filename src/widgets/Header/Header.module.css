@@ -1,0 +1,12 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #325aba;
+}
+
+.link {
+  max-width: 150px;
+}

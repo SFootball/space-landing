@@ -1,0 +1,6 @@
+.mainBg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+}

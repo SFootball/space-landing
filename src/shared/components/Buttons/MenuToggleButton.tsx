@@ -1,5 +1,6 @@
 import * as React from "react";
 import { SVGMotionProps, motion } from "framer-motion";
+import style from "./MenuToggleButton.module.css";
 
 const Path = (
   props: JSX.IntrinsicAttributes &
@@ -15,9 +16,16 @@ const Path = (
   />
 );
 
-const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
-  <button className="nav_menu_button" onClick={toggle}>
-    <svg className="menu-icon" height="23px" width="23px" viewBox="0 0 23 23">
+export const MenuToggleButton: React.FC<{ toggle: () => void }> = ({
+  toggle,
+}) => (
+  <button className={`${style.navMenuButton}`} onClick={toggle}>
+    <svg
+      className={style.menuIcon}
+      height="23px"
+      width="23px"
+      viewBox="0 0 23 23"
+    >
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
@@ -41,5 +49,3 @@ const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
     </svg>
   </button>
 );
-
-export default MenuToggle;

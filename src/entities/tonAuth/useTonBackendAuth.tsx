@@ -11,7 +11,8 @@ import {
   getAuthTokenFromLS,
   setAuthTokenToLS,
 } from "src/shared/utils/localStorage";
-import { resetAuthJwtTocken } from "src/shared/api/api";
+import { mainApi } from "src/shared/api/api";
+// import { resetAuthJwtTocken } from "src/shared/api/api";
 
 let isCheckingProof = false;
 
@@ -57,9 +58,7 @@ export function useTonBackendAuth() {
         try {
           console.log("tonConnectUI.onStatusChange ", connectedWallet);
           if (!connectedWallet || isCheckingProof) {
-            // TODO make back reset tonproof api
-            // setAuthorized(false);
-            resetAuthJwtTocken();
+            mainApi.resetAuthJwtTocken();
             return;
           }
 
