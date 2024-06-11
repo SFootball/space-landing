@@ -6,6 +6,10 @@ import { MotionMenuItem } from "src/shared/components/MotionList/MotionMenuItem"
 
 const links = [
   {
+    path: "/account-info",
+    name: "Account info",
+  },
+  {
     path: "/roadmap",
     name: "Roadmap",
   },

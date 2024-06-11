@@ -377,6 +377,92 @@ export interface TonproofGeneratePayloadResponseSchema {
 /**
  * 
  * @export
+ * @interface TonproofGetAccauntInfoResponseSchema
+ */
+export interface TonproofGetAccauntInfoResponseSchema {
+    /**
+     * 
+     * @type {TonproofGetAccauntInfoResponseSchemaStandardClaims}
+     * @memberof TonproofGetAccauntInfoResponseSchema
+     */
+    'StandardClaims'?: TonproofGetAccauntInfoResponseSchemaStandardClaims;
+    /**
+     * 
+     * @type {number}
+     * @memberof TonproofGetAccauntInfoResponseSchema
+     */
+    'tg_id'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchema
+     */
+    'tg_username'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchema
+     */
+    'ton_wallet_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchema
+     */
+    'user_id'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TonproofGetAccauntInfoResponseSchemaStandardClaims
+ */
+export interface TonproofGetAccauntInfoResponseSchemaStandardClaims {
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'aud'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'exp'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'iat'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'iss'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'jti'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'nbf'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof TonproofGetAccauntInfoResponseSchemaStandardClaims
+     */
+    'sub'?: string;
+}
+/**
+ * 
+ * @export
  * @interface TonproofPayloadResponseSchema
  */
 export interface TonproofPayloadResponseSchema {
@@ -567,6 +653,35 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
     return {
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthTonproofAccauntInfoGet: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/tonproof/accaunt-info`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {TonproofCheckPayloadBodySchema} [tonproofCheckPayloadBodySchema]  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -639,6 +754,17 @@ export const AuthApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthTonproofAccauntInfoGet(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TonproofGetAccauntInfoResponseSchema>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthTonproofAccauntInfoGet(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AuthApi.apiAuthTonproofAccauntInfoGet']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
          * @param {TonproofCheckPayloadBodySchema} [tonproofCheckPayloadBodySchema]  {   \&quot;address\&quot;: \&quot;0:f63660ff947e5fe6ed4a8f729f1b24ef859497d0483aaa9d9ae48414297c4e1b\&quot;, // user\&#39;s address   \&quot;network\&quot;: \&quot;-1\&quot;, // \&quot;-239\&quot; for mainnet and \&quot;-1\&quot; for testnet   \&quot;proof\&quot;: {     \&quot;timestamp\&quot;: 1668094767, // unix epoch seconds    \&quot;domain\&quot;: {     \&quot;lengthBytes\&quot;: 21,     \&quot;value\&quot;: \&quot;ton-connect.github.io\&quot;    },    \&quot;signature\&quot;: \&quot;28tWSg8RDB3P/iIYupySINq1o3F5xLodndzNFHOtdi16Z+MuII8LAPnHLT3E6WTB27//qY4psU5Rf5/aJaIIAA&#x3D;&#x3D;\&quot;,    \&quot;payload\&quot;: \&quot;E5B4ARS6CdOI2b5e1jz0jnS-x-a3DgfNXprrg_3pec0&#x3D;\&quot; // payload from the step 1.   }  } \&quot; 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -670,6 +796,14 @@ export const AuthApiFp = function(configuration?: Configuration) {
 export const AuthApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AuthApiFp(configuration)
     return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthTonproofAccauntInfoGet(options?: RawAxiosRequestConfig): AxiosPromise<TonproofGetAccauntInfoResponseSchema> {
+            return localVarFp.apiAuthTonproofAccauntInfoGet(options).then((request) => request(axios, basePath));
+        },
         /**
          * 
          * @param {AuthApiApiAuthTonproofCheckPayloadPostRequest} requestParameters Request parameters.
@@ -711,6 +845,16 @@ export interface AuthApiApiAuthTonproofCheckPayloadPostRequest {
  * @extends {BaseAPI}
  */
 export class AuthApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public apiAuthTonproofAccauntInfoGet(options?: RawAxiosRequestConfig) {
+        return AuthApiFp(this.configuration).apiAuthTonproofAccauntInfoGet(options).then((request) => request(this.axios, this.basePath));
+    }
+
     /**
      * 
      * @param {AuthApiApiAuthTonproofCheckPayloadPostRequest} requestParameters Request parameters.

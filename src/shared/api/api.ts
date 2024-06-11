@@ -1,4 +1,5 @@
 import { localStorageAuthTokenKey } from "../constants/localStorageKeys";
+import { axiosAuth } from "./authAxios";
 import { Configuration } from "./swagger";
 import { UsersApi, PlayersApi, TasksApi, AuthApi } from "./swagger/api";
 
@@ -27,11 +28,17 @@ export class MainApi {
     this.conf = new Configuration({
       basePath: this.basePath,
       accessToken: this.accessToken,
+      baseOptions: {
+        headers: {
+          Authorization: `Bearer ${this.accessToken}`,
+        },
+      },
     });
-    this.usersApi = new UsersApi(this.conf, this.basePath);
-    this.playersApi = new PlayersApi(this.conf, this.basePath);
-    this.tasksApi = new TasksApi(this.conf, this.basePath);
-    this.authApi = new AuthApi(this.conf, this.basePath);
+
+    this.usersApi = new UsersApi(this.conf, this.basePath, axiosAuth);
+    this.playersApi = new PlayersApi(this.conf, this.basePath, axiosAuth);
+    this.tasksApi = new TasksApi(this.conf, this.basePath, axiosAuth);
+    this.authApi = new AuthApi(this.conf, this.basePath, axiosAuth);
   }
 
   resetAuthJwtTocken = () => {
