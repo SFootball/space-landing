@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { mainApi } from "../../shared/api/api";
-import { useIsConnectionRestored } from "@tonconnect/ui-react";
+import { useIsConnectionRestored, useTonWallet } from "@tonconnect/ui-react";
 import { useEffect } from "react";
 import { queryClient } from "src/App";
 
@@ -8,6 +8,7 @@ export const useGetAccountInfoQueryKey = ["accountInfo"];
 
 export const useGetAccountInfo = () => {
   const connectionRestored = useIsConnectionRestored();
+  const wallet = useTonWallet();
 
   const { data, isLoading, error, refetch, isFetched } = useQuery({
     queryKey: useGetAccountInfoQueryKey,
@@ -21,14 +22,16 @@ export const useGetAccountInfo = () => {
 
   useEffect(() => {
     if (connectionRestored) {
-      refetch();
-    } else {
-      queryClient.resetQueries({
-        queryKey: useGetAccountInfoQueryKey,
-        exact: true,
-      });
+      if (wallet) {
+        refetch();
+      } else {
+        queryClient.refetchQueries({
+          queryKey: useGetAccountInfoQueryKey,
+          exact: true,
+        });
+      }
     }
-  }, [connectionRestored, refetch]);
+  }, [connectionRestored, refetch, wallet]);
 
   return {
     accountInfo: data,

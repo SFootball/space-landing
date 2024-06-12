@@ -3,6 +3,7 @@ import {
   ConnectedWallet,
   useIsConnectionRestored,
   useTonConnectUI,
+  useTonWallet,
 } from "@tonconnect/ui-react";
 
 import { errorAlert } from "src/shared/components/Alerts/ErrorAlert";
@@ -23,7 +24,10 @@ export function useTonBackendAuth() {
   const { t } = useTranslation();
 
   const connectionRestored = useIsConnectionRestored();
+  const walletCon = useTonWallet();
 
+  // console.log("walletCon: ", walletCon);
+  // console.log("useTonBackendAuth connectionRestored: ", connectionRestored);
   const [tonConnectUI] = useTonConnectUI();
   const firstProofLoading = useRef<boolean>(true);
 
@@ -59,14 +63,17 @@ export function useTonBackendAuth() {
   const checkProofOnBackend = useCallback(
     async (wallet: ConnectedWallet | null) => {
       try {
-        console.log("checkProofOnBackend ", wallet);
-        if (!wallet || isCheckingProof) {
+        // console.log("checkProofOnBackend ", wallet);
+        if (isCheckingProof) {
+          return;
+        }
+        if (!wallet) {
           mainApi.resetAuthJwtTocken();
           return;
         }
 
         let token = getAuthTokenFromLS();
-        console.log("wallet.connectItems: ", wallet?.connectItems);
+        // console.log("wallet.connectItems: ", wallet?.connectItems);
         if (
           wallet?.connectItems?.tonProof &&
           "proof" in wallet.connectItems.tonProof
@@ -112,11 +119,13 @@ export function useTonBackendAuth() {
   // check jwt token on connection restored
   useEffect(() => {
     if (connectionRestored) {
-      const authToken = getAuthTokenFromLS();
-      if (!authToken) {
-        tonConnectUI.disconnect();
-        return;
+      if (walletCon) {
+        const authToken = getAuthTokenFromLS();
+        if (!authToken) {
+          tonConnectUI.disconnect();
+          return;
+        }
       }
     }
-  }, [connectionRestored, checkProofOnBackend, tonConnectUI]);
+  }, [connectionRestored, checkProofOnBackend, tonConnectUI, walletCon]);
 }

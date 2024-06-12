@@ -25,25 +25,48 @@ export class MainApi {
   constructor() {
     this.basePath = basePath;
     this.accessToken = localStorage.getItem(localStorageAuthTokenKey) || "";
+    const Authorization = this.accessToken
+      ? `Bearer ${this.accessToken}`
+      : undefined;
     this.conf = new Configuration({
       basePath: this.basePath,
       accessToken: this.accessToken,
       baseOptions: {
         headers: {
-          Authorization: `Bearer ${this.accessToken}`,
+          Authorization,
         },
       },
     });
-
     this.usersApi = new UsersApi(this.conf, this.basePath, axiosAuth);
     this.playersApi = new PlayersApi(this.conf, this.basePath, axiosAuth);
     this.tasksApi = new TasksApi(this.conf, this.basePath, axiosAuth);
     this.authApi = new AuthApi(this.conf, this.basePath, axiosAuth);
   }
 
+  init = () => {
+    this.accessToken = localStorage.getItem(localStorageAuthTokenKey) || "";
+    const Authorization = this.accessToken
+      ? `Bearer ${this.accessToken}`
+      : undefined;
+    this.conf = new Configuration({
+      basePath: this.basePath,
+      accessToken: this.accessToken,
+      baseOptions: {
+        headers: {
+          Authorization,
+        },
+      },
+    });
+    this.usersApi = new UsersApi(this.conf, this.basePath, axiosAuth);
+    this.playersApi = new PlayersApi(this.conf, this.basePath, axiosAuth);
+    this.tasksApi = new TasksApi(this.conf, this.basePath, axiosAuth);
+    this.authApi = new AuthApi(this.conf, this.basePath, axiosAuth);
+  };
+
   resetAuthJwtTocken = () => {
     localStorage.removeItem(localStorageAuthTokenKey);
     this.authApi.apiAuthTonproofGeneratePayloadPost();
+    this.init();
   };
 }
 
