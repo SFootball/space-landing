@@ -2,8 +2,8 @@ import { Flex, Box, Container, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import MenuForMdScreen from "./MenuForMdScreen";
 import MenuForMobScreen from "./MenuForMobScreen";
-import { useTonBackendAuth } from "src/entities/tonAuth/useTonBackendAuth";
-import { TonButton } from "src/entities/tonAuth/TonButton";
+import { useTonBackendAuth } from "src/features/tonAuth/useTonBackendAuth";
+import { TonButton } from "src/features/tonAuth/TonButton";
 import style from "./Header.module.css";
 
 const logoSrc = "/images/logos/logo.png";

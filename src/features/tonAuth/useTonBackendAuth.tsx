@@ -7,7 +7,7 @@ import {
 
 import { errorAlert } from "src/shared/components/Alerts/ErrorAlert";
 import { useTranslation } from "react-i18next";
-import { useTonproofGenPayload } from "src/shared/hooks/useTonproofGenPayload";
+import { useTonproofGenPayload } from "./useTonproofGenPayload";
 import { useTonproofCheckPayload } from "./useTonproofCheckPayload";
 import useInterval from "src/shared/hooks/useInterval";
 import { tonproofPayloadTTLMS } from "src/shared/constants/intervals";

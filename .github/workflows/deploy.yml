@@ -48,5 +48,5 @@ jobs:
           # cache-from: type=registry,ref=space-football.cr.cloud.ru/sfootball_landing:latest
           # cache-to: type=inline
 
-      - name: Cleanup
-        run: docker system prune -af
+      # - name: Cleanup
+      #   run: docker system prune -af

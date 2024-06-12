@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { mainApi } from "../api/api";
+import { mainApi } from "../../shared/api/api";
 
 export const generatePayloadQueryKey = ["tonproofGenPayload"];
 
