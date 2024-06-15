@@ -1,4 +1,4 @@
-import { Flex, Box, Container, Image } from "@chakra-ui/react";
+import { Flex, Box, Image, useMediaQuery } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import MenuForMdScreen from "./MenuForMdScreen";
 import MenuForMobScreen from "./MenuForMobScreen";
@@ -10,21 +10,37 @@ const logoSrc = "/images/logos/logo.png";
 
 const Header = () => {
   useTonBackendAuth();
-  // const changeLanguage = (lng: string) => {
-  //   i18n.changeLanguage(lng);
-  // };
+  // for mobile
+  const [isMobile] = useMediaQuery("(max-width: 420px)");
 
   return (
     <Box as="header" bgColor="white">
-      <Container maxW="1200px">
-        <Flex position="absolute" right="100px" top="40px" gap="8px">
+      <Flex
+        maxW="1200px"
+        minH="110px"
+        w="100%"
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        px="4"
+        gap={4}
+      >
+        <Flex right="100px" top="40px" gap="8px">
           <TonButton />
         </Flex>
-        <Flex h="110px" alignItems="center" justify="space-between">
-          <Link className={style.link} to="/">
-            <Image src={logoSrc} />
-          </Link>
+        {!isMobile && (
+          <Flex h="110px" alignItems="center" justify="space-between">
+            <Link className={style.link} to="/">
+              <Image src={logoSrc} />
+            </Link>
+          </Flex>
+        )}
 
+        <Flex
+          flexGrow={1}
+          justify="flex-end"
+          // position={"relative"}
+          alignItems={"center"}
+        >
           <Box display={{ base: "none", md: "block" }}>
             <MenuForMdScreen />
           </Box>
@@ -33,7 +49,7 @@ const Header = () => {
             <MenuForMobScreen />
           </Box>
         </Flex>
-      </Container>
+      </Flex>
     </Box>
   );
 };
