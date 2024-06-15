@@ -1,6 +1,6 @@
 import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
+import Background from "./Background";
 
-export const bgImgURL = "url('/images/common/footballer.jpg')";
 const laptopImgSRC_1 = "/images/common/1.png";
 const laptopImgSRC_2 = "/images/common/2.png";
 const laptopImgSRC_3 = "/images/common/3.png";
@@ -10,20 +10,8 @@ const dataImgSRC_2 = "/images/common/5-2.png";
 
 function Main() {
   return (
-    <Box width="100%" minH="100vh" bgColor="transparent">
-      <Box
-        as="main"
-        position="fixed"
-        top="0"
-        left="0"
-        width="100%"
-        height="100%"
-        bgImage={bgImgURL}
-        bgRepeat="no-repeat"
-        bgPosition="center"
-        zIndex="-1"
-        className="main-bg"
-      />
+    <>
+      <Background />
       <Container maxW="1200px">
         <Flex
           h="calc(100vh - 110px)"
@@ -251,7 +239,8 @@ function Main() {
           </Flex>
         </Container>
       </Box>
-    </Box>
+      {/* </Box> */}
+    </>
   );
 }
 

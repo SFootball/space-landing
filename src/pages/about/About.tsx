@@ -1,10 +1,9 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-
-const stadiumImgURL = "/images/common/stadium.jpg";
-const ballImgURL = "/images/common/ball.jpg";
-const matchImgURL = "/images/common/match.jpg";
-const scautImgURL = "/images/common/scaut.svg";
+import StadiumImg from "./StadiumImg";
+import BallImg from "./BallImg";
+import MatchImg from "./MatchImg";
+import ScautImg from "./ScautImg";
 
 function About() {
   const { t } = useTranslation();
@@ -76,15 +75,7 @@ function About() {
               alignItems="center"
               gap="50px"
             >
-              <Box
-                h="300px"
-                w="300px"
-                borderRadius="50%"
-                bg={`url('${stadiumImgURL}') no-repeat 0 -36px`}
-                bgSize="300px auto"
-                boxShadow="dark-lg"
-                p="6"
-              />
+              <StadiumImg />
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
                   {t("Who we are?")}
@@ -112,15 +103,7 @@ function About() {
                   )}
                 </Text>
               </Box>
-              <Box
-                h="300px"
-                w="300px"
-                borderRadius="50%"
-                bg={`url('${ballImgURL}') no-repeat -190px 0`}
-                bgSize="auto 300px"
-                boxShadow="dark-lg"
-                p="6"
-              />
+              <BallImg />
             </Flex>
             <Flex
               direction={{ base: "column", lg: "row" }}
@@ -128,15 +111,7 @@ function About() {
               alignItems="center"
               gap="50px"
             >
-              <Box
-                h="300px"
-                w="300px"
-                borderRadius="50%"
-                bg={`url('${matchImgURL}') no-repeat -60px 0`}
-                bgSize="auto 300px"
-                boxShadow="dark-lg"
-                p="6"
-              />
+              <MatchImg />
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
                   {t("How does it work?")}
@@ -168,15 +143,7 @@ function About() {
                   )}
                 </Text>
               </Box>
-              <Box
-                h="300px"
-                w="300px"
-                borderRadius="50%"
-                bg={`url('${scautImgURL}') no-repeat -18px 0`}
-                bgSize="auto 300px"
-                boxShadow="dark-lg"
-                p="6"
-              />
+              <ScautImg />
             </Flex>
           </Flex>
         </Container>
@@ -190,8 +157,9 @@ function About() {
               </Text>
               <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="center" align="start">
-                {management.map((person) => (
+                {management.map((person, i) => (
                   <Flex
+                    key={i}
                     direction="column"
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
@@ -226,8 +194,9 @@ function About() {
               </Text>
               <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="start" align="start" wrap="wrap" rowGap="60px">
-                {coreTeam.map((person) => (
+                {coreTeam.map((person, i) => (
                   <Flex
+                    key={i}
                     direction="column"
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
