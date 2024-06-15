@@ -1,4 +1,5 @@
 import {
+  Navigate,
   Route,
   createBrowserRouter,
   createRoutesFromElements,
@@ -16,6 +17,7 @@ export const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/roadmap" element={<Roadmap />} />
       <Route path="/account-info" element={<AccountInfo />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Route>
   )
 );

@@ -16,9 +16,11 @@ const Path = (
   />
 );
 
-export const MenuToggleButton: React.FC<{ toggle: () => void }> = ({
-  toggle,
-}) => (
+type Props = {
+  toggle: () => void;
+};
+
+export const MenuToggleButton: React.FC<Props> = ({ toggle }) => (
   <button className={`${style.navMenuButton}`} onClick={toggle}>
     <svg
       className={style.menuIcon}

@@ -11,7 +11,7 @@ const Card: React.FC<Props> = ({
   containerProps,
   badgeColor = "green",
   date,
-  title,
+  // title,
   description,
 }) => {
   const { t, i18n } = useTranslation();
