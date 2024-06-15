@@ -1,5 +1,6 @@
 import { Flex, Box, Container, Text, Image, Divider } from "@chakra-ui/react";
 import Card from "./Card";
+import { roadmapItems } from "./roadmap.config";
 
 function Roadmap() {
   return (
@@ -61,27 +62,25 @@ function Roadmap() {
                 width="2px"
                 bgColor="red"
                 h="100%"
-              ></Box>
-              <Card
-                justify={{ base: "center", lg: "start" }}
-                quarter="Q1/2024"
-                badgeColor="green"
               />
-              <Card
-                justify={{ base: "center", lg: "end" }}
-                quarter="Q2/2024"
-                badgeColor="yellow"
-              />
-              <Card
-                justify={{ base: "center", lg: "start" }}
-                quarter="Q3/2024"
-                badgeColor="red"
-              />
-              <Card
-                justify={{ base: "center", lg: "end" }}
-                quarter="Q4/2025"
-                badgeColor="red"
-              />
+              {roadmapItems.map((item, index) => {
+                const isHonest = index % 2 === 0;
+                return (
+                  <Card
+                    key={index}
+                    containerProps={{
+                      justifyContent: {
+                        base: "center",
+                        lg: isHonest ? "start" : "end",
+                      },
+                    }}
+                    date={item.date}
+                    badgeColor={item.badgeColor}
+                    title={item.title}
+                    description={item.description}
+                  />
+                );
+              })}
             </Flex>
           </Container>
         </Box>

@@ -1,5 +1,6 @@
 import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
-import Background from "./Background";
+import Background, { bgImgURL } from "./Background";
+import style from "./Main.module.css";
 
 const laptopImgSRC_1 = "/images/common/1.png";
 const laptopImgSRC_2 = "/images/common/2.png";
@@ -10,8 +11,20 @@ const dataImgSRC_2 = "/images/common/5-2.png";
 
 function Main() {
   return (
-    <>
-      <Background />
+    <Box width="100%" minH="100vh" bgColor="transparent">
+      <Box
+        as="main"
+        position="fixed"
+        top="0"
+        left="0"
+        width="100%"
+        height="100%"
+        bgImage={bgImgURL}
+        bgRepeat="no-repeat"
+        bgPosition="center"
+        zIndex="-1"
+        className={style.mainBg}
+      />
       <Container maxW="1200px">
         <Flex
           h="calc(100vh - 110px)"
@@ -39,7 +52,7 @@ function Main() {
       </Container>
       <Box bgColor="white">
         <Container maxW="1200px">
-          <Flex maxH="720px" py="90px" justify="center" align="center">
+          {/* <Flex maxH="720px" py="90px" justify="center" align="center">
             <iframe
               width="960"
               height="540"
@@ -50,7 +63,7 @@ function Main() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
-          </Flex>
+          </Flex> */}
         </Container>
         <Container
           maxW="760px"
@@ -239,8 +252,7 @@ function Main() {
           </Flex>
         </Container>
       </Box>
-      {/* </Box> */}
-    </>
+    </Box>
   );
 }
 

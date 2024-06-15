@@ -1,6 +1,6 @@
 import { motion, useCycle } from "framer-motion";
-import Navigation from "./Navigation";
-import MenuToggle from "./MenuToggle";
+import { Navigation } from "./Navigation";
+import { MenuToggleButton } from "src/shared/components/Buttons/MenuToggleButton";
 
 const MenuForMdScreen = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -8,7 +8,7 @@ const MenuForMdScreen = () => {
   return (
     <>
       <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
-        <MenuToggle toggle={() => toggleOpen()} />
+        <MenuToggleButton toggle={() => toggleOpen()} />
         <Navigation toggle={() => toggleOpen()} />
       </motion.nav>
     </>

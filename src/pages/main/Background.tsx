@@ -2,7 +2,7 @@ import { Box, Image } from "@chakra-ui/react";
 import { useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-const bgImgSRC = "/images/common/footballer.jpg";
+export const bgImgURL = "/images/common/footballer.jpg";
 
 const Background = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
