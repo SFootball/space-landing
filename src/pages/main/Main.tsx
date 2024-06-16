@@ -1,6 +1,5 @@
 import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
-import Background, { bgImgURL } from "./Background";
-import style from "./Main.module.css";
+import Background from "./Background";
 
 const laptopImgSRC_1 = "/images/common/1.png";
 const laptopImgSRC_2 = "/images/common/2.png";
