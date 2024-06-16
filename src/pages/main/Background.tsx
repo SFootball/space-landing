@@ -22,7 +22,7 @@ const Background = () => {
       <Image
         h="calc(100vh + 110px)"
         w="100vw"
-        src={bgImgSRC}
+        src={bgImgURL}
         position="fixed"
         top="-110px"
         zIndex="-1"

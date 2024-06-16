@@ -157,7 +157,7 @@ function About() {
               </Text>
               <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="center" align="start">
-                {management.map((person, i) => (
+                {management.map((person) => (
                   <Flex
                     key={person.name}
                     direction="column"
@@ -194,7 +194,7 @@ function About() {
               </Text>
               <Divider borderColor="black" mb={{ base: "45px", lg: "90px" }} />
               <Flex justify="start" align="start" wrap="wrap" rowGap="60px">
-                {coreTeam.map((person, i) => (
+                {coreTeam.map((person) => (
                   <Flex
                     key={person.name}
                     direction="column"
