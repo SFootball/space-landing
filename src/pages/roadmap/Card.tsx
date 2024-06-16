@@ -26,7 +26,7 @@ const Card: React.FC<Props> = ({
       <Flex
         w={{ base: "294px", lg: "420px" }}
         h={{ base: "auto" }}
-        bgColor="brand.blue"
+        bgColor="blue.500"
         borderRadius="25px"
         shadow="2xl"
         justify="center"

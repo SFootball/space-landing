@@ -1,9 +1,18 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import StadiumImg from "./StadiumImg";
-import BallImg from "./BallImg";
-import MatchImg from "./MatchImg";
-import ScautImg from "./ScautImg";
+import StadiumImg from "../../shared/components/ContentImgs/StadiumImg";
+import BallImg from "../../shared/components/ContentImgs/BallImg";
+import MatchImg from "../../shared/components/ContentImgs/MatchImg";
+import ScautImg from "../../shared/components/ContentImgs/ScautImg";
+import IldarIcon from "src/shared/components/TeamIcons/IldarIcon";
+import DenisIcon from "src/shared/components/TeamIcons/DenisIcon";
+import AntonIcon from "src/shared/components/TeamIcons/AntonIcon";
+import LeisanIcon from "src/shared/components/TeamIcons/LeisanIcon";
+import DmitryIcon from "src/shared/components/TeamIcons/DmitryIcon";
+import AlexeyIcon from "src/shared/components/TeamIcons/AlexeyIcon";
+import DanilIcon from "src/shared/components/TeamIcons/DanilIcon";
+import AliIcon from "src/shared/components/TeamIcons/AliIcon";
+import KarinaIcon from "src/shared/components/TeamIcons/KarinaIcon";
 
 function About() {
   const { t } = useTranslation();
@@ -12,12 +21,12 @@ function About() {
     {
       name: "Denis Yunusov",
       position: "CEO",
-      bg: "url('/images/avatars/denis_yunusov.jpg') no-repeat -44px 0",
+      icon: <DenisIcon />,
     },
     {
       name: "Ildar Nasyrov",
       position: "CTO",
-      bg: "url('/images/avatars/ildar_nasyrov.jpeg') no-repeat",
+      icon: <IldarIcon />,
     },
   ];
 
@@ -25,37 +34,37 @@ function About() {
     {
       name: "Anton Tuktarev",
       position: "Content Manager",
-      bg: "url('/images/avatars/tuktarev_anton.jpg') no-repeat -42px 0",
+      icon: <AntonIcon />,
     },
     {
       name: "Leisan",
       position: "PR Manager",
-      bg: "gray.100",
+      icon: <LeisanIcon />,
     },
     {
       name: "Dmitry Zykov",
       position: "ML Engineer",
-      bg: "url('/images/avatars/zykov_dmitry.jpg') no-repeat",
+      icon: <DmitryIcon />,
     },
     {
       name: "Alexey Senchenko",
       position: "Art Manager",
-      bg: "url('/images/avatars/alexey_senchenko.jpg') no-repeat",
+      icon: <AlexeyIcon />,
     },
     {
       name: "Danil",
       position: "Smart Contract Developer",
-      bg: "url('/images/avatars/danil.jpg') no-repeat",
+      icon: <DanilIcon />,
     },
     {
       name: "Ali Baybutov",
       position: "Frontend Developer",
-      bg: "url('/images/avatars/ali_baybutov.jpg') no-repeat -40px 0",
+      icon: <AliIcon />,
     },
     {
       name: "Karina Kanchurina",
       position: "Test Engineer",
-      bg: "url('/images/avatars/karina_kanchurina.jpg') no-repeat -46px 0",
+      icon: <KarinaIcon />,
     },
   ];
 
@@ -164,16 +173,7 @@ function About() {
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
                   >
-                    <Box
-                      h="120px"
-                      w="120px"
-                      borderRadius="50%"
-                      bg={person.bg}
-                      bgSize="auto 120px"
-                      boxShadow="dark-lg"
-                      p="6"
-                      mb="16px"
-                    />
+                    {person.icon}
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
                     </Text>
@@ -201,16 +201,7 @@ function About() {
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
                   >
-                    <Box
-                      h="120px"
-                      w="120px"
-                      borderRadius="50%"
-                      bg={person.bg}
-                      bgSize="auto 120px"
-                      boxShadow="dark-lg"
-                      p="6"
-                      mb="16px"
-                    />
+                    {person.icon}
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
                     </Text>

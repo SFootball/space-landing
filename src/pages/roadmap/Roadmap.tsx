@@ -1,6 +1,7 @@
-import { Flex, Box, Container, Text, Image, Divider } from "@chakra-ui/react";
+import { Flex, Box, Container, Text, Divider } from "@chakra-ui/react";
 import Card from "./Card";
 import { roadmapItems } from "./roadmap.config";
+import RoadmapImg from "src/shared/components/ContentImgs/RoadmapImg";
 
 function Roadmap() {
   return (
@@ -36,12 +37,7 @@ function Roadmap() {
                     have completed, are developing and plan to implement
                   </Text>
                 </Text>
-                <Image
-                  borderRadius="25px"
-                  maxH={{ base: "300px" }}
-                  src="/images/common/roadmap.jpg"
-                  shadow="2xl"
-                />
+                <RoadmapImg />
               </Flex>
             </Flex>
           </Container>
