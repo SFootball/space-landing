@@ -180,7 +180,6 @@ function About() {
                     <Text
                       textAlign="center"
                       fontSize={{ base: "13px", lg: "18px" }}
-                      px="10px"
                     >
                       {t(`${person.position}`)}
                     </Text>
@@ -205,7 +204,10 @@ function About() {
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
                     </Text>
-                    <Text fontSize={{ base: "13px", lg: "18px" }}>
+                    <Text
+                      textAlign="center"
+                      fontSize={{ base: "13px", lg: "18px" }}
+                    >
                       {t(`${person.position}`)}
                     </Text>
                   </Flex>

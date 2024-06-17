@@ -37,6 +37,7 @@ const AntonIcon = () => {
           setImageLoaded(true);
         }}
         display={!imageLoaded ? "none" : "inline"}
+        mb="10px"
       />
     </>
   );

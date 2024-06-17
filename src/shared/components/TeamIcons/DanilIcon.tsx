@@ -37,6 +37,7 @@ const DanilIcon = () => {
           setImageLoaded(true);
         }}
         display={!imageLoaded ? "none" : "inline"}
+        mb="10px"
       />
     </>
   );
