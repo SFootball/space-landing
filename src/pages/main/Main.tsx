@@ -54,35 +54,38 @@ function Main() {
         </Container>
         <Container
           maxW="760px"
-          maxH="1280px"
+          maxH="1320px"
           py={{ base: "75px", lg: "150px" }}
           px={{ base: "30px", lg: "0px" }}
         >
           <Text
+            display="inline-block"
             fontSize={{ base: "56px", lg: "72px" }}
             as="b"
             textAlign="center"
-            mb="72px"
+            mb="64px"
           >
             Who we are?
           </Text>
+          <Text
+            display="inline-block"
+            fontSize={{ base: "18px", lg: "26px" }}
+            as="b"
+          >
+            FIND OUT ABOUT THE BEST YOUNG FOOTBALL PLAYERS
+          </Text>
           <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
             SFootball is a new digital project dedicated to set up a football
-            analytics. The project provides a wide range of services covering
-            all possible customer requests, statistical post-match reports, raw
-            data, player fitness tracking reports, and analytical player
-            reports.
+            analytics, using machine learning, blockchain, neural networks,
+            customized and user-friendly software. Explore the best advanced
+            soccer stats and free stats which you have not seen before. Look for
+            young promising players in our database.
           </Text>
           <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
             OUR MISSION
           </Text>
           <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
-            We aim at developing football with the contemporary IT solutions
-            using machine learning, blockchain, neural networks, customized and
-            user-friendly software which will facilitate the work for coaches,
-            analysts, scouts as well as journalists and commentators. The
-            SFootball services are fully customizable, so all the users will
-            manage to find what they need.
+            Development of world football through digital technologies.
           </Text>
           <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
             OUR ENERGY
@@ -92,11 +95,23 @@ function Main() {
             goal.
           </Text>
           <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
-            RELIABILITY
+            COMPARE YOURSELF
           </Text>
           <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
-            SFootball is a well-structured company with over 20 people in staff
-            all around the world.
+            Compare yourself with the best players in the world or with your
+            friends using our reports.
+          </Text>
+          <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="36px">
+            PREDICTIONS
+          </Text>
+          <Text fontSize={{ base: "14px", lg: "20px" }} mb="54px">
+            Applying rigorous statistical models and advanced algorithms, we
+            provide young players to showcase their talent in a professional
+            setting Our predictions are the most accurate. Get to know the
+            complete player reports, enriched with extensive analytical data.
+            This analysis offers a comprehensive overview to gain a deeper
+            understanding of a player's potential and make informed predictions
+            about his future performance in football.
           </Text>
         </Container>
       </Box>

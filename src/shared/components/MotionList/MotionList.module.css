@@ -32,8 +32,8 @@
   .navList {
     position: absolute;
     top: 0px;
-    right: calc(50% - 170px);
-    width: 340px;
+    right: calc(50% - 250px);
+    width: 500px;
     height: 110px;
     display: flex;
     flex-direction: row-reverse;
