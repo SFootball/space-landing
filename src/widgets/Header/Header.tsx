@@ -7,7 +7,9 @@ import { TonButton } from "src/features/tonAuth/TonButton";
 import style from "./Header.module.css";
 import i18n from "src/i18n";
 
-const logoSrc = "/images/logos/logo.png";
+const logoURL = "/images/logos/logo.png";
+const enURL = "/images/common/en.png";
+const ruURL = "/images/common/ru.png";
 
 const Header = () => {
   useTonBackendAuth();
@@ -32,7 +34,7 @@ const Header = () => {
                   onClick={() => {
                     changeLanguage("ru");
                   }}
-                  src="/images/common/ru.png"
+                  src={ruURL}
                   h="30px"
                   w="30px"
                   cursor="pointer"
@@ -41,7 +43,7 @@ const Header = () => {
                   onClick={() => {
                     changeLanguage("en");
                   }}
-                  src="/images/common/en.png"
+                  src={enURL}
                   h="30px"
                   w="30px"
                   cursor="pointer"
@@ -49,7 +51,7 @@ const Header = () => {
               </Flex>
               <Flex h="110px" alignItems="center" justify="space-between">
                 <Link className={style.link} to="/">
-                  <Image src={logoSrc} />
+                  <Image src={logoURL} />
                 </Link>
 
                 <Box display={{ base: "none", md: "block" }}>
