@@ -14,13 +14,15 @@ export const Main = () => {
   return (
     <Box width="100%" minH="100vh" bgColor="transparent">
       <Background />
-      <Container maxW="1200px">
-        <Flex
-          h="calc(100vh - 110px)"
-          justifyContent="center"
-          alignItems="center"
-          direction="column"
-        >
+      <Flex
+        maxW="1200px"
+        minH={{ base: "420px", lg: "calc(100vh - 110px)" }}
+        justify="center"
+        align="center"
+        margin="0 auto"
+        px="20px"
+      >
+        <Flex justifyContent="center" alignItems="center" direction="column">
           <Heading
             fontSize={{ base: "56px", lg: "72px" }}
             marginBottom="54px"
@@ -38,7 +40,7 @@ export const Main = () => {
             {t("All in one statistical solution")}
           </Box>
         </Flex>
-      </Container>
+      </Flex>
       <Box bgColor="white">
         <Container maxW="1200px">
           {/* <Flex maxH="720px" py="90px" justify="center" align="center">

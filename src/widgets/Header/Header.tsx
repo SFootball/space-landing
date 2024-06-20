@@ -53,11 +53,10 @@ export const Header = () => {
                 <Link className={style.link} to="/">
                   <Image src={logoURL} />
                 </Link>
-
-                <Box display={{ base: "none", md: "block" }}>
+                <Box display={{ base: "none", md: "block" }} height="50px">
                   <MenuForMdScreen />
                 </Box>
-                <Box display={{ base: "block", md: "none" }}>
+                <Box display={{ base: "block", md: "none" }} height="50px">
                   <MenuForMobScreen />
                 </Box>
               </Flex>
@@ -67,8 +66,11 @@ export const Header = () => {
               h="110px"
               alignItems="center"
               justify="space-between"
-              flexDirection="row-reverse"
+              // flexDirection="row-reverse"
             >
+              <Link className={style.link} to="/">
+                <Image src={logoURL} />
+              </Link>
               <Box display={{ base: "none", md: "block" }}>
                 <MenuForMdScreen />
               </Box>
