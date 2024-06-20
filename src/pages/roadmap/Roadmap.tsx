@@ -1,8 +1,15 @@
-import { Flex, Box, Container, Text, Image, Divider } from "@chakra-ui/react";
-import Card from "./Card";
+import { Flex, Box, Container, Text, Divider } from "@chakra-ui/react";
+import { Card } from "./Card";
 import { roadmapItems } from "./roadmap.config";
+import { PreloadImage } from "src/shared/components/PreloadImage";
+import { useTranslation } from "react-i18next";
+import { imgPathMap } from "src/shared/constants/imgPathMap";
 
-function Roadmap() {
+export const Roadmap = () => {
+  const { t } = useTranslation();
+
+  const { roadmap } = imgPathMap;
+
   return (
     <>
       <Box as="main">
@@ -25,22 +32,24 @@ function Roadmap() {
                   as="b"
                   textAlign={{ base: "center", lg: "left" }}
                 >
-                  SFootball Roadmap
+                  {t("SFootball Roadmap")}
                   <Text
                     textAlign="left"
                     fontSize={{ base: "18px", lg: "26px" }}
                     fontWeight="normal"
                     maxW="600px"
                   >
-                    We invite you to familiarize yourself with the tasks that we
-                    have completed, are developing and plan to implement
+                    {t(
+                      "We invite you to familiarize yourself with the tasks that we have completed, are developing and plan to implement"
+                    )}
                   </Text>
                 </Text>
-                <Image
+                <PreloadImage
+                  imgSRC={roadmap.path}
+                  maxH="300px"
+                  hash={roadmap.hash}
                   borderRadius="25px"
-                  maxH={{ base: "300px" }}
-                  src="/images/common/roadmap.jpg"
-                  shadow="2xl"
+                  objectPosition="right 0 bottom 0"
                 />
               </Flex>
             </Flex>
@@ -88,6 +97,4 @@ function Roadmap() {
       <Divider />
     </>
   );
-}
-
-export default Roadmap;
+};

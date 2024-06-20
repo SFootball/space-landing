@@ -2,7 +2,7 @@ import { motion, useCycle } from "framer-motion";
 import { Navigation } from "./Navigation";
 import { MenuToggleButton } from "src/shared/components/Buttons/MenuToggleButton";
 
-const MenuForMdScreen = () => {
+export const MenuForMdScreen = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
@@ -14,5 +14,3 @@ const MenuForMdScreen = () => {
     </>
   );
 };
-
-export default MenuForMdScreen;

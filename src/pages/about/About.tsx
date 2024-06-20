@@ -1,24 +1,41 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { PreloadImage } from "src/shared/components/PreloadImage";
+import { imgPathMap } from "src/shared/constants/imgPathMap";
 
-const stadiumImgURL = "/images/common/stadium.jpg";
-const ballImgURL = "/images/common/ball.jpg";
-const matchImgURL = "/images/common/match.jpg";
-const scautImgURL = "/images/common/scaut.svg";
-
-function About() {
+export const About = () => {
   const { t } = useTranslation();
+
+  const {
+    denisYunusov,
+    ildarNasyrov,
+    antonTuktarev,
+    leisan,
+    dmitryZykov,
+    alexeySenchenko,
+    danil,
+    aliBaybutov,
+    karinaKanchurina,
+    stadium,
+    ball,
+    match,
+    scaut,
+  } = imgPathMap;
 
   const management = [
     {
       name: "Denis Yunusov",
       position: "CEO",
-      bg: "url('/images/avatars/denis_yunusov.jpg') no-repeat -44px 0",
+      imgSRC: denisYunusov.path,
+      hash: denisYunusov.hash,
+      objectPosition: "right -48px bottom 0",
     },
     {
       name: "Ildar Nasyrov",
       position: "CTO",
-      bg: "url('/images/avatars/ildar_nasyrov.jpeg') no-repeat",
+      imgSRC: ildarNasyrov.path,
+      hash: ildarNasyrov.hash,
+      objectPosition: "right 0 bottom 0",
     },
   ];
 
@@ -26,37 +43,51 @@ function About() {
     {
       name: "Anton Tuktarev",
       position: "Content Manager",
-      bg: "url('/images/avatars/tuktarev_anton.jpg') no-repeat -42px 0",
+      imgSRC: antonTuktarev.path,
+      hash: antonTuktarev.hash,
+      objectPosition: "right -48px bottom 0",
     },
     {
       name: "Leisan",
       position: "PR Manager",
-      bg: "gray.100",
+      imgSRC: leisan.path,
+      hash: leisan.hash,
+      objectPosition: "right -48px bottom 0",
     },
     {
       name: "Dmitry Zykov",
       position: "ML Engineer",
-      bg: "url('/images/avatars/zykov_dmitry.jpg') no-repeat",
+      imgSRC: dmitryZykov.path,
+      hash: dmitryZykov.hash,
+      objectPosition: "right 0 bottom 0",
     },
     {
       name: "Alexey Senchenko",
       position: "Art Manager",
-      bg: "url('/images/avatars/alexey_senchenko.jpg') no-repeat",
+      imgSRC: alexeySenchenko.path,
+      hash: alexeySenchenko.hash,
+      objectPosition: "right 0 bottom 0",
     },
     {
       name: "Danil",
       position: "Smart Contract Developer",
-      bg: "url('/images/avatars/danil.jpg') no-repeat",
+      imgSRC: danil.path,
+      hash: danil.hash,
+      objectPosition: "right 0 bottom 0",
     },
     {
       name: "Ali Baybutov",
       position: "Frontend Developer",
-      bg: "url('/images/avatars/ali_baybutov.jpg') no-repeat -40px 0",
+      imgSRC: aliBaybutov.path,
+      hash: aliBaybutov.hash,
+      objectPosition: "right -18px bottom 0",
     },
     {
       name: "Karina Kanchurina",
       position: "Test Engineer",
-      bg: "url('/images/avatars/karina_kanchurina.jpg') no-repeat -46px 0",
+      imgSRC: karinaKanchurina.path,
+      hash: karinaKanchurina.hash,
+      objectPosition: "right -44px bottom 0",
     },
   ];
 
@@ -76,14 +107,13 @@ function About() {
               alignItems="center"
               gap="50px"
             >
-              <Box
-                h="300px"
-                w="300px"
+              <PreloadImage
+                imgSRC={stadium.path}
+                width="300px"
+                height="300px"
+                hash={stadium.hash}
                 borderRadius="50%"
-                bg={`url('${stadiumImgURL}') no-repeat 0 -36px`}
-                bgSize="300px auto"
-                boxShadow="dark-lg"
-                p="6"
+                objectPosition=""
               />
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
@@ -112,14 +142,13 @@ function About() {
                   )}
                 </Text>
               </Box>
-              <Box
-                h="300px"
-                w="300px"
+              <PreloadImage
+                imgSRC={ball.path}
+                width="300px"
+                height="300px"
+                hash={ball.hash}
                 borderRadius="50%"
-                bg={`url('${ballImgURL}') no-repeat -190px 0`}
-                bgSize="auto 300px"
-                boxShadow="dark-lg"
-                p="6"
+                objectPosition="right 0 bottom 0"
               />
             </Flex>
             <Flex
@@ -128,14 +157,13 @@ function About() {
               alignItems="center"
               gap="50px"
             >
-              <Box
-                h="300px"
-                w="300px"
+              <PreloadImage
+                imgSRC={match.path}
+                width="300px"
+                height="300px"
+                hash={match.hash}
                 borderRadius="50%"
-                bg={`url('${matchImgURL}') no-repeat -60px 0`}
-                bgSize="auto 300px"
-                boxShadow="dark-lg"
-                p="6"
+                objectPosition="left -60px bottom 0"
               />
               <Box maxW="600px">
                 <Text fontSize={{ base: "32px", lg: "46px" }} as="b">
@@ -168,14 +196,13 @@ function About() {
                   )}
                 </Text>
               </Box>
-              <Box
-                h="300px"
-                w="300px"
+              <PreloadImage
+                imgSRC={scaut.path}
+                width="300px"
+                height="300px"
+                hash={scaut.hash}
                 borderRadius="50%"
-                bg={`url('${scautImgURL}') no-repeat -18px 0`}
-                bgSize="auto 300px"
-                boxShadow="dark-lg"
-                p="6"
+                objectPosition="left -16px bottom 0"
               />
             </Flex>
           </Flex>
@@ -197,15 +224,14 @@ function About() {
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
                   >
-                    <Box
-                      h="120px"
-                      w="120px"
+                    <PreloadImage
+                      imgSRC={person.imgSRC}
+                      width="120px"
+                      height="120px"
+                      hash={person.hash}
                       borderRadius="50%"
-                      bg={person.bg}
-                      bgSize="auto 120px"
-                      boxShadow="dark-lg"
-                      p="6"
-                      mb="16px"
+                      objectPosition={person.objectPosition}
+                      mb="10px"
                     />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
@@ -213,7 +239,6 @@ function About() {
                     <Text
                       textAlign="center"
                       fontSize={{ base: "13px", lg: "18px" }}
-                      px="10px"
                     >
                       {t(`${person.position}`)}
                     </Text>
@@ -234,20 +259,22 @@ function About() {
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
                   >
-                    <Box
-                      h="120px"
-                      w="120px"
+                    <PreloadImage
+                      imgSRC={person.imgSRC}
+                      width="120px"
+                      height="120px"
+                      hash={person.hash}
                       borderRadius="50%"
-                      bg={person.bg}
-                      bgSize="auto 120px"
-                      boxShadow="dark-lg"
-                      p="6"
-                      mb="16px"
+                      objectPosition={person.objectPosition}
+                      mb="10px"
                     />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
                     </Text>
-                    <Text fontSize={{ base: "13px", lg: "18px" }}>
+                    <Text
+                      textAlign="center"
+                      fontSize={{ base: "13px", lg: "18px" }}
+                    >
                       {t(`${person.position}`)}
                     </Text>
                   </Flex>
@@ -307,6 +334,4 @@ function About() {
       </Box>
     </Box>
   );
-}
-
-export default About;
+};

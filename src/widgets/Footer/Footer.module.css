@@ -1,0 +1,33 @@
+.logoFooter {
+  max-width: 240px;
+  margin-bottom: 40px;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.discordIcon:hover {
+  fill: red;
+}
+
+.tgBotIcon:hover {
+  fill: red;
+}
+
+.tgBotIcon {
+  fill: #c944fd;
+}
+
+.tgEnIcon:hover {
+  fill: red;
+}
+
+.tgRuIcon {
+  fill: blue;
+}
+
+.tgRuIcon:hover {
+  fill: red;
+}
