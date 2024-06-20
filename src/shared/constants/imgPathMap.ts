@@ -39,4 +39,28 @@ export const imgPathMap = {
     path: "/images/avatars/karina_kanchurina.jpg",
     hash: "LJLq5{.8_N%2Dit7.8Rj%#WBMdX8",
   },
+  stadium: {
+    path: "/images/common/stadium.jpg",
+    hash: "TB9j+TWCD*~qaxM{00fRxs00og%M",
+  },
+  ball: {
+    path: "/images/common/ball.jpg",
+    hash: "L?Fa5|YRv|xXyC$_slsqesn~xYR.",
+  },
+  match: {
+    path: "/images/common/match.jpg",
+    hash: "L5D03|wRA0bV00_2~WD+GgD*a0%N",
+  },
+  scaut: {
+    path: "/images/common/scaut.jpg",
+    hash: "LPALkuoJD,WCu6kCICWBtSfljDf5",
+  },
+  roadmap: {
+    path: "/images/common/roadmap.jpg",
+    hash: "L35Hn[Y$S5tkO;bvayj?Mxaef6j[",
+  },
+  background: {
+    path: "/images/common/footballer.jpg",
+    hash: "LEED*.nn~p8^028wRhR-4T?Y4o-;",
+  },
 };

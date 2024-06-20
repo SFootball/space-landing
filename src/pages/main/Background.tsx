@@ -1,17 +1,18 @@
 import { Box, Image } from "@chakra-ui/react";
 import { useState } from "react";
 import { Blurhash } from "react-blurhash";
-
-export const bgImgURL = "/images/common/footballer.jpg";
+import { imgPathMap } from "src/shared/constants/imgPathMap";
 
 export const Background = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+
+  const { background } = imgPathMap;
 
   return (
     <>
       <Box display={imageLoaded ? "none" : "inline"}>
         <Blurhash
-          hash="LEED*.nn~p8^028wRhR-4T?Y4o-;"
+          hash={background.hash}
           width="100vw"
           height="100vh"
           resolutionX={32}
@@ -22,7 +23,7 @@ export const Background = () => {
       <Image
         h="calc(100vh + 110px)"
         w="100vw"
-        src={bgImgURL}
+        src={background.path}
         position="fixed"
         top="-110px"
         zIndex="-1"

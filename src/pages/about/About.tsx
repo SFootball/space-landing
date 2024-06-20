@@ -16,6 +16,10 @@ export const About = () => {
     danil,
     aliBaybutov,
     karinaKanchurina,
+    stadium,
+    ball,
+    match,
+    scaut,
   } = imgPathMap;
 
   const management = [
@@ -104,10 +108,10 @@ export const About = () => {
               gap="50px"
             >
               <PreloadImage
-                imgSRC="/images/common/stadium.jpg"
+                imgSRC={stadium.path}
                 width="300px"
                 height="300px"
-                hash="TB9j+TWCD*~qaxM{00fRxs00og%M"
+                hash={stadium.hash}
                 borderRadius="50%"
                 objectPosition=""
               />
@@ -139,10 +143,10 @@ export const About = () => {
                 </Text>
               </Box>
               <PreloadImage
-                imgSRC="/images/common/ball.jpg"
+                imgSRC={ball.path}
                 width="300px"
                 height="300px"
-                hash="L?Fa5|YRv|xXyC$_slsqesn~xYR."
+                hash={ball.hash}
                 borderRadius="50%"
                 objectPosition="right 0 bottom 0"
               />
@@ -154,10 +158,10 @@ export const About = () => {
               gap="50px"
             >
               <PreloadImage
-                imgSRC="/images/common/match.jpg"
+                imgSRC={match.path}
                 width="300px"
                 height="300px"
-                hash="L5D03|wRA0bV00_2~WD+GgD*a0%N"
+                hash={match.hash}
                 borderRadius="50%"
                 objectPosition="left -60px bottom 0"
               />
@@ -193,10 +197,10 @@ export const About = () => {
                 </Text>
               </Box>
               <PreloadImage
-                imgSRC="/images/common/scaut.jpg"
+                imgSRC={scaut.path}
                 width="300px"
                 height="300px"
-                hash="LPALkuoJD,WCu6kCICWBtSfljDf5"
+                hash={scaut.hash}
                 borderRadius="50%"
                 objectPosition="left -16px bottom 0"
               />

@@ -3,9 +3,13 @@ import { Card } from "./Card";
 import { roadmapItems } from "./roadmap.config";
 import { PreloadImage } from "src/shared/components/PreloadImage";
 import { useTranslation } from "react-i18next";
+import { imgPathMap } from "src/shared/constants/imgPathMap";
 
 export const Roadmap = () => {
   const { t } = useTranslation();
+
+  const { roadmap } = imgPathMap;
+
   return (
     <>
       <Box as="main">
@@ -41,9 +45,9 @@ export const Roadmap = () => {
                   </Text>
                 </Text>
                 <PreloadImage
-                  imgSRC="/images/common/roadmap.jpg"
+                  imgSRC={roadmap.path}
                   maxH="300px"
-                  hash="L35Hn[Y$S5tkO;bvayj?Mxaef6j["
+                  hash={roadmap.hash}
                   borderRadius="25px"
                   objectPosition="right 0 bottom 0"
                 />
