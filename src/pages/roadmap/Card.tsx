@@ -7,11 +7,10 @@ type Props = {
   badgeColor?: string;
 } & RoadmapItemType;
 
-const Card: React.FC<Props> = ({
+export const Card: React.FC<Props> = ({
   containerProps,
   badgeColor = "green",
   date,
-  // title,
   description,
 }) => {
   const { t, i18n } = useTranslation();
@@ -27,27 +26,26 @@ const Card: React.FC<Props> = ({
       <Flex
         w={{ base: "294px", lg: "420px" }}
         h={{ base: "auto" }}
-        bgColor="brand.blue"
+        bgColor="blue.500"
         borderRadius="25px"
         shadow="2xl"
         justify="center"
         direction={"column"}
         align="start"
         py={{ base: "14px", lg: "20px" }}
-        px={{ base: 4 }}
-        // position="relative"
+        px={{ base: "14px", lg: "20px" }}
+        position="relative"
         gap={{ base: "10" }}
       >
         <Flex
           w="100%"
-          // h={{ base: "50px" }} w={{ base: "266px", lg: "380px" }}
+          h={{ base: "50px" }}
           justifyContent={"space-between"}
           alignItems={"center"}
-          pr={{ base: 2 }}
         >
           <Text
-            // position="absolute"
-            // left="20px"
+            position="absolute"
+            left="20px"
             top={{ base: "14px", lg: "12px" }}
             fontSize={{ base: "22px", lg: "32px" }}
             color="white"
@@ -57,21 +55,20 @@ const Card: React.FC<Props> = ({
           <Badge
             colorScheme={badgeColor}
             fontSize={{ base: "16px", lg: "22px" }}
-            // position="absolute"
-            // right="20px"
-            // top="20px"
+            position="absolute"
+            right="20px"
+            top="20px"
             borderRadius="22px"
           >
             {date.toLocaleDateString(i18n.language)}
           </Badge>
         </Flex>
         <Box
-          w={{ base: "266px", lg: "380px" }}
+          w="100%"
           h={{ base: "auto" }}
           bgColor="white"
           borderRadius="14px"
           boxShadow="inner"
-          // position="relative"
         >
           <Text
             p="8px 12px 12px 12px"
@@ -85,5 +82,3 @@ const Card: React.FC<Props> = ({
     </Flex>
   );
 };
-
-export default Card;

@@ -3,7 +3,7 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { useGetAccountInfo } from "src/entities/accountInfo/useGetAccountInfo";
 
-const Component: FC = () => {
+export const Component: FC = () => {
   const { t } = useTranslation();
   const { accountInfo, isLoadingAccountInfo } = useGetAccountInfo();
 
