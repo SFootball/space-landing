@@ -6,7 +6,7 @@ type PreloadImageProps = {
   imgSRC: string | undefined;
   width?: string;
   height?: string;
-  hash: string | undefined;
+  hash: string;
   borderRadius: string | undefined;
   objectPosition: string | undefined;
   mb?: string;
