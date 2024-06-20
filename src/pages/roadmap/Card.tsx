@@ -7,7 +7,7 @@ type Props = {
   badgeColor?: string;
 } & RoadmapItemType;
 
-const Card: React.FC<Props> = ({
+export const Card: React.FC<Props> = ({
   containerProps,
   badgeColor = "green",
   date,
@@ -84,5 +84,3 @@ const Card: React.FC<Props> = ({
     </Flex>
   );
 };
-
-export default Card;

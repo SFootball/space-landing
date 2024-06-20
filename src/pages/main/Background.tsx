@@ -4,7 +4,7 @@ import { Blurhash } from "react-blurhash";
 
 export const bgImgURL = "/images/common/footballer.jpg";
 
-const Background = () => {
+export const Background = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
@@ -35,5 +35,3 @@ const Background = () => {
     </>
   );
 };
-
-export default Background;

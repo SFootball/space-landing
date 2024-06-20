@@ -3,18 +3,18 @@ import { useState } from "react";
 import { Blurhash } from "react-blurhash";
 
 type PreloadImageProps = {
-  imgSRC: string;
+  imgSRC: string | undefined;
   width?: string;
   height?: string;
-  hash: string;
-  borderRadius: string;
-  objectPosition: string;
+  hash: string | undefined;
+  borderRadius: string | undefined;
+  objectPosition: string | undefined;
   mb?: string;
   maxH?: string;
   maxW?: string;
 };
 
-const PreloadImage: React.FC<PreloadImageProps> = ({
+export const PreloadImage: React.FC<PreloadImageProps> = ({
   imgSRC,
   width,
   height,
@@ -64,5 +64,3 @@ const PreloadImage: React.FC<PreloadImageProps> = ({
     </>
   );
 };
-
-export default PreloadImage;

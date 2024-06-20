@@ -1,40 +1,33 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import PreloadImage from "src/shared/components/PreloadImage";
+import { PreloadImage } from "src/shared/components/PreloadImage";
 
-function About() {
+export const About = () => {
   const { t } = useTranslation();
 
   const management = [
     {
       name: "Denis Yunusov",
       position: "CEO",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/denis_yunusov.jpg"
-          width="120px"
-          height="120px"
-          hash="T9N0@;M{ui4Tog?wY6Rjq[S#j[w^"
-          borderRadius="50%"
-          objectPosition="right -48px bottom 0"
-          mb="10px"
-        />
-      ),
+
+      imgSRC: "/images/avatars/denis_yunusov.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "T9N0@;M{ui4Tog?wY6Rjq[S#j[w^",
+      borderRadius: "50%",
+      objectPosition: "right -48px bottom 0",
+      mb: "10px",
     },
     {
       name: "Ildar Nasyrov",
       position: "CTO",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/ildar_nasyrov.jpeg"
-          width="120px"
-          height="120px"
-          hash="TOFi$7%gY7?v?^Io.SSgR4EMkXMc"
-          borderRadius="50%"
-          objectPosition="right 0 bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/ildar_nasyrov.jpeg",
+      width: "120px",
+      height: "120px",
+      hash: "TOFi$7%gY7?v?^Io.SSgR4EMkXMc",
+      borderRadius: "50%",
+      objectPosition: "right 0 bottom 0",
+      mb: "10px",
     },
   ];
 
@@ -42,107 +35,79 @@ function About() {
     {
       name: "Anton Tuktarev",
       position: "Content Manager",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/tuktarev_anton.jpg"
-          width="120px"
-          height="120px"
-          hash="T48M?Wxa01D%s:oz5SNH}?Fdj[#S"
-          borderRadius="50%"
-          objectPosition="right -48px bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/tuktarev_anton.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "T48M?Wxa01D%s:oz5SNH}?Fdj[#S",
+      borderRadius: "50%",
+      objectPosition: "right -48px bottom 0",
+      mb: "10px",
     },
     {
       name: "Leisan",
       position: "PR Manager",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/leisan.jpg"
-          width="120px"
-          height="120px"
-          hash="T7AvzpE10000-p_4X:IoZ#9Ft7-;"
-          borderRadius="50%"
-          objectPosition="right -48px bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/leisan.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "T7AvzpE10000-p_4X:IoZ#9Ft7-;",
+      borderRadius: "50%",
+      objectPosition: "right -48px bottom 0",
+      mb: "10px",
     },
     {
       name: "Dmitry Zykov",
       position: "ML Engineer",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/zykov_dmitry.jpg"
-          width="120px"
-          height="120px"
-          hash="UbL;me00~q-;?b%Mt7M{Rjt7fQM{xuM{M{t7"
-          borderRadius="50%"
-          objectPosition="right 0 bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/zykov_dmitry.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "UbL;me00~q-;?b%Mt7M{Rjt7fQM{xuM{M{t7",
+      borderRadius: "50%",
+      objectPosition: "right 0 bottom 0",
+      mb: "10px",
     },
     {
       name: "Alexey Senchenko",
       position: "Art Manager",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/alexey_senchenko.jpg"
-          width="120px"
-          height="120px"
-          hash="U-NTkAog_MRiNNa}s%jZ.7oIRPfmxUoJbdWY"
-          borderRadius="50%"
-          objectPosition="right 0 bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/alexey_senchenko.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "U-NTkAog_MRiNNa}s%jZ.7oIRPfmxUoJbdWY",
+      borderRadius: "50%",
+      objectPosition: "right 0 bottom 0",
+      mb: "10px",
     },
     {
       name: "Danil",
       position: "Smart Contract Developer",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/danil.jpg"
-          width="120px"
-          height="120px"
-          hash="URS6SsWB~qxua}j[t7ay-;j[IUWBxuayNGj["
-          borderRadius="50%"
-          objectPosition="right 0 bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/danil.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "URS6SsWB~qxua}j[t7ay-;j[IUWBxuayNGj[",
+      borderRadius: "50%",
+      objectPosition: "right 0 bottom 0",
+      mb: "10px",
     },
     {
       name: "Ali Baybutov",
       position: "Frontend Developer",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/ali_baybutov.jpg"
-          width="120px"
-          height="120px"
-          hash="LiM%}}%M?bIU~qWBRjayRjxuj[t7"
-          borderRadius="50%"
-          objectPosition="right -18px bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/ali_baybutov.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "LiM%}}%M?bIU~qWBRjayRjxuj[t7",
+      borderRadius: "50%",
+      objectPosition: "right -18px bottom 0",
+      mb: "10px",
     },
     {
       name: "Karina Kanchurina",
       position: "Test Engineer",
-      icon: (
-        <PreloadImage
-          imgSRC="/images/avatars/karina_kanchurina.jpg"
-          width="120px"
-          height="120px"
-          hash="LJLq5{.8_N%2Dit7.8Rj%#WBMdX8"
-          borderRadius="50%"
-          objectPosition="right -44px bottom 0"
-          mb="10px"
-        />
-      ),
+      imgSRC: "/images/avatars/karina_kanchurina.jpg",
+      width: "120px",
+      height: "120px",
+      hash: "LJLq5{.8_N%2Dit7.8Rj%#WBMdX8",
+      borderRadius: "50%",
+      objectPosition: "right -44px bottom 0",
+      mb: "10px",
     },
   ];
 
@@ -279,7 +244,15 @@ function About() {
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
                   >
-                    {person.icon}
+                    <PreloadImage
+                      imgSRC={person.imgSRC}
+                      width={person.width}
+                      height={person.height}
+                      hash={person.hash}
+                      borderRadius={person.borderRadius}
+                      objectPosition={person.objectPosition}
+                      mb={person.mb}
+                    />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
                     </Text>
@@ -306,7 +279,15 @@ function About() {
                     align="center"
                     width={{ base: "50%", lg: "25%" }}
                   >
-                    {person.icon}
+                    <PreloadImage
+                      imgSRC={person.imgSRC}
+                      width={person.width}
+                      height={person.height}
+                      hash={person.hash}
+                      borderRadius={person.borderRadius}
+                      objectPosition={person.objectPosition}
+                      mb={person.mb}
+                    />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
                     </Text>
@@ -373,6 +354,4 @@ function About() {
       </Box>
     </Box>
   );
-}
-
-export default About;
+};

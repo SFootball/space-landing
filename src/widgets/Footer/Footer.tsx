@@ -6,7 +6,7 @@ import style from "./Footer.module.css";
 
 const logoSrc = "/images/logos/logo.png";
 
-const Footer = () => {
+export const Footer = () => {
   const { t } = useTranslation();
 
   return (
@@ -89,5 +89,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;

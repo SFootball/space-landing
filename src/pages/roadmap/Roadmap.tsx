@@ -1,9 +1,9 @@
 import { Flex, Box, Container, Text, Divider } from "@chakra-ui/react";
-import Card from "./Card";
+import { Card } from "./Card";
 import { roadmapItems } from "./roadmap.config";
-import PreloadImage from "src/shared/components/PreloadImage";
+import { PreloadImage } from "src/shared/components/PreloadImage";
 
-function Roadmap() {
+export const Roadmap = () => {
   return (
     <>
       <Box as="main">
@@ -90,6 +90,4 @@ function Roadmap() {
       <Divider />
     </>
   );
-}
-
-export default Roadmap;
+};

@@ -1,7 +1,7 @@
 import { Flex, Box, Image, useMediaQuery, Container } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import MenuForMdScreen from "./MenuForMdScreen";
-import MenuForMobScreen from "./MenuForMobScreen";
+import { MenuForMdScreen } from "./MenuForMdScreen";
+import { MenuForMobScreen } from "./MenuForMobScreen";
 import { useTonBackendAuth } from "src/features/tonAuth/useTonBackendAuth";
 import { TonButton } from "src/features/tonAuth/TonButton";
 import style from "./Header.module.css";
@@ -11,7 +11,7 @@ const logoURL = "/images/logos/logo.png";
 const enURL = "/images/common/en.png";
 const ruURL = "/images/common/ru.png";
 
-const Header = () => {
+export const Header = () => {
   useTonBackendAuth();
 
   const changeLanguage = (lng: string) => {
@@ -82,5 +82,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

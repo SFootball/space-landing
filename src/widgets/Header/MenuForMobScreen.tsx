@@ -25,7 +25,7 @@ const sidebar = {
   },
 };
 
-const MenuForMobScreen = () => {
+export const MenuForMobScreen = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
@@ -36,5 +36,3 @@ const MenuForMobScreen = () => {
     </motion.nav>
   );
 };
-
-export default MenuForMobScreen;
