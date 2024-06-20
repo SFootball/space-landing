@@ -2,8 +2,10 @@ import { Flex, Box, Container, Text, Divider } from "@chakra-ui/react";
 import { Card } from "./Card";
 import { roadmapItems } from "./roadmap.config";
 import { PreloadImage } from "src/shared/components/PreloadImage";
+import { useTranslation } from "react-i18next";
 
 export const Roadmap = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Box as="main">
@@ -26,15 +28,16 @@ export const Roadmap = () => {
                   as="b"
                   textAlign={{ base: "center", lg: "left" }}
                 >
-                  SFootball Roadmap
+                  {t("SFootball Roadmap")}
                   <Text
                     textAlign="left"
                     fontSize={{ base: "18px", lg: "26px" }}
                     fontWeight="normal"
                     maxW="600px"
                   >
-                    We invite you to familiarize yourself with the tasks that we
-                    have completed, are developing and plan to implement
+                    {t(
+                      "We invite you to familiarize yourself with the tasks that we have completed, are developing and plan to implement"
+                    )}
                   </Text>
                 </Text>
                 <PreloadImage

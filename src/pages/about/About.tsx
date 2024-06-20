@@ -1,33 +1,37 @@
 import { Flex, Box, Container, Text, Divider, Image } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { PreloadImage } from "src/shared/components/PreloadImage";
+import { imgPathMap } from "src/shared/constants/imgPathMap";
 
 export const About = () => {
   const { t } = useTranslation();
+
+  const {
+    denisYunusov,
+    ildarNasyrov,
+    antonTuktarev,
+    leisan,
+    dmitryZykov,
+    alexeySenchenko,
+    danil,
+    aliBaybutov,
+    karinaKanchurina,
+  } = imgPathMap;
 
   const management = [
     {
       name: "Denis Yunusov",
       position: "CEO",
-
-      imgSRC: "/images/avatars/denis_yunusov.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "T9N0@;M{ui4Tog?wY6Rjq[S#j[w^",
-      borderRadius: "50%",
+      imgSRC: denisYunusov.path,
+      hash: denisYunusov.hash,
       objectPosition: "right -48px bottom 0",
-      mb: "10px",
     },
     {
       name: "Ildar Nasyrov",
       position: "CTO",
-      imgSRC: "/images/avatars/ildar_nasyrov.jpeg",
-      width: "120px",
-      height: "120px",
-      hash: "TOFi$7%gY7?v?^Io.SSgR4EMkXMc",
-      borderRadius: "50%",
+      imgSRC: ildarNasyrov.path,
+      hash: ildarNasyrov.hash,
       objectPosition: "right 0 bottom 0",
-      mb: "10px",
     },
   ];
 
@@ -35,79 +39,51 @@ export const About = () => {
     {
       name: "Anton Tuktarev",
       position: "Content Manager",
-      imgSRC: "/images/avatars/tuktarev_anton.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "T48M?Wxa01D%s:oz5SNH}?Fdj[#S",
-      borderRadius: "50%",
+      imgSRC: antonTuktarev.path,
+      hash: antonTuktarev.hash,
       objectPosition: "right -48px bottom 0",
-      mb: "10px",
     },
     {
       name: "Leisan",
       position: "PR Manager",
-      imgSRC: "/images/avatars/leisan.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "T7AvzpE10000-p_4X:IoZ#9Ft7-;",
-      borderRadius: "50%",
+      imgSRC: leisan.path,
+      hash: leisan.hash,
       objectPosition: "right -48px bottom 0",
-      mb: "10px",
     },
     {
       name: "Dmitry Zykov",
       position: "ML Engineer",
-      imgSRC: "/images/avatars/zykov_dmitry.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "UbL;me00~q-;?b%Mt7M{Rjt7fQM{xuM{M{t7",
-      borderRadius: "50%",
+      imgSRC: dmitryZykov.path,
+      hash: dmitryZykov.hash,
       objectPosition: "right 0 bottom 0",
-      mb: "10px",
     },
     {
       name: "Alexey Senchenko",
       position: "Art Manager",
-      imgSRC: "/images/avatars/alexey_senchenko.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "U-NTkAog_MRiNNa}s%jZ.7oIRPfmxUoJbdWY",
-      borderRadius: "50%",
+      imgSRC: alexeySenchenko.path,
+      hash: alexeySenchenko.hash,
       objectPosition: "right 0 bottom 0",
-      mb: "10px",
     },
     {
       name: "Danil",
       position: "Smart Contract Developer",
-      imgSRC: "/images/avatars/danil.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "URS6SsWB~qxua}j[t7ay-;j[IUWBxuayNGj[",
-      borderRadius: "50%",
+      imgSRC: danil.path,
+      hash: danil.hash,
       objectPosition: "right 0 bottom 0",
-      mb: "10px",
     },
     {
       name: "Ali Baybutov",
       position: "Frontend Developer",
-      imgSRC: "/images/avatars/ali_baybutov.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "LiM%}}%M?bIU~qWBRjayRjxuj[t7",
-      borderRadius: "50%",
+      imgSRC: aliBaybutov.path,
+      hash: aliBaybutov.hash,
       objectPosition: "right -18px bottom 0",
-      mb: "10px",
     },
     {
       name: "Karina Kanchurina",
       position: "Test Engineer",
-      imgSRC: "/images/avatars/karina_kanchurina.jpg",
-      width: "120px",
-      height: "120px",
-      hash: "LJLq5{.8_N%2Dit7.8Rj%#WBMdX8",
-      borderRadius: "50%",
+      imgSRC: karinaKanchurina.path,
+      hash: karinaKanchurina.hash,
       objectPosition: "right -44px bottom 0",
-      mb: "10px",
     },
   ];
 
@@ -246,12 +222,12 @@ export const About = () => {
                   >
                     <PreloadImage
                       imgSRC={person.imgSRC}
-                      width={person.width}
-                      height={person.height}
+                      width="120px"
+                      height="120px"
                       hash={person.hash}
-                      borderRadius={person.borderRadius}
+                      borderRadius="50%"
                       objectPosition={person.objectPosition}
-                      mb={person.mb}
+                      mb="10px"
                     />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
@@ -281,12 +257,12 @@ export const About = () => {
                   >
                     <PreloadImage
                       imgSRC={person.imgSRC}
-                      width={person.width}
-                      height={person.height}
+                      width="120px"
+                      height="120px"
                       hash={person.hash}
-                      borderRadius={person.borderRadius}
+                      borderRadius="50%"
                       objectPosition={person.objectPosition}
-                      mb={person.mb}
+                      mb="10px"
                     />
                     <Text fontSize={{ base: "13px", lg: "18px" }} as="b">
                       {t(`${person.name}`)}
