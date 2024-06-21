@@ -20,35 +20,47 @@ export const Header = () => {
   // for mobile
   const [isMobile] = useMediaQuery("(max-width: 508px)");
 
-  return !isMobile ? (
-    <>
-      <Box as="header" bgColor="white">
-        <Container maxW="1200px" position="relative" minH="110px">
-          <Flex position="absolute" right="100px" top="40px" gap="8px">
-            <TonButton />
-            <Image
-              onClick={() => {
-                changeLanguage("ru");
-              }}
-              src={ruURL}
-              h="30px"
-              w="30px"
-              cursor="pointer"
-            />
-            <Image
-              onClick={() => {
-                changeLanguage("en");
-              }}
-              src={enURL}
-              h="30px"
-              w="30px"
-              cursor="pointer"
-            />
-          </Flex>
+  return (
+    <Box as="header" bgColor="white">
+      <Container maxW="1200px" position="relative" minH="110px">
+        {!isMobile ? (
+          <>
+            <Flex position="absolute" right="100px" top="40px" gap="8px">
+              <TonButton />
+              <Image
+                onClick={() => {
+                  changeLanguage("ru");
+                }}
+                src={ruURL}
+                h="30px"
+                w="30px"
+                cursor="pointer"
+              />
+              <Image
+                onClick={() => {
+                  changeLanguage("en");
+                }}
+                src={enURL}
+                h="30px"
+                w="30px"
+                cursor="pointer"
+              />
+            </Flex>
+            <Flex h="110px" alignItems="center" justify="space-between">
+              <Link className={style.link} to="/">
+                <Image src={logoURL} />
+              </Link>
+              <Box display={{ base: "none", lg: "block" }} height="50px">
+                <MenuForMdScreen />
+              </Box>
+              <Box display={{ base: "block", lg: "none" }} height="50px">
+                <MenuForMobScreen />
+              </Box>
+            </Flex>
+          </>
+        ) : (
           <Flex h="110px" alignItems="center" justify="space-between">
-            <Link className={style.link} to="/">
-              <Image src={logoURL} />
-            </Link>
+            <TonButton />
             <Box display={{ base: "none", lg: "block" }} height="50px">
               <MenuForMdScreen />
             </Box>
@@ -56,21 +68,7 @@ export const Header = () => {
               <MenuForMobScreen />
             </Box>
           </Flex>
-        </Container>
-      </Box>
-    </>
-  ) : (
-    <Box as="header" bgColor="white">
-      <Container maxW="1200px" position="relative" minH="110px">
-        <Flex h="110px" alignItems="center" justify="space-between">
-          <TonButton />
-          <Box display={{ base: "none", lg: "block" }} height="50px">
-            <MenuForMdScreen />
-          </Box>
-          <Box display={{ base: "block", lg: "none" }} height="50px">
-            <MenuForMobScreen />
-          </Box>
-        </Flex>
+        )}
       </Container>
     </Box>
   );

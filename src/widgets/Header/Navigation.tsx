@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { MotionList } from "src/shared/components/MotionList/MotionList";
 import { MotionMenuItem } from "src/shared/components/MotionList/MotionMenuItem";
-import { useTonBackendAuth } from "src/features/tonAuth/useTonBackendAuth";
 import style from "./Header.module.css";
 
 const links = [
@@ -28,8 +27,6 @@ const links = [
 const logoURL = "/images/logos/logo_white.png";
 
 export const Navigation: React.FC<{ toggle: () => void }> = ({ toggle }) => {
-  useTonBackendAuth();
-
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
