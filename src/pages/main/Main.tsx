@@ -22,13 +22,19 @@ export const Main = () => {
         margin="0 auto"
         px="20px"
       >
-        <Flex justifyContent="center" alignItems="center" direction="column">
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          direction="column"
+          py="16px"
+        >
           <Heading
             fontSize={{ base: "56px", lg: "72px" }}
             marginBottom="54px"
             fontWeight="bold"
             color="white"
             textAlign="center"
+            width={{ base: "350px", sm: "auto" }}
           >
             {t("Professionals rely on numbers!")}
           </Heading>

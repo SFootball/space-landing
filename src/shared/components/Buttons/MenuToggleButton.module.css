@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .navMenuButton {
     background-color: #325aba !important;
     outline: none;
@@ -8,7 +8,7 @@
     border-radius: 50%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navMenuButton {
     background-color: #325aba !important;
     outline: none;
