@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navMenuButton {
     position: absolute;
     outline: none;
@@ -28,11 +28,11 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navList {
     position: absolute;
     top: 0px;
-    right: calc(50% - 250px);
+    right: calc(50% - 174px);
     width: 500px;
     height: 110px;
     display: flex;
