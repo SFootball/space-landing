@@ -2,6 +2,7 @@ import { motion, useCycle } from "framer-motion";
 import { Navigation } from "./Navigation";
 import { MenuToggleButton } from "src/shared/components/Buttons/MenuToggleButton";
 import style from "./Header.module.css";
+import { Box } from "@chakra-ui/react";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -32,7 +33,9 @@ export const MenuForMobScreen = () => {
     <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
       <motion.div className={style.sidebar} variants={sidebar} />
       <MenuToggleButton toggle={() => toggleOpen()} />
-      <Navigation toggle={() => toggleOpen()} />
+      <Box display={isOpen ? "block" : "none"}>
+        <Navigation toggle={() => toggleOpen()} />
+      </Box>
     </motion.nav>
   );
 };
