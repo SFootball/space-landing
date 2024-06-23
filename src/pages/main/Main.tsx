@@ -3,7 +3,8 @@ import { Background } from "./Background";
 import { useTranslation } from "react-i18next";
 
 const videoWithStatImgSRC = "/images/common/are-you-footballer.png";
-const laptopImgSRC_2 = "/images/common/2.png";
+const reachForStarImgSRC = "/images/common/reach-for-star.png";
+// const laptopImgSRC_2 = "/images/common/2.png";
 const laptopImgSRC_3 = "/images/common/3.png";
 const laptopImgSRC_4 = "/images/common/4.png";
 // const dataImgSRC_1 = "/images/common/5-1.png";
@@ -130,14 +131,19 @@ export const Main = () => {
           px={{ base: "30px", xl: "60px" }}
         >
           <Flex direction="column" gap="50px">
-            <Flex justify="space-between" align="start">
+            <Flex
+              justify="space-between"
+              align={{ base: "center", md: "start" }}
+              direction={{ base: "column", md: "row" }}
+            >
               <Image
                 borderRadius="30px"
                 src={videoWithStatImgSRC}
                 maxW="48%"
                 shadow="inner"
                 p="2"
-                mr="20px"
+                mr={{ base: "0", md: "20px" }}
+                mb={{ base: "20px", md: "0" }}
               />
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
@@ -158,7 +164,38 @@ export const Main = () => {
                 </Box>
               </Box>
             </Flex>
-            <Flex justify="space-between" align="center">
+            <Flex
+              justify="space-between"
+              align={{ base: "center", md: "start" }}
+              direction={{ base: "column-reverse", md: "row" }}
+            >
+              <Box>
+                <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
+                  {t("REACH FOR THE STAR")}
+                </Text>
+                <Box fontSize={{ base: "13px", lg: "18px" }}>
+                  <p>• {t("Fill out your game stats")};</p>
+                  <p>• {t("Choose your favorite player you're aiming for")};</p>
+                  <p>
+                    •{" "}
+                    {t(
+                      "See where you are inferior to him and what you need to work on"
+                    )}
+                    ;
+                  </p>
+                  <p>• {t("Get your own NFT")}.</p>
+                </Box>
+              </Box>
+              <Image
+                src={reachForStarImgSRC}
+                maxW="48%"
+                shadow="inner"
+                p="2"
+                borderRadius="30px"
+                mb={{ base: "20px", md: "0" }}
+              />
+            </Flex>
+            {/* <Flex justify="space-between" align="center"> 
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
                   {t("SFOOTBALL PLATFORM FOR COACHES")}
@@ -195,12 +232,20 @@ export const Main = () => {
                   </p>
                   <p>• {t("Customizable statistical spreadsheets")}.</p>
                 </Box>
-              </Box>
+              </Box> 
               <Image src={laptopImgSRC_2} maxW="48%" />
-            </Flex>
-            <Flex justify="space-between" align="center">
-              <Image src={laptopImgSRC_3} maxW="48%" />
-              <Box pl={{ base: "30px", lg: "100px" }}>
+              </Flex>*/}
+            <Flex
+              justify="space-between"
+              align={{ base: "center", md: "start" }}
+              direction={{ base: "column", md: "row" }}
+            >
+              <Image
+                src={laptopImgSRC_3}
+                maxW="48%"
+                mb={{ base: "20px", md: "0" }}
+              />
+              <Box pl={{ base: "0", md: "100px" }}>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
                   {t("SFOOTBALL PLATFORM FOR PLAYER RECRUITMENT")}
                 </Text>
@@ -230,7 +275,11 @@ export const Main = () => {
                 </Box>
               </Box>
             </Flex>
-            <Flex justify="space-between" align="center">
+            <Flex
+              justify="space-between"
+              align={{ base: "center", md: "start" }}
+              direction={{ base: "column-reverse", md: "row" }}
+            >
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
                   {t("STATISTICAL REPORTS")}
@@ -243,7 +292,11 @@ export const Main = () => {
                   <p>• {t("Data quality control")}.</p>
                 </Box>
               </Box>
-              <Image src={laptopImgSRC_4} maxW="48%" />
+              <Image
+                src={laptopImgSRC_4}
+                maxW="48%"
+                mb={{ base: "20px", md: "0" }}
+              />
             </Flex>
             {/* <Flex justify="space-between" align="center">
               <Image src={dataImgSRC_1} maxW="48%" />
