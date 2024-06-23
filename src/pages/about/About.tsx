@@ -48,7 +48,7 @@ export const About = () => {
       objectPosition: "right -48px bottom 0",
     },
     {
-      name: "Leisan",
+      name: "Leisan Mugattarova",
       position: "PR Manager",
       imgSRC: leisan.path,
       hash: leisan.hash,
@@ -69,7 +69,7 @@ export const About = () => {
       objectPosition: "right 0 bottom 0",
     },
     {
-      name: "Danil",
+      name: "Danil Peshcherov",
       position: "Smart Contract Developer",
       imgSRC: danil.path,
       hash: danil.hash,
