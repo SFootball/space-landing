@@ -2,12 +2,12 @@ import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 import { Background } from "./Background";
 import { useTranslation } from "react-i18next";
 
-const laptopImgSRC_1 = "/images/common/are-you-footballer.png";
+const videoWithStatImgSRC = "/images/common/are-you-footballer.png";
 const laptopImgSRC_2 = "/images/common/2.png";
 const laptopImgSRC_3 = "/images/common/3.png";
 const laptopImgSRC_4 = "/images/common/4.png";
-const dataImgSRC_1 = "/images/common/5-1.png";
-const dataImgSRC_2 = "/images/common/5-2.png";
+// const dataImgSRC_1 = "/images/common/5-1.png";
+// const dataImgSRC_2 = "/images/common/5-2.png";
 
 export const Main = () => {
   const { t } = useTranslation();
@@ -133,7 +133,7 @@ export const Main = () => {
             <Flex justify="space-between" align="start">
               <Image
                 borderRadius="30px"
-                src={laptopImgSRC_1}
+                src={videoWithStatImgSRC}
                 maxW="48%"
                 shadow="inner"
                 p="2"
@@ -245,7 +245,7 @@ export const Main = () => {
               </Box>
               <Image src={laptopImgSRC_4} maxW="48%" />
             </Flex>
-            <Flex justify="space-between" align="center">
+            {/* <Flex justify="space-between" align="center">
               <Image src={dataImgSRC_1} maxW="48%" />
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
@@ -296,7 +296,7 @@ export const Main = () => {
                 </Box>
               </Box>
               <Image src={dataImgSRC_2} maxW="48%" />
-            </Flex>
+            </Flex> */}
           </Flex>
         </Container>
       </Box>
