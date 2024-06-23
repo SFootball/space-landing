@@ -2,7 +2,7 @@ import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 import { Background } from "./Background";
 import { useTranslation } from "react-i18next";
 
-const laptopImgSRC_1 = "/images/common/1.png";
+const laptopImgSRC_1 = "/images/common/are-you-footballer.png";
 const laptopImgSRC_2 = "/images/common/2.png";
 const laptopImgSRC_3 = "/images/common/3.png";
 const laptopImgSRC_4 = "/images/common/4.png";
@@ -130,27 +130,31 @@ export const Main = () => {
           px={{ base: "30px", xl: "60px" }}
         >
           <Flex direction="column" gap="50px">
-            <Flex justify="space-between" align="center">
-              <Image src={laptopImgSRC_1} maxW="48%" />
+            <Flex justify="space-between" align="start">
+              <Image
+                borderRadius="30px"
+                src={laptopImgSRC_1}
+                maxW="48%"
+                shadow="inner"
+                p="2"
+                mr="20px"
+              />
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
-                  {t("SFOOTBALL SOLUTIONS")}
+                  {t(
+                    "ARE YOU A FOOTBALL PLAYER? THEN THERE WILL BE A LOT OF USEFUL THINGS FOR YOU"
+                  )}
                 </Text>
                 <Box mb="36px" fontSize={{ base: "13px", lg: "18px" }}>
-                  <p>• {t("Technical match filming")};</p>
-                  <p>• {t("Video and advanced statistics")};</p>
-                  <p>• {t("Detailed post-match reports")};</p>
-                  <p>• {t("Statistical live data collection")};</p>
-                  <p>• {t("Player fitness tracking reports")};</p>
-                  <p>• {t("Raw data delivered in live mode")}.</p>
-                </Box>
-                <Box fontSize={{ base: "13px", lg: "18px" }}>
-                  {t("Services to be launched in the short term")}:
-                  <p>• {t("24/7 technical support")};</p>
-                  <p>• {t("Live fitness tracking")};</p>
-                  <p>• {t("Analytical opponent’s prescout reports")};</p>
-                  <p>• {t("Post-match referee reports")};</p>
-                  <p>• {t("Offline and online tagging software")}.</p>
+                  <p>• {t("Upload videos of your matches on the site")};</p>
+                  <p>
+                    •{" "}
+                    {t(
+                      "Get detailed statistics about your game based on video"
+                    )}
+                    ;
+                  </p>
+                  <p>• {t("Analyze the effectiveness of your actions")}.</p>
                 </Box>
               </Box>
             </Flex>
