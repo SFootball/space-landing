@@ -2,10 +2,10 @@ import { Flex, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 import { Background } from "./Background";
 import { useTranslation } from "react-i18next";
 
-const videoWithStatImgSRC = "/images/common/are-you-footballer.png";
-const reachForStarImgSRC = "/images/common/reach-for-star.png";
-const areYouCoachImgSRC = "/images/common/are-you-coach.png";
-const laptopImgSRC_4 = "/images/common/4.png";
+const videoWithStatImgSRC = "/images/common/are-you-footballer_1.png";
+const reachForStarImgSRC = "/images/common/reach-for-star_1.png";
+const areYouCoachImgSRC = "/images/common/are-you-coach_1.png";
+const areYouScautImgSRC = "/images/common/are-you-scaut_1.png";
 
 export const Main = () => {
   const { t } = useTranslation();
@@ -133,8 +133,7 @@ export const Main = () => {
                 borderRadius="30px"
                 src={videoWithStatImgSRC}
                 maxW={{ base: "90%", md: "48%" }}
-                shadow="inner"
-                p="2"
+                shadow="xl"
                 mr={{ base: "0", md: "20px" }}
                 mb={{ base: "20px", md: "0" }}
               />
@@ -182,8 +181,7 @@ export const Main = () => {
               <Image
                 src={reachForStarImgSRC}
                 maxW={{ base: "90%", md: "48%" }}
-                shadow="inner"
-                p="2"
+                shadow="xl"
                 borderRadius="30px"
                 mb={{ base: "20px", md: "0" }}
               />
@@ -197,8 +195,7 @@ export const Main = () => {
                 src={areYouCoachImgSRC}
                 maxW={{ base: "90%", md: "48%" }}
                 mb={{ base: "20px", md: "0" }}
-                shadow="inner"
-                p="2"
+                shadow="xl"
                 borderRadius="30px"
               />
               <Box pl={{ base: "0", md: "100px" }}>
@@ -244,20 +241,43 @@ export const Main = () => {
             >
               <Box>
                 <Text fontSize={{ base: "18px", lg: "26px" }} as="b" mb="24px">
-                  {t("STATISTICAL REPORTS")}
+                  {t("ARE YOU A SCAUT? BECOME MORE EFFECTIVE WITH US")}
                 </Text>
                 <Box fontSize={{ base: "13px", lg: "18px" }}>
-                  <p>• {t("Real-time statistical match analysis")};</p>
-                  <p>• {t("Statistical post-match team and player report")};</p>
-                  <p>• {t("Team and tournament summary reports")};</p>
-                  <p>• {t("New advanced metrics developed")};</p>
-                  <p>• {t("Data quality control")}.</p>
+                  <p>
+                    •{" "}
+                    {t(
+                      "Expand your geography by finding future stars in unknown hinterlands and big cities"
+                    )}
+                    ;
+                  </p>
+                  <p>
+                    •{" "}
+                    {t(
+                      "Filter football players by playing and physical characteristics"
+                    )}
+                    ;
+                  </p>
+                  <p>
+                    •{" "}
+                    {t("View their matches, complete with advanced statistics")}
+                    ;
+                  </p>
+                  <p>
+                    •{" "}
+                    {t(
+                      "Send an invitation to the player you are interested in"
+                    )}
+                    .
+                  </p>
                 </Box>
               </Box>
               <Image
-                src={laptopImgSRC_4}
+                src={areYouScautImgSRC}
                 maxW={{ base: "90%", md: "48%" }}
                 mb={{ base: "20px", md: "0" }}
+                shadow="xl"
+                borderRadius="30px"
               />
             </Flex>
           </Flex>
